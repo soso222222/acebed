@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <?php include '../include/head.html'; ?>
+    <title>매트리스 | 침대 | ACE BED</title>
+    <meta name="description" content="ACE BED 매트리스 상품 안내" />
+  </head>
+  <body class="sub bed bed-mattress">
+    <div id="wrapper">
+      <?php include '../include/header.html'; ?>
+
+      <main id="main">
+        <div class="sub-header">
+          <div class="background-matt">
+            <h2>매트리스</h2>
+          </div>
+        </div>
+      
+      
+        <section id="sub-product-list">
+        
+          <h3 class="ir-hidden">매트리스 리스트</h3>
+          <div class="product">
+            <div class="content-box">
+        
+              <div class="top">
+                <p class="total-product">총 <strong class="num">20개</strong>의 제품이 있습니다.</p>
+                <ul class="arr-list">
+                  <li class="view">
+                    <ul>
+                      <li class="row-3 on"><a href="#">3열 보기</a></li>
+                      <li class="row-2"><a href="#">2열 보기</a></li>
+                    </ul>
+                  </li>
+                  <li class="order">
+                    <select class="arr" title="sort">
+                      <option value="rec">추천순</option>
+                      <option value="hot">인기순</option>
+                    </select>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        
+            <div class="bottom">
+              <div class="side">
+                <div class="search-box">
+                  <p>
+                    <input type="text" id="search-keyword" name="" placeholder="검색어를 입력하세요" />
+                    <label for="search-keyword"><a href="#"><i class="fas fa-search"><span>검색</span></i></a></label>
+                  </p>
+                  <div class="keyword">
+                    <div class="recent-word">
+                      <p class="title"><em>최근 검색어</em></p>
+                      <p>최근 검색어가 존재하지 않습니다.</p>
+                    </div>
+                    <div class="recommend-word">
+                      <p class="title"><em>추천 검색어</em></p>
+                      <ul>
+                        <li><a href="#">1. ZANA</a></li>
+                        <li><a href="#">2. IRINA</a></li>
+                        <li><a href="#">3. HYBRID TECH</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+        
+                <div class="category-matt">
+                  <ul>
+                    <li data-menu="size" class="on">
+                      <ul>
+                        <a href="#">
+                          <em>사이즈</em>
+                          <img alt="분류 열기" src="../img/side-icon-on.png" />
+                          <img alt="분류 닫기" src="../img/side-icon-off.png" />
+                        </a>
+                        <li>
+                          <a href="#">
+                            <input type="checkbox" id="category-size-lk" name="category-size" value="lk" />
+                            <label for="category-size-LK">라이킹(LK)</label>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <input type="checkbox" id="category-size-k" name="category-size" value="k" />
+                            <label for="category-size-K">킹(K)</label>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <input type="checkbox" id="category-size-lq" name="category-size" value="lq" />
+                            <label for="category-size-lq">라지퀸(LQ)</label>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <input type="checkbox" id="category-size-dd" name="category-size" value="dd" />
+                            <label for="category-size-dd">더블(DD))</label>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <input type="checkbox" id="category-size-ss" name="category-size" value="ss" />
+                            <label for="category-size-ss">슈퍼싱글(SS)</label>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <input type="checkbox" id="category-size-ds" name="category-size" value="ds" />
+                            <label for="category-size-ds">디럭스싱글(DS)</label>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li data-menu="rank">
+                      <ul>
+                        <a href="#">
+                          <em>매트리스 등급</em>
+                          <img alt="분류 열기" src="../img/side-icon-on.png" />
+                          <img alt="분류 닫기" src="../img/side-icon-off.png" />
+                        </a>
+                        <li>
+                          <a href="#">
+                            <input type="checkbox" id="category-rank-royal" name="category-rank" value="royal" />
+                            <label for="category-rank-royal">ROYAL ACE</label>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <input type="checkbox" id="category-rank-hybrid" name="category-rank" value="hybrid" />
+                            <label for="category-rank-hybrid">HYBRID TECH</label>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <input type="checkbox" id="category-rank-ace" name="category-rank" value="ace" />
+                            <label for="category-rank-ace">ACE</label>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <input type="checkbox" id="category-rank-etc" name="category-rank" value="etc" />
+                            <label for="category-rank-etc">기타</label>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li data-menu="cushion">
+                      <ul>
+                        <a href="#">
+                          <em>쿠션감</em>
+                          <img alt="분류 열기" src="../img/side-icon-on.png" />
+                          <img alt="분류 닫기" src="../img/side-icon-off.png" />
+                        </a>
+                        <li>
+                          <a href="#">
+                            <input type="checkbox" id="category-cushion-premium-soft" name="category-cushion"
+                              value="premium-soft" />
+                            <label for="category-cushion-premium-soft">Premium Soft</label>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <input type="checkbox" id="category-cushion-soft" name="category-cushion" value="soft" />
+                            <label for="category-cushion-soft">Soft</label>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <input type="checkbox" id="category-cushion-reg" name="category-cushion" value="reg" />
+                            <label for="category-cushion-reg">Regular</label>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <input type="checkbox" id="category-cushion-hard" name="category-cushion" value="hard" />
+                            <label for="category-cushion-hard">Hard</label>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <input type="checkbox" id="category-cushion-super-hard" name="category-cushion" value="super-hard" />
+                            <label for="category-cushion-super-hard">Super Hard</label>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li data-menu="spring">
+                      <ul>
+                        <a href="#">
+                          <em>적용 스프링</em>
+                          <img alt="분류 열기" src="../img/side-icon-on.png" />
+                          <img alt="분류 닫기" src="../img/side-icon-off.png" />
+                        </a>
+                        <li>
+                          <a href="#">
+                            <input type="checkbox" id="category-spring-hybrid-z" name="category-spring" value="hybrid-z" />
+                            <label for="category-spring-hybrid-z">Hybrid Z Spring</label>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <input type="checkbox" id="category-spring-hybrid-h" name="category-spring" value="hybrid-h" />
+                            <label for="category-spring-hybrid-h">Hybrid H Spring</label>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <input type="checkbox" id="category-spring-hybrid-s" name="category-spring" value="hybrid-s" />
+                            <label for="category-spring-hybrid-s">Hybrid S Spring</label>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <input type="checkbox" id="category-spring-hybrid" name="category-spring" value="hybrid" />
+                            <label for="category-spring-hybrid">Hybrid Spring</label>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <input type="checkbox" id="category-spring-plus-power" name="category-spring" value="plus-power" />
+                            <label for="category-spring-plus-power">Plus Power Spring</label>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <input type="checkbox" id="category-spring-magin-power" name="category-spring" value="magin-power" />
+                            <label for="category-spring-magin-power">Magic Power Spring</label>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <input type="checkbox" id="category-spring-super-power" name="category-spring" value="super-power" />
+                            <label for="category-spring-super-power">Super Power Spring</label>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li data-menu="store">
+                      <ul>
+                        <a href="#">
+                          <em>판매처</em>
+                          <img alt="분류 열기" src="../img/side-icon-on.png" />
+                          <img alt="분류 닫기" src="../img/side-icon-off.png" />
+                        </a>
+                        <li>
+                          <a href="#">
+                            <input type="checkbox" id="category-store-dept" name="category-store" value="dept" />
+                            <label for="category-store-dept">백화점</label>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <input type="checkbox" id="category-store-agency" name="category-store" value="agency" />
+                            <label for="category-store-agency">대리점</label>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <input type="checkbox" id="category-store-online" name="category-store" value="online" />
+                            <label for="category-store-online">온라인몰</label>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <input type="checkbox" id="category-store-part" name="category-store" value="part" />
+                            <label for="category-store-part">일부매장</label>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+        
+              <div class="list row-3">
+                <div class="box">
+                  <dl>
+                    <dt><a href="#"><img alt="" src="../img/bed-mattress-01.jpg" class="photo" /></a></dt>
+                    <dd>
+                      <ul>
+                        <li>
+                          <p class="category-size">LK / LK / K / LQ / DD / SS</p>
+                        </li>
+                        <li>
+                          <p class="title">ROYAL ACE 400</p>
+                        </li>
+                        <li>
+                          <p class="categoty-rank">ROYAL ACE</p>
+                        </li>
+                      </ul>
+                      <img alt="찜하기" src="../img/icon-like.png" />
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt><a href="#"><img alt="" src="../img/bed-mattress-02.jpg" class="photo" /></a></dt>
+                    <dd>
+                      <ul>
+                        <li>
+                          <p class="category-size">LK / LK / K / LQ / DD / SS</p>
+                        </li>
+                        <li>
+                          <p class="title">ROYAL ACE 380</p>
+                        </li>
+                        <li>
+                          <p class="categoty-rank">ROYAL ACE</p>
+                        </li>
+                      </ul>
+                      <img alt="찜하기" src="../img/icon-like.png" />
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt><a href="#"><img alt="" src="../img/bed-mattress-03.jpg" class="photo" /></a></dt>
+                    <dd>
+                      <ul>
+                        <li>
+                          <p class="category-size">LK / LK / K / LQ / DD / SS</p>
+                        </li>
+                        <li>
+                          <p class="title">ROYAL ACE 360</p>
+                        </li>
+                        <li>
+                          <p class="categoty-rank">ROYAL ACE</p>
+                        </li>
+                      </ul>
+                      <img alt="찜하기" src="../img/icon-like.png" />
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt><a href="#"><img alt="" src="../img/bed-mattress-04.jpg" class="photo" /></a></dt>
+                    <dd>
+                      <ul>
+                        <li>
+                          <p class="category-size">LK / LK / K / LQ / DD / SS</p>
+                        </li>
+                        <li>
+                          <p class="title">ROYAL ACE 320D</p>
+                        </li>
+                        <li>
+                          <p class="categoty-rank">ROYAL ACE</p>
+                        </li>
+                      </ul>
+                      <img alt="찜하기" src="../img/icon-like.png" />
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt><a href="#"><img alt="" src="../img/bed-mattress-05.jpg" class="photo" /></a></dt>
+                    <dd>
+                      <ul>
+                        <li>
+                          <p class="category-size">LK / LK / K / LQ / DD / SS</p>
+                        </li>
+                        <li>
+                          <p class="title">ROYAL ACE 320</p>
+                        </li>
+                        <li>
+                          <p class="categoty-rank">ROYAL ACE</p>
+                        </li>
+                      </ul>
+                      <img alt="찜하기" src="../img/icon-like.png" />
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt><a href="#"><img alt="" src="../img/bed-mattress-06.jpg" class="photo" /></a></dt>
+                    <dd>
+                      <ul>
+                        <li>
+                          <p class="category-size">LK / LK / K / LQ / DD / SS</p>
+                        </li>
+                        <li>
+                          <p class="title">HYBRID TECH - RED</p>
+                        </li>
+                        <li>
+                          <p class="categoty-rank">HYBRID TECH</p>
+                        </li>
+                      </ul>
+                      <img alt="찜하기" src="../img/icon-like.png" />
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt><a href="#"><img alt="" src="../img/bed-mattress-07.jpg" class="photo" /></a></dt>
+                    <dd>
+                      <ul>
+                        <li>
+                          <p class="category-size">LK / LK / K / LQ / DD / SS</p>
+                        </li>
+                        <li>
+                          <p class="title">HYBRID TECH - VII</p>
+                        </li>
+                        <li>
+                          <p class="categoty-rank">HYBRID TECH</p>
+                        </li>
+                      </ul>
+                      <img alt="찜하기" src="../img/icon-like.png" />
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt><a href="#"><img alt="" src="../img/bed-mattress-08.jpg" class="photo" /></a></dt>
+                    <dd>
+                      <ul>
+                        <li>
+                          <p class="category-size">LK / LK / K / LQ / DD / SS</p>
+                        </li>
+                        <li>
+                          <p class="title">HYBRID TECH - BLUE</p>
+                        </li>
+                        <li>
+                          <p class="categoty-rank">HYBRID TECH</p>
+                        </li>
+                      </ul>
+                      <img alt="찜하기" src="../img/icon-like.png" />
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt><a href="#"><img alt="" src="../img/bed-mattress-09.jpg" class="photo" /></a></dt>
+                    <dd>
+                      <ul>
+                        <li>
+                          <p class="category-size">LK / LK / K / LQ / DD / SS</p>
+                        </li>
+                        <li>
+                          <p class="title">HYBRID TECH - V</p>
+                        </li>
+                        <li>
+                          <p class="categoty-rank">HYBRID TECH</p>
+                        </li>
+                      </ul>
+                      <img alt="찜하기" src="../img/icon-like.png" />
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt><a href="#"><img alt="" src="../img/bed-mattress-10.jpg" class="photo" /></a></dt>
+                    <dd>
+                      <ul>
+                        <li>
+                          <p class="category-size">K / LQ / DD / SS</p>
+                        </li>
+                        <li>
+                          <p class="title">HYBRID TECH - III</p>
+                        </li>
+                        <li>
+                          <p class="categoty-rank">HYBRID TECH</p>
+                        </li>
+                      </ul>
+                      <img alt="찜하기" src="../img/icon-like.png" />
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt><a href="#"><img alt="" src="../img/bed-mattress-11.jpg" class="photo" /></a></dt>
+                    <dd>
+                      <ul>
+                        <li>
+                          <p class="category-size">K / LQ / DD / SS</p>
+                        </li>
+                        <li>
+                          <p class="title">HYBRID TECH - WHITE</p>
+                        </li>
+                        <li>
+                          <p class="categoty-rank">HYBRID TECH</p>
+                        </li>
+                      </ul>
+                      <img alt="찜하기" src="../img/icon-like.png" />
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt><a href="#"><img alt="" src="../img/bed-mattress-12.jpg" class="photo" /></a></dt>
+                    <dd>
+                      <ul>
+                        <li>
+                          <p class="category-size">K / LQ / DD / SS</p>
+                        </li>
+                        <li>
+                          <p class="title">HYBRID TECH - ALPHA</p>
+                        </li>
+                        <li>
+                          <p class="categoty-rank">HYBRID TECH</p>
+                        </li>
+                      </ul>
+                      <img alt="찜하기" src="../img/icon-like.png" />
+                    </dd>
+                  </dl>
+                </div>
+                <div class="paging">
+                  <p class="number">
+                    <a href="#" class="prev_first"></a>
+                    <a href="#" class="on">1</a>
+                    <a href="#">2</a>
+                    <a href="#" class="next-last"></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+        
+          </div>
+        
+        </section>
+      
+      </main>
+
+      <?php include '../include/footer.html'; ?>
+    </div>
+
+  </body>
+</html>
