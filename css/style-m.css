@@ -64,9 +64,9 @@ body.sub #header h1 a img.white {display: block;}
 #main-science div.article-slide ul.slide li > ul > li:nth-child(3) {left: 200%;}
 #main-science div.article-slide ul.slide li > ul > li:nth-child(4) {left: 300%;}
 
-#main-science div.article-slide ul.slide li.title {position: absolute; top: 39%; left: 5%; padding-right: 5%;}
+#main-science div.article-slide ul.slide li.title {position: absolute; top: 41%; left: 5%; padding-right: 5%;}
 #main-science div.article-slide ul.slide li.title > ul > li {font-size: 20px; font-weight: 800; letter-spacing: 0.03em;}
-#main-science div.article-slide ul.slide li.text {position: absolute; top: 46%; left: 5%; padding-right: 5%;}
+#main-science div.article-slide ul.slide li.text {position: absolute; top: 49%; left: 5%; padding-right: 5%;}
 #main-science div.article-slide ul.slide li.text p.title {line-height: 35px; font-size: 25px; font-weight: 700; margin-bottom: 15px; letter-spacing: -0.1em;}
 #main-science div.article-slide ul.slide li.text p.content {line-height: 30px; font-size: 16px; white-space: pre-line; overflow: hidden;}
 #main-science div.article-slide ul.slide li.title > ul > li.on, 

@@ -337,8 +337,8 @@
                 <div class="scroll">
                   <div class="whole-bar">
                     <div class="bar">
-                      <span class="on">1번째 슬라이드</span>
-                      <span>2번째 슬라이드</span>
+                      <!-- <span class="on">1번째 슬라이드</span>
+                      <span>2번째 슬라이드</span> -->
                     </div>
                   </div>
                 </div>
@@ -452,6 +452,7 @@
     // setImageSlide('#main-visual div.image-slide', 'image');
     // setImageSlide('#main-science div.article-slide', 'article');
     // setImageSlide('#main-collection div.image-scroll', 'image-scroll');
+    var lang = 'kr';
 
     function ImageSlide(id, options) {
       // var $selectorSlide = $(selector);
@@ -561,8 +562,10 @@
         $selectorSlide.find('.indicator li:eq(' + (n - 1) + ')').addClass('on');
 
         curNumSlide = n;
-        prevNumSlide = (n === 1) ? totalNumSlide : (n - 1);
-        nextNumSlide = (n === totalNumSlide) ? 1 : (n + 1);
+        prevNumSlide = (n === 1) ? 1 : (n - 1);
+        nextNumSlide = (n === totalNumSlide) ? totalNumSlide : (n + 1);
+        // prevNumSlide = (n === 1) ? totalNumSlide : (n - 1);
+        // nextNumSlide = (n === totalNumSlide) ? 1 : (n + 1);
 
       }
       function setArticleSlide() {

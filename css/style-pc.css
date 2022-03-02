@@ -41,58 +41,78 @@ body {font-family: 'NanumSquare', sans-serif; font-size: 14px; color: #000000; b
 
 #header div.bottom {}
 #header > div.bottom > div.content-box {position: relative; height: 52px; margin: 0 auto;}
-/* #header h1 {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);} */
 #header h1 a {display: block;}
 #header h1 a img {display: block;}
 body.main #header h1 a img.black {display: block;}
 body.main #header h1 a img.white {display: none;}
 body.sub #header h1 a img.black {display: none;}
 body.sub #header h1 a img.white {display: block;}
-#gnb > ul {position: absolute; top: 50%; transform: translate(0, -50%);}
-#gnb > ul > li {float: left; color: #333; font-size: 16px; font-weight: 700;}
+#gnb > ul {position: absolute; top: 35%;}
+/* #gnb > ul {position: absolute; top: 50%; transform: translate(0, -50%);} */
+#gnb > ul > li {position: relative; float: left; color: #333; font-size: 17px; font-weight: 700;}
 #gnb > ul.etc > li.search {font-size: 18px;}
 body.main #gnb li.menu img.black {display: block;}
 body.main #gnb li.menu img.white {display: none;}
 body.sub #gnb li.menu img.black {display: none;}
 body.sub #gnb li.menu img.white {display: block;}
 
-#gnb > ul > li > a {display: block;}
-#gnb > ul.bed-product > li > a:hover, 
-#gnb > ul.about-ace > li > a:hover {color: #0890c0;}
-#gnb > ul > li > ul {position: absolute; height: 150px;}
-#gnb > ul.bed-product > li > ul {display: none;}
-#gnb > ul.about-ace > li > ul {display: none;}
-#gnb > ul > li > ul > li {margin-top: 12px; font-size: 15px; font-weight: 400;}
+#gnb > ul > li > a.kr {display: none;}
+#gnb > ul > li > a.en {display: block;}
+#gnb > ul > li.on > a {color: #0890c0;}
+#gnb > ul > li > ul {position: absolute; display: none; width: 100%; padding: 1em 0;}
+#gnb > ul > li > ul > li {font-size: 15px; font-weight: 400; padding: 0.5em 0;}
 #gnb > ul > li > ul > li > a {position: relative;}
 #gnb > ul > li > ul > li span {display: inline-block; white-space: nowrap;}
-#gnb > ul > li > ul > li span::after {content: ''; position: absolute; display: block; left: 0; bottom: 0; width: 0; height: 4px; background: #d6eff8; z-index:-1;}
-#gnb > ul > li > ul > li > a:hover span::after {width: 100%; transition: width 1s ease-out;}
-
+#gnb > ul > li > ul > li span::before {content: ''; position: absolute; display: block; left: 0; bottom: 0; width: 0; height: 4px; background: #d6eff8;}
+#gnb > ul > li > ul > li > a:hover span::before {width: 100%; transition: width 0.8s ease-out;}
+#gnb > ul.about-ace > li:last-child, 
+#gnb > ul.bed-product > li:last-child {padding-right: 0;}
 
 /* header mouse hover */
-#header::before {content: ''; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-color: #fff; transition: all 0.4s ease;}
-#header.open::before {height: 280px; box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3);}
+#header::before {content: ''; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-color: #fff; transition: height 0.4s ease;}
+#header.open::before {height: 350px; box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3);}
 #header.open h1 {display: none;}
-/* #header.open.bed-product #gnb > ul.bed-product > li + li {transition: margin 0.4s ease; margin-left: 40px;}
-#header.open.bed-product #gnb > ul.bed-product > li:nth-child(3){transition: margin 0.4s ease; margin-left: 10px;} */
-#header.open.about-ace #gnb > ul.about-ace > li + li {transition: margin 0.4s ease; margin-left: 80px;}
-#header.open.about-ace #gnb > ul.about-ace > li:nth-child(3){transition: margin 0.4s ease; margin-left: 20px;}
-#header.open.about-ace #gnb > ul.about-ace > li:nth-child(5){transition: margin 0.4s ease; margin-left: 20px;}
+#header.open #gnb > ul > li {height: 260px;}
+#header.open #gnb > ul.bed-product > li > a.kr {display: block;}
+#header.open #gnb > ul.bed-product > li > a.en {display: none;}
 /* end of header mouse hover */
 
 #gnb div.search-box {position: absolute; width: 100%; height: 0; background: #ffffff; box-sizing: border-box; overflow: hidden;} 
 
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1700px) {
   #header > div.bottom > div.content-box {max-width: calc(100% - 160px);}
   #header h1 {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
   #gnb > ul.bed-product {left: 0;}
   #gnb > ul.about-ace {right: 6%;}
   #gnb > ul.etc {right: 0;}
-  #gnb > ul > li + li {margin-left: 20px;}
+  #gnb > ul.bed-product > li {padding-right: 40px;}
+  #gnb > ul.about-ace > li {padding-right: 25px;}
+  #gnb > ul.etc > li + li {padding-left: 30px;}
   
   /* header mouse hover */
-  #header.open.bed-product #gnb > ul.bed-product > li + li {transition: margin 0.4s ease; margin-left: 40px;}
-  #header.open.bed-product #gnb > ul.bed-product > li:nth-child(3){transition: margin 0.4s ease; margin-left: 10px;}
+  #header.open.bed-product #gnb > ul.bed-product > li {padding-right: 70px;}
+  #header.open.about-ace #gnb > ul.about-ace > li:nth-child(1) {padding-right: 80px;}
+  #header.open.about-ace #gnb > ul.about-ace > li:nth-child(2) {padding-right: 40px;}
+  #header.open.about-ace #gnb > ul.about-ace > li:nth-child(3) {padding-right: 110px;}
+  #header.open.about-ace #gnb > ul.about-ace > li:nth-child(4) {padding-right: 65px;}
+  /* end of header mouse hover */
+}
+@media screen and (min-width: 1500px) and (max-width:1699.9px) {
+  #header > div.bottom > div.content-box {max-width: calc(100% - 160px);}
+  #header h1 {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+  #gnb > ul.bed-product {left: 0;}
+  #gnb > ul.about-ace {right: 7%;}
+  #gnb > ul.etc {right: 0;}
+  #gnb > ul.bed-product > li {padding-right: 20px;}
+  #gnb > ul.about-ace > li {padding-right: 15px;}
+  #gnb > ul.etc > li + li {padding-left: 30px;}
+  
+  /* header mouse hover */
+  #header.open.bed-product #gnb > ul.bed-product > li {padding-right: 50px;}
+  #header.open.about-ace #gnb > ul.about-ace > li:nth-child(1) {padding-right: 65px;}
+  #header.open.about-ace #gnb > ul.about-ace > li:nth-child(2) {padding-right: 20px;}
+  #header.open.about-ace #gnb > ul.about-ace > li:nth-child(3) {padding-right: 85px;}
+  #header.open.about-ace #gnb > ul.about-ace > li:nth-child(4) {padding-right: 70px;}
   /* end of header mouse hover */
 }
 @media screen and (min-width: 767.9px) and (max-width:1499.9px) {
@@ -105,7 +125,7 @@ body.sub #gnb li.menu img.white {display: block;}
   #gnb > ul.etc > li + li {margin-left: 30%;}
 
   /* header mouse hover */
-  #header.open.bed-product #gnb > ul.bed-product > li + li {transition: margin 0.4s ease; margin-left: 8%;}
+  #header.open.bed-product #gnb > ul.bed-product > li + li {margin-left: 8%;}
   /* end of header mouse hover */
 }
 
@@ -234,36 +254,42 @@ body.sub #gnb li.menu img.white {display: block;}
 
  @media screen and (min-width: 768px) and (max-width: 1279.9px) {
   #main-science div.article-slide {position: relative; margin-top: 30px; color: #fff;}
-  #main-science div.article-slide > div.box {position: relative; width: 100%; height: calc(100vh - 70px); margin: 0 auto;}
+  #main-science div.article-slide > div.box {position: relative; width: 100%; height: calc(100vh - 80px); margin: 0 auto;}
   #main-science div.article-slide img, 
-  #main-science div.article-slide video {max-width: 765px; height: 800px; object-fit: cover;}
+  #main-science div.article-slide video {width: 710px; height: 800px; object-fit: cover;}
   #main-science div.article-slide ul.slide {width: 100%; height: 100%;}
+  #main-science div.article-slide ul.slide > li {width: 710px;}
   #main-science div.article-slide ul.slide ul {position: relative;}
-  #main-science div.article-slide ul.slide li.visual {position: relative; margin: 0 auto; width: 100%; height: 100%;}
+  #main-science div.article-slide ul.slide li.visual {position: relative; margin: 0 auto; height: 100%;}
   #main-science div.article-slide ul.slide li.visual > ul {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
-  #main-science div.article-slide ul.slide li.visual > ul > li {position: absolute; display: none; top: 0; left: 50%; transform: translate(-50%, 0);}
-  #main-science div.article-slide ul.slide li.visual > ul > li::after {content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 800px; background: url(../img/main-science-back-m.png) center center no-repeat;}
+  #main-science div.article-slide ul.slide li.visual > ul > li {position: absolute; display: none; top: 0; left: 50%; height: 100%; transform: translate(-50%, 0);}
+
   #main-science div.article-slide ul.slide li > ul > li:first-child {display: block;}
   #main-science div.article-slide ul.slide li > ul > li:nth-child(2) {left: 100%;}
   #main-science div.article-slide ul.slide li > ul > li:nth-child(3) {left: 200%;}
   #main-science div.article-slide ul.slide li > ul > li:nth-child(4) {left: 300%;}
-  
-  #main-science div.article-slide ul.slide li.title {position: absolute; top: 38%; left: 5%; padding-right: 5%;}
-  #main-science div.article-slide ul.slide li.title > ul > li {font-size: 20px; font-weight: 800; letter-spacing: 0.03em;}
-  #main-science div.article-slide ul.slide li.text {position: absolute; top: 44%; left: 5%; padding-right: 5%;}
-  #main-science div.article-slide ul.slide li.text p.title {line-height: 35px; font-size: 25px; font-weight: 700; margin-bottom: 15px; letter-spacing: -0.1em;}
-  #main-science div.article-slide ul.slide li.text p.content {line-height: 30px; font-size: 16px; white-space: pre-line; overflow: hidden;}
+
+  #main-science div.article-slide ul.slide li.visual > ul > li::after {content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url(../img/main-science-back-m.png) center center no-repeat;}
+
+  #main-science div.article-slide ul.slide li.title {position: absolute; top: 30%; left: 53%; transform: translate(-50%, 0);}
+  #main-science div.article-slide ul.slide li.title > ul > li {font-size: 30px; font-weight: 800; letter-spacing: 0.03em;}
+  #main-science div.article-slide ul.slide li.text {position: absolute; top: 40%; left: 53%; transform: translate(-50%, 0);}
+  #main-science div.article-slide ul.slide li.text p.title {font-size: 40px; font-weight: 700; line-height: 1.3em; margin-bottom: 0.5em; letter-spacing: -0.1em;}
+  #main-science div.article-slide ul.slide li.text p.content {width: 50%; font-size: 20px; line-height: 1.5em; word-break: keep-all; overflow: hidden;}
   #main-science div.article-slide ul.slide li.title > ul > li.on, 
   #main-science div.article-slide ul.slide li.text > ul > li.on {display: block;}
   #main-science div.article-slide ul.slide li.title > ul > li:not(.on), 
   #main-science div.article-slide ul.slide li.text > ul > li:not(.on) {display: none;}
+
+  #main-science div.article-slide ul.indicator {display: block;}
+  #main-science div.article-slide p.control {display: none;}
 }
 
 
 #main-collection {position: relative; padding-top: 150px; background-color: #f4f7fa;}
 #main-collection > div.content-box {position: relative; max-width: calc(100% - 160px); margin: 0 auto;}
 #main-collection div.image-scroll-slide > p.tab {text-align: center; margin-top: 40px; margin-bottom: 50px;}
-#main-collection div.image-scroll-slide > p.tab span {font-size: 22px; color: #888;cursor: pointer;}
+#main-collection div.image-scroll-slide > p.tab span {font-size: 22px; color: #888; cursor: pointer;}
 #main-collection div.image-scroll-slide > p.tab span.on {color: #0890c0; font-weight: 800;}
 #main-collection div.image-scroll-slide > p.tab span + span::before {content: '|'; margin: 0 20px; font-size: 20px; color: #ddd;}
 
@@ -402,9 +428,15 @@ body.sub #main div.sub-header h2 {font-size: 60px; font-weight: 700; color: #fff
 #sub-product-list {position: relative; padding-bottom: 160px; border-bottom: 1px solid #ebebeb; box-sizing: border-box;}
 #sub-product-list div.product {margin-top: 20px;}
 #sub-product-list > div.product > div.content-box {position: relative; max-width: calc(100% - 80px); margin: 0 auto;}
-#sub-product-list div.top {position: relative; margin-bottom: 30px;}
-#sub-product-list div.top > p.total-product {position: relative; font-size: 18px; color: #666;}
+#sub-product-list div.top {position: relative; margin-bottom: 30px; overflow: hidden;}
+#sub-product-list div.top > p.total-product {position: relative; float: left; width: 22%; font-size: 18px; color: #666;}
 #sub-product-list div.top > p.total-product > strong.num {color: #333;}
+#sub-product-list div.top > div.filter {position: relative; float: left; width: 60%; font-size: 17px; font-weight: 700;  color: #333;}
+#sub-product-list div.top > div.filter span.clear {float: left; padding: 8px 20px; background-color: #e5e5e5;border-radius: 100px;}
+#sub-product-list div.top > div.filter > ul {overflow: hidden; padding: 0 5px;}
+#sub-product-list div.top > div.filter > ul > li {position: relative; float: left;}
+#sub-product-list div.top > div.filter > ul > li > span {padding: 0 15px; font-size: 15px;}
+#sub-product-list div.top > div.filter > ul > li > a {display: inline-block; width: 15px; line-height: 30px; background: url(../img/icon-btn-del.png) center center no-repeat; transform: translate(-50%, 0); text-indent: -9999px;}
 #sub-product-list div.top ul.arr-list {position: absolute; top: 0; right: 0;}
 #sub-product-list div.top ul.arr-list > li {position: relative; float: left;}
 #sub-product-list div.top > ul.arr-list > li.view {margin-right: 20px;}
@@ -424,12 +456,12 @@ body.sub #main div.sub-header h2 {font-size: 60px; font-weight: 700; color: #fff
 #sub-product-list div.top > ul.arr-list li.order select.arr::-ms-expand {display: none;} /*IE10*/
 
 #sub-product-list div.bottom {position: relative; margin-top: 50px; overflow: hidden;}
-#sub-product-list div.side {float: left;}
-#sub-product-list div.side div.search-box {width: 300px; border: 1px solid #ebebeb; box-sizing: border-box; box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 5%);}
+#sub-product-list div.side {float: left; width: 20%;}
+#sub-product-list div.side div.search-box {border: 1px solid #ebebeb; box-sizing: border-box; box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 5%);}
 #sub-product-list div.side div.search-box > p {position: relative; line-height: 50px; background-color: #adc4ce; color: #fff;}
 #sub-product-list div.side div.search-box > p i {color: #fff;}
 #sub-product-list div.side div.search-box > p label {position: absolute; right: 5%;}
-#sub-product-list div.side div.search-box input[type="text"] {width: 70%; margin-left: 50px; border: none; background-color: transparent; color: #ffffff; font-family: inherit; color: inherit; font-size: 16px; font-weight: 400; box-sizing: border-box;}
+#sub-product-list div.side div.search-box input[type="text"] {width: 70%; margin-left: 15%; border: none; background-color: transparent; color: #ffffff; font-family: inherit; color: inherit; font-size: 16px; font-weight: 400; box-sizing: border-box;}
 #sub-product-list div.side div.search-box input[type="text"]::placeholder {color: inherit;}
 #sub-product-list div.side div.search-box.on > div.keyword {display: block; margin: 0 30px 0 80px;}
 #sub-product-list div.side div.search-box > div.keyword {display: none;}
@@ -440,27 +472,37 @@ body.sub #main div.sub-header h2 {font-size: 60px; font-weight: 700; color: #fff
 #sub-product-list div.side div.search-box > div.keyword div.recommend-word {padding: 30px 0;}
 #sub-product-list div.side div.search-box > div.keyword div.recommend-word ul li {padding-bottom: 6px;}
 
-#sub-product-list div.side div.category-matt {margin: 36px 30px 0 50px;}
-#sub-product-list div.side ul > li.on > ul {color: #333; margin-bottom: 25px; padding-bottom: 30px; border-bottom: 1px solid #ebebeb; box-sizing: border-box;}
+#sub-product-list div.side div.category-matt {margin: 10% 10% 0 15%;}
+#sub-product-list div.side ul > li.on > ul {color: #333; margin-bottom: 25px; padding-bottom: 30px; border-bottom: 1px solid #ebebeb; box-sizing: border-box; transition: all 0.8s;}
 #sub-product-list div.side ul > li > ul > a {position: relative; display: block; line-height: 50px;}
 #sub-product-list div.side ul > li.on > ul > a {margin-bottom: 15px;}
 #sub-product-list div.side ul > li > ul > a > em {font-size: 18px; font-weight: 800;}
 #sub-product-list div.side ul > li > ul > a > img {position: absolute; top: 50%; right: 0; transform: translate(0, -50%);}
+#sub-product-list div.side ul > li > ul > a > img.open {display: none;}
+#sub-product-list div.side ul > li > ul > a > img.close {display: block;}
+#sub-product-list div.side ul > li.on > ul > a > img.open {display: block;}
+#sub-product-list div.side ul > li.on > ul > a > img.close {display: none;}
 #sub-product-list div.side ul > li > ul > li {display: none;}
 #sub-product-list div.side ul > li.on > ul > li {display: block;}
 #sub-product-list div.side ul > li > ul > li + li {margin-top: 16px;}
 #sub-product-list div.side ul > li > ul > li > a {display: block;}
 #sub-product-list div.side ul > li > ul > li > a > label {font-size: 16px;}
+#sub-product-list div.side ul > li.on > ul > li > a > img.open {display: block;}
 
-#sub-product-list div.list {position: relative; overflow: hidden; width: calc(100% - 430px); margin: 0 auto;}
+/* #sub-product-list div.side input[type="checkbox"] {position: absolute; opacity: 0;} */
+/* #sub-product-list div.side label::before {content: '\f111'; font-family: 'Font Awesome 5 Free'; font-weight: 400; margin-right: 6px;} */
+#sub-product-list div.side input[type="checkbox"]:checked + label::before {content: '\e27e';}
+/* #sub-product-list div.side input[type="checkbox"]:focus + label {outline: 2px dashed #05141f;} */
+
+#sub-product-list div.list {position: relative; overflow: hidden; width: 75%; max-width: 1380px; margin: 0 auto;}
 #sub-product-list div.list > div.box {overflow: hidden;}
 #sub-product-list div.list > div.box > dl > dt > a {display: block; overflow: hidden;}
 #sub-product-list div.list > div.box > dl > dt img.photo {transition: transform 0.5s;}
 #sub-product-list div.list > div.box > dl > dt > a:hover img.photo {transform: scale(1.05);}
 #sub-product-list div.list > div.box > dl {float: left; box-sizing: border-box;}
-#sub-product-list div.list.row-3 > div.box > dl {width: calc(33.3% - 14px); margin-right: 21px;}
+#sub-product-list div.list.row-3 > div.box > dl {width: 32%; margin-right: 2%;}
 #sub-product-list div.list.row-3 > div.box > dl:nth-child(3n) {margin-right: 0;}
-#sub-product-list div.list.row-2 > div.box > dl {width: calc(50% - 10px); margin-right: 20px;}
+#sub-product-list div.list.row-2 > div.box > dl {width: 46%; margin-right: 4%;}
 #sub-product-list div.list.row-2 > div.box > dl:nth-child(2n) {margin-right: 0;}
 #sub-product-list div.list > div.box > dl > dd {position: relative; margin: 30px 0;}
 #sub-product-list div.list > div.box > dl > dd p.category-size {font-size: 16px; font-weight: 400; color: #666; margin-bottom: 10px;}
