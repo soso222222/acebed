@@ -90,6 +90,7 @@ body.sub #gnb li.menu img.white {display: block;}
   #gnb > ul.etc > li + li {padding-left: 30px;}
   
   /* header mouse hover */
+  #header.open #gnb > ul > li {height: 260px;}
   #header.open.bed-product #gnb > ul.bed-product > li {padding-right: 70px;}
   #header.open.about-ace #gnb > ul.about-ace > li:nth-child(1) {padding-right: 80px;}
   #header.open.about-ace #gnb > ul.about-ace > li:nth-child(2) {padding-right: 40px;}
@@ -115,7 +116,7 @@ body.sub #gnb li.menu img.white {display: block;}
   #header.open.about-ace #gnb > ul.about-ace > li:nth-child(4) {padding-right: 70px;}
   /* end of header mouse hover */
 }
-@media screen and (min-width: 767.9px) and (max-width:1499.9px) {
+@media screen and (min-width: 1280px) and (max-width:1499.9px) {
   #header > div.bottom > div.content-box {max-width: calc(100% - 10%);}
   #header h1 {position: absolute; top: 50%; left: 0; transform: translate(0, -50%);}
   #gnb > ul.bed-product {left: 0; width: 70%; margin-left: calc(12% + 130px);}
@@ -173,23 +174,23 @@ body.sub #gnb li.menu img.white {display: block;}
 #footer div.quick-link > ul.menu > li:last-child > a:hover > p > span.more:before {background-color: #fff;}
 #footer div.quick-link > ul.menu > li:last-child > a:hover > p > span.more:after {background-color: #fff;}
 
-#footer div.quick-link > ul.content {position: absolute; right: 0; bottom: 0; color: #fff;}
+#footer div.quick-link > ul.content {position: fixed; right: 0; bottom: 0; color: #fff;}
 #footer div.quick-link > ul.content div.content-box {width: 280px; height: 560px; background: url(../img/footer-quick-link-catalogue.jpg) top center no-repeat;}
 #footer div.quick-link > ul.content div.catalogue {height: 140px; padding: 50px 40px;}
 #footer div.quick-link > ul.content div.catalogue > p {line-height: 1.2em; font-size: 20px;}
 #footer div.quick-link > ul.content div.catalogue > a {position: relative; display: inline-block; padding-top: 40px;}
-#footer div.quick-link > ul.content div.catalogue > a span {display: inline-block; white-space: nowrap;}
+#footer div.quick-link > ul.content div.catalogue > a span {display: inline-block; white-space: nowrap; font-weight: 700;}
 #footer div.quick-link > ul.content div.catalogue > a span::before {content: ''; position: absolute; display: inline-block; left: 0; bottom: 0; width: 0; height: 7px; background: rgba(255, 255, 255, 0.3);}
 #footer div.quick-link > ul.content div.catalogue > a:hover span::before {width: 100%; transition: width 0.4s ease-out;}
 #footer div.quick-link > ul.content div.quick-menu-list {position: relative; height: 240px; padding: 40px 40px; background-color: #fff;}
 #footer div.quick-link > ul.content div.quick-menu-list > ul {overflow: hidden;}
-#footer div.quick-link > ul.content div.quick-menu-list > ul > li {float: left; width: 200px; box-sizing: border-box;}
+#footer div.quick-link > ul.content div.quick-menu-list > ul > li {float: left; box-sizing: border-box;}
+#footer div.quick-link > ul.content div.quick-menu-list > ul > li + li {margin-top: 30px;}
 #footer div.quick-link > ul.content div.quick-menu-list > ul > li a {position: relative; display: block;}
-#footer div.quick-link > ul.content div.quick-menu-list > ul > li a span {position: relative; display: block; top: 50%; transform: translate(0, -50%); text-align: center; font-size: 14px; color: #666; font-weight: 700;}
-#footer div.quick-link > ul.content div.quick-menu-list a > span::before {content: ''; display: block; width: 46px; height: 32px;}
-#footer div.quick-link > ul.content div.quick-menu-list > ul > li:nth-child(1) a > span::before {background: url(../img/footer-quick-link-icon-01.png) 0 0 no-repeat; background-position-y: center;}
-#footer div.quick-link > ul.content div.quick-menu-list > ul > li:nth-child(2) a > span::before {background: url(../img/footer-quick-link-icon-02.png) 0 0 no-repeat; background-position-y: center;}
-#footer div.quick-link > ul.content div.quick-menu-list > ul > li:nth-child(3) a > span::before {background: url(../img/footer-quick-link-icon-03.png) 0 0 no-repeat; background-position-y: center;}
+#footer div.quick-link > ul.content div.quick-menu-list > ul > li a span {position: relative; display: inline-block; font-size: 14px; color: #000; font-weight: 700; padding-left: 60px; word-break: keep-all;}
+#footer div.quick-link > ul.content div.quick-menu-list > ul > li:nth-child(1) a span {width: 50%; height: 40px; background: url(../img/footer-quick-link-icon-01.png) left center no-repeat; background-position-y: center; background-size: 45px auto;}
+#footer div.quick-link > ul.content div.quick-menu-list > ul > li:nth-child(2) a span {line-height: 40px; background: url(../img/footer-quick-link-icon-02.png) left center no-repeat; background-position-y: center; background-size: 45px auto;}
+#footer div.quick-link > ul.content div.quick-menu-list > ul > li:nth-child(3) a span {line-height: 40px; background: url(../img/footer-quick-link-icon-03.png) left center no-repeat; background-position-y: center; background-size: 45px auto;}
 
 #footer div.quick-link > ul.content div.quick-menu-list > p.close {position: absolute; right: 20px; bottom: 20px;}
 #footer div.quick-link > ul.content div.quick-menu-list > p.close a {position: relative; display: block; width: 24px; height: 24px;}
@@ -222,7 +223,6 @@ body.sub #gnb li.menu img.white {display: block;}
 #main-science {position: relative; padding-top: 150px; padding-bottom: 80px;}
 #main-science div.article-slide {position: relative; }
 
-@media screen and (min-width: 1280px) {
 #main-science div.article-slide > div.box {width: calc(100% - 80px); margin: 30px auto;}
 #main-science div.article-slide ul.slide {position: relative; left: 0; overflow: hidden;}
 #main-science div.article-slide ul.slide > li {overflow: hidden;}
@@ -230,15 +230,11 @@ body.sub #gnb li.menu img.white {display: block;}
 #main-science div.article-slide ul.slide > li.title, 
 #main-science div.article-slide ul.slide > li.text {width: calc(30% - 12px);}
 #main-science div.article-slide ul.slide ul {position: relative;}
-#main-science div.article-slide ul.slide li.visual {position: relative; margin: 0 auto;}
-/* 오른쪽으로 이미지 붙이기 */
-#main-science div.article-slide ul.slide li.visual > ul {width: 3200px; height: 800px; display: inline-block; overflow: hidden;}
-#main-science div.article-slide ul.slide li.visual > ul > li {float: left;}
-#main-science div.article-slide img, 
-#main-science div.article-slide video {width: 621px; height: 801px; object-fit: cover;}
-/* 오른쪽으로 이미지 붙이기 */
-/* #main-science div.article-slide ul.slide li.visual video, 
-#main-science div.article-slide ul.slide li.visual img {display: block; width: 100%; height: 800px; object-fit: cover;} */
+#main-science div.article-slide ul.slide li.visual {position: relative; height: 100%; margin: 0 auto; overflow: hidden;}
+#main-science div.article-slide ul.slide li.visual > ul {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+#main-science div.article-slide ul.slide li.visual > ul > li {position: absolute; display: none; top: 0; width: 100%; height: 100%;}
+#main-science div.article-slide ul.slide li.visual img, 
+#main-science div.article-slide ul.slide li.visual video {width: 100%; max-width: 621px; height: 90vh; object-fit: cover;}
 #main-science div.article-slide ul.slide li.title {position: absolute; top: 0; left: 0; height: 100%;}
 #main-science div.article-slide ul.slide li.title > ul {position: relative; top: 50%; left: 50%; width: 60%; transform: translate(-50%, -50%);}
 #main-science div.article-slide ul.slide li.title > ul > li {font-size: 16px; color: #666; letter-spacing: 0.03em;}
@@ -247,95 +243,57 @@ body.sub #gnb li.menu img.white {display: block;}
 #main-science div.article-slide ul.slide li.text {position: absolute; top: 37%; right: 0; height: 100%;}
 #main-science div.article-slide ul.slide li.text p.title {line-height: 54px; font-size: 35px; color: #333; font-weight: 700; margin-bottom: 24px; letter-spacing: -0.1em;}
 #main-science div.article-slide ul.slide li.text p.content {width: 80%; min-height: 100%; line-height: 30px; font-size: 18px; color: #666; white-space: pre-line; overflow: hidden;}
-#main-science div.article-slide ul.slide li.text > ul {position: absolute; width: 90%; height: 100%;}
-#main-science div.article-slide ul.slide li.text > ul > li {position: absolute; display: none;}
-#main-science div.article-slide ul.slide li.text > ul > li.on {display: block;}
-}
-
- @media screen and (min-width: 768px) and (max-width: 1279.9px) {
-  #main-science div.article-slide {position: relative; margin-top: 30px; color: #fff;}
-  #main-science div.article-slide > div.box {position: relative; width: 100%; height: calc(100vh - 80px); margin: 0 auto;}
-  #main-science div.article-slide img, 
-  #main-science div.article-slide video {width: 710px; height: 800px; object-fit: cover;}
-  #main-science div.article-slide ul.slide {width: 100%; height: 100%;}
-  #main-science div.article-slide ul.slide > li {width: 710px;}
-  #main-science div.article-slide ul.slide ul {position: relative;}
-  #main-science div.article-slide ul.slide li.visual {position: relative; margin: 0 auto; height: 100%;}
-  #main-science div.article-slide ul.slide li.visual > ul {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
-  #main-science div.article-slide ul.slide li.visual > ul > li {position: absolute; display: none; top: 0; left: 50%; height: 100%; transform: translate(-50%, 0);}
-
-  #main-science div.article-slide ul.slide li > ul > li:first-child {display: block;}
-  #main-science div.article-slide ul.slide li > ul > li:nth-child(2) {left: 100%;}
-  #main-science div.article-slide ul.slide li > ul > li:nth-child(3) {left: 200%;}
-  #main-science div.article-slide ul.slide li > ul > li:nth-child(4) {left: 300%;}
-
-  #main-science div.article-slide ul.slide li.visual > ul > li::after {content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url(../img/main-science-back-m.png) center center no-repeat;}
-
-  #main-science div.article-slide ul.slide li.title {position: absolute; top: 30%; left: 53%; transform: translate(-50%, 0);}
-  #main-science div.article-slide ul.slide li.title > ul > li {font-size: 30px; font-weight: 800; letter-spacing: 0.03em;}
-  #main-science div.article-slide ul.slide li.text {position: absolute; top: 40%; left: 53%; transform: translate(-50%, 0);}
-  #main-science div.article-slide ul.slide li.text p.title {font-size: 40px; font-weight: 700; line-height: 1.3em; margin-bottom: 0.5em; letter-spacing: -0.1em;}
-  #main-science div.article-slide ul.slide li.text p.content {width: 50%; font-size: 20px; line-height: 1.5em; word-break: keep-all; overflow: hidden;}
-  #main-science div.article-slide ul.slide li.title > ul > li.on, 
-  #main-science div.article-slide ul.slide li.text > ul > li.on {display: block;}
-  #main-science div.article-slide ul.slide li.title > ul > li:not(.on), 
-  #main-science div.article-slide ul.slide li.text > ul > li:not(.on) {display: none;}
-
-  #main-science div.article-slide ul.indicator {display: block;}
-  #main-science div.article-slide p.control {display: none;}
-}
+#main-science div.article-slide ul.slide li.text > ul {position: absolute; width: 90%; height: 100%; margin-left: 10%;}
+#main-science div.article-slide ul.slide li.text > ul > li {position: absolute;}
 
 
 #main-collection {position: relative; padding-top: 150px; background-color: #f4f7fa;}
 #main-collection > div.content-box {position: relative; max-width: calc(100% - 160px); margin: 0 auto;}
-#main-collection div.image-scroll-slide > p.tab {text-align: center; margin-top: 40px; margin-bottom: 50px;}
-#main-collection div.image-scroll-slide > p.tab span {font-size: 22px; color: #888; cursor: pointer;}
-#main-collection div.image-scroll-slide > p.tab span.on {color: #0890c0; font-weight: 800;}
-#main-collection div.image-scroll-slide > p.tab span + span::before {content: '|'; margin: 0 20px; font-size: 20px; color: #ddd;}
+#main-collection div.image-scroll-slide {position: relative;}
+#main-collection div.image-scroll-slide p.tab {text-align: center; margin-top: 40px; margin-bottom: 50px;}
+#main-collection div.image-scroll-slide p.tab span {font-size: 22px; color: #888; cursor: pointer;}
+#main-collection div.image-scroll-slide p.tab span.on {color: #0890c0; font-weight: 800;}
+#main-collection div.image-scroll-slide p.tab span + span::before {content: '|'; margin: 0 20px; font-size: 20px; color: #ddd;}
 
-#main-collection div.image-scroll-slide > div.box {position: relative; width: calc(100% - 270px); height: 100%; margin: 50px auto;}
-#main-collection div.image-scroll-slide ul.slide > li {position: absolute; display: none; top: 0; width: 100%; height: 100%;}
-#main-collection div.image-scroll-slide ul.slide > li p.img {position: relative;}
-#main-collection div.image-scroll-slide ul.slide > li p.img::after {content: ''; position: absolute; display: block; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.3);}
-#main-collection div.image-scroll-slide ul.slide > li img {width: calc(100vw - 270px);}
-/* #main-collection div.image-scroll-slide ul.slide > li.on > div.preview-info {display: block;} */
+#main-collection div.image-scroll-slide > div.box {position: relative; width: calc(100% - 200px); max-width: 1270px; height: 100%; margin: 50px auto;}
+#main-collection div.image-scroll-slide p.dummy {width: calc(100vw - 200px); max-width: 1270px; max-height: 720px; opacity: 0;}
+#main-collection div.image-scroll-slide ul.slide > li {position: absolute; display: none; top: 0; width: 100%; height: 100%; }
+#main-collection div.image-scroll-slide ul.slide > li img {width: calc(100vw - 200px); max-width: 1270px; max-height: 720px;}
+#main-collection div.image-scroll-slide ul.slide > li div.img > div.box {position: relative; text-align: center; overflow: hidden;}
+#main-collection div.image-scroll-slide ul.slide > li div.img > div.box::before {content: ''; position: absolute; display: block; top: 0; left: 50%; width: 100%; max-width: 1270px; height: 100%; max-height: 720px; background-color: rgba(0, 0, 0, 0.3); transform: translate(-50%, 0);}
 
-#main-collection div.image-scroll-slide ul > li > div.preview-info {position: absolute; top: 10%; left: 8%; color: #fff;}
+#main-collection div.image-scroll-slide div.pick div.preview-info {display: none;}
+#main-collection div.image-scroll-slide ul.slide div.preview-info {position: absolute; top: 15%; left: 12%; color: #fff; text-align: left; overflow: hidden;}
 #main-collection div.image-scroll-slide ul.slide div.preview-info > p.tag {font-size: 16px;}
 #main-collection div.image-scroll-slide ul.slide div.preview-info > p.tag span {display: inline-block; box-sizing: border-box; border: 1px solid #fff; border-radius: 50px; padding: 4px 10px;}
 #main-collection div.image-scroll-slide ul.slide div.preview-info > p.title {font-size: 30px; font-weight: 800; margin-top: 30px;}
 #main-collection div.image-scroll-slide ul.slide div.preview-info > p.text {font-size: 18px; margin-top: 30px;}
-#main-collection div.image-scroll-slide ul.slide div.preview-info > a {display: inline-block; height: 50px; line-height: 50px; box-sizing: border-box; border: 1px solid #fff; padding: 0 34px; margin-top: 50px;}
-#main-collection div.image-scroll-slide ul.slide div.preview-info > a::before {content: ''; position: absolute; left: 0; bottom: 0; display: block; width: 110px; height: 0; background-color: #0890c0; box-sizing: border-box;}
-#main-collection div.image-scroll-slide ul.slide div.preview-info > a:hover::before {height: 50px; transition: height 0.5s ease-out;}
-#main-collection div.image-scroll-slide ul.slide div.preview-info > a > span {position: relative; font-size: 16px; font-weight: 700; z-index: 1;}
+#main-collection div.image-scroll-slide ul.slide div.preview-info > a.btn {display: inline-block; height: 50px; line-height: 50px; padding: 0 34px; margin-top: 50px; border: 1px solid #fff;}
+#main-collection div.image-scroll-slide ul.slide div.preview-info > a.btn::before {width: 110px;}
+#main-collection div.image-scroll-slide ul.slide div.preview-info > a.btn:hover::before {height: 50px;}
+#main-collection div.image-scroll-slide ul.slide div.preview-info > a.btn > span {font-size: 16px;}
 
-#main-collection div.image-scroll-slide p.control > a.prev {left: 0;}
-#main-collection div.image-scroll-slide p.control > a.next {right: 0;}
-#main-collection div.image-scroll-slide p.control > a > span {color: #fff;}
-#main-collection div.image-scroll-slide div.scroll {position: relative; margin-top: 40px;}
-#main-collection div.image-scroll-slide div.scroll div.whole-bar {width: 100%; height: 4px; box-sizing: border-box; background-color: #C9C9C9; border-radius: 50px;}
-#main-collection div.image-scroll-slide div.scroll div.bar {display: block; width: 100%;}
-#main-collection div.image-scroll-slide div.scroll div.bar span {display: block; float: left; width: 33.3%; text-indent: -1999px;}
-#main-collection div.image-scroll-slide div.scroll div.bar span.on {height: 4px; box-sizing: border-box; background-color: #0890c0; border-radius: 50px;}
+#main-collection div.image-scroll-slide p.control > a > span {color: #fff; font-weight: 700;}
+
+#main-collection div.image-scroll-slide div.scroll {position: relative; width: calc(100vw - 200px); max-width: 1270px; max-height: 720px; margin: 3% auto 0 auto;}
 
 
 #main-event {position: relative; padding: 150px 0; background-color: #f4f7fa;}
-#main-event div.article-slide {position: relative; width: calc(100% - 80px); margin: 45px auto;}
-#main-event div.article-slide ul.slide {position: relative; left: 0; overflow: hidden;}
-#main-event div.article-slide ul.slide > li:nth-child(1) {width: calc(50% - 18px); overflow: hidden;}
-#main-event div.article-slide ul.slide > li:nth-child(2) {width: calc(25% - 18px); overflow: hidden;}
-#main-event div.article-slide ul.slide > li:nth-child(3) {width: calc(25% - 18px); overflow: hidden;}
+#main-event div.article-slide {margin-top: 45px;}
+
+
+#main-event > div.content-box {position: relative; width: calc(100% - 80px); margin: 0 auto;}
+#main-event div.article-slide > div.box {position: relative; height: 710px; margin: 0 auto;}
 #main-event div.article-slide ul.slide ul {position: relative;}
-#main-event div.article-slide ul.slide li.visual {position: relative; margin: 0 auto;}
-#main-event div.article-slide ul.slide li.visual > ul {width: 3200px; height: 800px; display: inline-block; overflow: hidden;}
-#main-event div.article-slide ul.slide li.visual > ul > li {float: left;}
+#main-event div.article-slide ul.slide li.visual {position: relative; width: 50%; max-width: 710px; height: 100%; margin: 0 auto; overflow: hidden;}
+#main-event div.article-slide ul.slide li.visual > ul {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+#main-event div.article-slide ul.slide li.visual > ul > li {position: absolute; display: none; top: 0; width: 100%; height: 100%;}
 #main-event div.article-slide ul.slide li.visual img, 
-#main-event div.article-slide ul.slide li.visual video {width: 47vw;}
-#main-event div.article-slide ul.slide li.title {position: absolute; top: 0; left: 0; height: 100%;}
-#main-event div.article-slide ul.slide li.title > p {position: relative; top: 50%; left: 50%; line-height: 1.5em; transform: translate(-50%, -50%); font-size: 26px; font-weight: 300; color: #333; letter-spacing: 0.03em;}
-#main-event div.article-slide ul.slide li.text {position: absolute; top: 0; right: 0; height: 100%;}
-#main-event div.article-slide ul.slide li.text > ul {position: relative; top: 50%; left: 50%; width: 90%; transform: translate(-50%, -50%);}
+#main-event div.article-slide ul.slide li.visual video {width: 100%; max-width: 710px;}
+#main-event div.article-slide ul.slide li.title {position: absolute; top: 0; left: 0; width: 20%; height: 100%; padding: 0 1% 0 4%;}
+#main-event div.article-slide ul.slide li.title > p {position: relative; top: 50%; left: 50%; line-height: 1.5em; transform: translate(-50%, -50%); font-size: 26px; font-weight: 400; color: #333; letter-spacing: 0.03em;}
+#main-event div.article-slide ul.slide li.text {position: absolute; top: 0; right: 0; width: 20%; height: 100%; padding: 0 1% 0 4%;}
+#main-event div.article-slide ul.slide li.text > ul {position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%);}
 #main-event div.article-slide ul.slide li.text > ul li {font-size: 16px; color: #666; letter-spacing: 0.03em;}
 #main-event div.article-slide ul.slide li.text > ul li a {display: block; line-height: 50px; box-sizing: border-box; border-bottom: 1px solid #ebebeb; padding: 40px 0;}
 #main-event div.article-slide ul.slide li.text > ul > li.on a em {color: #0890c0;}
@@ -360,9 +318,9 @@ body.sub #gnb li.menu img.white {display: block;}
 #main-map div.map {height: 500px; background: url(../img/main-store-map.jpg) center center no-repeat; background-size: cover;}
 #main-map > div.content-box {position: relative; max-width: calc(100% - 80px); margin: 0 auto;}
 
-#main-map div.close-store {position: absolute; right: 0; bottom: 30%; width: 340px; height: 340px; background-color: #0890c0;}
+#main-map div.close-store {position: absolute; right: 0; bottom: 30%; width: 340px; height: 340px; background-color: #0890c0; transition: width 0.8s;}
 #main-map div.close-store div.box {margin: 90px 70px;}
-#main-map div.close-store p.text {line-height: 30px; font-size: 20px; color: #fff; text-align: center;}
+#main-map div.close-store p.text {line-height: 30px; font-size: 20px; color: #fff; text-align: center; word-break: keep-all;}
 #main-map div.close-store p.search {box-sizing: border-box; border-bottom: 2px solid #fff; color: #fff; margin-top: 50px; overflow: hidden;}
 #main-map div.close-store p.search input[type="text"] {float: left; border: none; background-color: transparent; padding: 10px 0;}
 #main-map div.close-store p.search input[type="text"]::placeholder {overflow: hidden; white-space: nowrap; text-overflow: ellipsis; color: rgba(221, 221, 221, 0.6); font-size: 14px;}
@@ -391,15 +349,13 @@ body.sub #gnb li.menu img.white {display: block;}
 #main-contact div.app {width: 50%; height: 100%;}
 #main-contact div.app div.box {position: relative; display: inline-block; top: 50%; left: 50%; transform: translate(-50%, -50%); overflow: hidden;}
 #main-contact div.app p.title {font-size: 30px;}
-#main-contact div.app ul.app-store {display: block; font-size: 16px; font-weight: 700; letter-spacing: 0.1em; color: #777; margin-top: 30px; overflow: hidden;}
-#main-contact div.app ul.app-store a {position: relative; display: block; height: 50px; line-height: 50px; box-sizing: border-box; border: 1px solid #d1d1d1; padding: 0 34px;}
-#main-contact div.app ul.app-store a::before {content: ''; position: absolute; left: 0; bottom: 0; display: block; width: 100%; height: 0; background-color: #0890c0; box-sizing: border-box;}
-#main-contact div.app ul.app-store a:hover::before {height: 50px; color: #fff; transition: height 0.5s ease-out;}
-#main-contact div.app ul.app-store a > span {position: relative; font-size: 16px; font-weight: 700; z-index: 1;}
-#main-contact div.app ul.app-store a:hover span {color: #fff;}
+#main-contact div.app ul.app-store {display: block; color: #777; margin-top: 30px; overflow: hidden;}
+#main-contact div.app ul.app-store a.btn {height: 50px; line-height: 50px; padding: 0 34px;}
+#main-contact div.app ul.app-store a.btn:hover::before {height: 50px;}
+#main-contact div.app ul.app-store a.btn > span {font-size: 17px;}
 
 #main-contact div.app ul.app-store li {float: left;}
-#main-contact div.app ul.app-store li + li {margin-left: 30px;}
+#main-contact div.app ul.app-store li + li {margin-left: 20px;}
 #main-contact div.app p.more {margin-top: 30px;}
 #main-contact div.app p.more a {position: relative; font-size: 16px; color: #666; letter-spacing: 0.06em; margin-top: 40px;}
 #main-contact div.app p.more a::after {content: ''; display: inline-block; width: 30px; height: 1px; background-color: #666; vertical-align: middle; margin-left: 14px;}
@@ -428,14 +384,16 @@ body.sub #main div.sub-header h2 {font-size: 60px; font-weight: 700; color: #fff
 #sub-product-list {position: relative; padding-bottom: 160px; border-bottom: 1px solid #ebebeb; box-sizing: border-box;}
 #sub-product-list div.product {margin-top: 20px;}
 #sub-product-list > div.product > div.content-box {position: relative; max-width: calc(100% - 80px); margin: 0 auto;}
+#sub-product-list div.top-m {display: none;}
 #sub-product-list div.top {position: relative; margin-bottom: 30px; overflow: hidden;}
 #sub-product-list div.top > p.total-product {position: relative; float: left; width: 22%; font-size: 18px; color: #666;}
 #sub-product-list div.top > p.total-product > strong.num {color: #333;}
-#sub-product-list div.top > div.filter {position: relative; float: left; width: 60%; font-size: 17px; font-weight: 700;  color: #333;}
-#sub-product-list div.top > div.filter span.clear {float: left; padding: 8px 20px; background-color: #e5e5e5;border-radius: 100px;}
+#sub-product-list div.top > div.filter {position: relative; display: none; float: left; width: 60%; font-size: 17px; font-weight: 700;  color: #333;}
+#sub-product-list div.top > div.filter.on {display: block;}
+#sub-product-list div.top > div.filter span.clear {float: left; padding: 8px 20px; background-color: #e5e5e5; border-radius: 100px; cursor: pointer;}
 #sub-product-list div.top > div.filter > ul {overflow: hidden; padding: 0 5px;}
 #sub-product-list div.top > div.filter > ul > li {position: relative; float: left;}
-#sub-product-list div.top > div.filter > ul > li > span {padding: 0 15px; font-size: 15px;}
+#sub-product-list div.top > div.filter > ul > li > span {padding: 0 15px; font-size: 17px;}
 #sub-product-list div.top > div.filter > ul > li > a {display: inline-block; width: 15px; line-height: 30px; background: url(../img/icon-btn-del.png) center center no-repeat; transform: translate(-50%, 0); text-indent: -9999px;}
 #sub-product-list div.top ul.arr-list {position: absolute; top: 0; right: 0;}
 #sub-product-list div.top ul.arr-list > li {position: relative; float: left;}
@@ -473,25 +431,30 @@ body.sub #main div.sub-header h2 {font-size: 60px; font-weight: 700; color: #fff
 #sub-product-list div.side div.search-box > div.keyword div.recommend-word ul li {padding-bottom: 6px;}
 
 #sub-product-list div.side div.category-matt {margin: 10% 10% 0 15%;}
-#sub-product-list div.side ul > li.on > ul {color: #333; margin-bottom: 25px; padding-bottom: 30px; border-bottom: 1px solid #ebebeb; box-sizing: border-box; transition: all 0.8s;}
-#sub-product-list div.side ul > li > ul > a {position: relative; display: block; line-height: 50px;}
-#sub-product-list div.side ul > li.on > ul > a {margin-bottom: 15px;}
-#sub-product-list div.side ul > li > ul > a > em {font-size: 18px; font-weight: 800;}
-#sub-product-list div.side ul > li > ul > a > img {position: absolute; top: 50%; right: 0; transform: translate(0, -50%);}
-#sub-product-list div.side ul > li > ul > a > img.open {display: none;}
-#sub-product-list div.side ul > li > ul > a > img.close {display: block;}
+#sub-product-list div.side ul > li > a {position: relative; display: block; line-height: 50px;}
+#sub-product-list div.side ul > li.on > a {margin-bottom: 15px;}
+#sub-product-list div.side ul > li > ul {transition: height 0.8s;}
+#sub-product-list div.side ul > li.on > ul {color: #333; margin-bottom: 25px; overflow: hidden;}
+#sub-product-list div.side ul > li > a > em {font-size: 18px; font-weight: 800;}
+#sub-product-list div.side ul > li > a > img {position: absolute; top: 50%; right: 0; transform: translate(0, -50%);}
+#sub-product-list div.side ul > li > a > img.open {display: none;}
+#sub-product-list div.side ul > li > a > img.close {display: block;}
 #sub-product-list div.side ul > li.on > ul > a > img.open {display: block;}
 #sub-product-list div.side ul > li.on > ul > a > img.close {display: none;}
 #sub-product-list div.side ul > li > ul > li {display: none;}
-#sub-product-list div.side ul > li.on > ul > li {display: block;}
-#sub-product-list div.side ul > li > ul > li + li {margin-top: 16px;}
-#sub-product-list div.side ul > li > ul > li > a {display: block;}
-#sub-product-list div.side ul > li > ul > li > a > label {font-size: 16px;}
+#sub-product-list div.side ul > li.on > ul > li {display: block; line-height: 40px;}
+#sub-product-list div.side ul > li.on > ul > li:last-child {border-bottom: 1px solid #ebebeb; box-sizing: border-box; padding-bottom: 30px;}
+#sub-product-list div.side ul > li.on > ul > li > a {display: block;}
 #sub-product-list div.side ul > li.on > ul > li > a > img.open {display: block;}
+#sub-product-list div.side ul > li > ul > li > input {position: absolute; opacity: 0;}
+#sub-product-list div.side ul > li > ul > li > label {position: relative; line-height: 15px; font-size: 17px;}
+#sub-product-list div.side ul > li > ul > li > label::before {content: ''; display: inline-block; width: 15px; height: 15px; border: 1px solid #888; margin-right: 6px; margin-top: 1px;}
+#sub-product-list div.side ul > li > ul > li > label::after {content: ''; position: absolute; display: none; top: 3px; left: 5px; width: 6px; height: 6px; background-color: #333; border-radius: 1px;}
+#sub-product-list div.side ul > li > ul > li > input:checked ~ label::after {display: inline-block;}
+/* #sub-product-list div.side ul > li > ul > li > a > input:focus + label {outline: 2px dashed #05141f;} */
 
 /* #sub-product-list div.side input[type="checkbox"] {position: absolute; opacity: 0;} */
 /* #sub-product-list div.side label::before {content: '\f111'; font-family: 'Font Awesome 5 Free'; font-weight: 400; margin-right: 6px;} */
-#sub-product-list div.side input[type="checkbox"]:checked + label::before {content: '\e27e';}
 /* #sub-product-list div.side input[type="checkbox"]:focus + label {outline: 2px dashed #05141f;} */
 
 #sub-product-list div.list {position: relative; overflow: hidden; width: 75%; max-width: 1380px; margin: 0 auto;}
@@ -505,9 +468,8 @@ body.sub #main div.sub-header h2 {font-size: 60px; font-weight: 700; color: #fff
 #sub-product-list div.list.row-2 > div.box > dl {width: 46%; margin-right: 4%;}
 #sub-product-list div.list.row-2 > div.box > dl:nth-child(2n) {margin-right: 0;}
 #sub-product-list div.list > div.box > dl > dd {position: relative; margin: 30px 0;}
-#sub-product-list div.list > div.box > dl > dd p.category-size {font-size: 16px; font-weight: 400; color: #666; margin-bottom: 10px;}
+#sub-product-list div.list > div.box > dl > dd p {font-size: 16px; font-weight: 400; color: #666; margin-bottom: 10px;}
 #sub-product-list div.list > div.box > dl > dd p.title {font-size: 18px; font-weight: 800; color: #333; margin-bottom: 6px;}
-#sub-product-list div.list > div.box > dl > dd p.categoty-rank {font-size: 16px; font-weight: 400; color: #666;}
 #sub-product-list div.list > div.box > dl > dd img {position: absolute; top: 0; right: 0;}
 
 #sub-product-list div.paging {margin-top: 60px; text-align: center;}
@@ -520,27 +482,34 @@ body.sub #main div.sub-header h2 {font-size: 60px; font-weight: 700; color: #fff
 
 
 /* module */
-div[class$="-slide"] {overflow: hidden;}
 div.image-slide > div.box {position: relative; width: calc(100% - 160px); height: calc(100vh - 280px); margin: 30px auto; overflow: hidden;}
 div.image-slide video, 
 div.image-slide img {width: calc(100vw - 170px); height: 100vh; object-fit: cover; transform: translate(0, -20%);}
-div[class$="-slide"] p.dummy {opacity: 0;}
-div[class$="-slide"] ul.slide {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+p.dummy {opacity: 0;}
+ul.slide {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
 div.image-slide ul.slide > li {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
-div[class$="-slide"]  ul.slide > li a {display: block;}
-div[class$="-slide"] p.control > a {position: absolute; top: 50%; transform: translate(0, -50%);}
-div[class$="-slide"] p.control > a.prev {left: 0;}
-div[class$="-slide"] p.control > a.prev.first > svg > path {stroke: #e8e8e8;}
-div[class$="-slide"] p.control > a.next {right: 0;}
-div[class$="-slide"] p.control > a.next.last > svg > path {stroke: #e8e8e8;}
-div[class$="-slide"] p.control > a > svg {width: 50px; height: 150px;}
-div[class$="-slide"] p.control > a > svg > path {stroke: #C9C9C9; stroke-width: 4; fill: transparent; transition: 0.6s; stroke-linecap: round;}
-div[class$="-slide"] p.control > a > span {position: absolute; top: 36%; writing-mode: vertical-rl; opacity: 0; font-size: 15px;}
-div[class$="-slide"] p.control > a.next > span {right: 100%;}
-div[class$="-slide"] p.control > a > span.on {opacity: 1;}
-div[class$="-slide"] p.control > a:first-child > span {transform: rotate(180deg);}
+ul.slide > li a {display: block;}
+p.control > a {position: absolute; top: 50%; transform: translate(0, -50%);}
+p.control > a.prev {left: 0;}
+p.control > a.prev.first > svg > path {stroke: #e8e8e8;}
+p.control > a.next {right: 0;}
+p.control > a.next.last > svg > path {stroke: #e8e8e8;}
+p.control > a > svg {width: 50px; height: 150px;}
+p.control > a > svg > path {stroke: #C9C9C9; stroke-width: 4; fill: transparent; transition: 0.6s; stroke-linecap: round;}
+p.control > a > span {position: absolute; top: 36%; writing-mode: vertical-rl; opacity: 0; font-size: 15px;}
+p.control > a.next > span {right: 100%;}
+p.control > a > span.on {opacity: 1;}
+p.control > a:first-child > span {transform: rotate(180deg);}
 
+a.btn {position: relative; display: inline-block; min-width: 100px; height: 40px; line-height: 40px; box-sizing: border-box; border: 1px solid #d1d1d1;}
+a.btn::before {content: ''; position: absolute; left: 0; bottom: 0; display: block; width: 100%; height: 0; background-color: #0890c0; box-sizing: border-box;}
+a.btn:hover::before {height: 40px; color: #fff; transition: height 0.5s ease-out;}
+a.btn > span {position: relative; font-weight: 700; z-index: 1;}
+a.btn:hover span {color: #fff;}
 
+div.bar {position: relative; height: 60px;}
+div.bar::before {content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; box-sizing: border-box; border-radius: 50px; background-color: #C9C9C9;}
+div.bar span {position: absolute; top: 0; height: 4px; box-sizing: border-box; border-radius: 50px; transition: left 1s; background-color: #0890c0;}
 
 
 

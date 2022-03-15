@@ -47,14 +47,24 @@ function addEvent() {
   $('#gnb > ul.bed-product').on('mouseenter', function () {
     headerMouseEvents('enter', 'bed-product');
   });
-  $('#gnb > ul.bed-product a').on('focus', function () {
+  // $('#gnb > ul.bed-product a').on('focus', function () {
+  //   headerMouseEvents('enter', 'bed-product');
+  // });
+  $('#gnb > ul.bed-product').on('focusin', function() {
     headerMouseEvents('enter', 'bed-product');
+  }).on('focusout', function() {
+    headerMouseEvents('leave', 'bed-product');
   });
   $('#gnb > ul.about-ace').on('mouseenter', function () {
     headerMouseEvents('enter', 'about-ace');
   });
-  $('#gnb > ul.about-ace a').on('focus', function () {
+  // $('#gnb > ul.about-ace a').on('focus', function () {
+  //   headerMouseEvents('enter', 'about-ace');
+  // });
+  $('#gnb > ul.bed-product').on('focusin', function() {
     headerMouseEvents('enter', 'about-ace');
+  }).on('focusout', function() {
+    headerMouseEvents('leave', 'about-ace');
   });
   $('#gnb > ul.bed-product').on('mouseleave', function () {
     headerMouseEvents('leave', 'bed-product');
@@ -90,9 +100,28 @@ function addEvent() {
   $('#sub-product-list div.top > ul.arr-list > li.view > ul > li.row-2 a').on('click', function () {
     showRowView('row-2');
   });
-  $('#sub-product-list div.side ul > li > ul > a').on('click', function () {
-    $('#sub-product-list div.side ul > li').removeClass('on');
-    $(this).parent().parent().addClass('on');
+  $('#sub-product-list .category-matt > ul > li > a').on('click', function () {
+    var mattLi = $(this).parent();
+    if(mattLi.hasClass('on')){
+      mattLi.find('ul').css({'height': '0'});
+      mattLi.removeClass('on');
+    } else {
+      $('#sub-product-list .category-matt > ul > li').removeClass('on');
+      mattLi.addClass('on');
+      
+      if(mattLi.find('ul').length > 0) {
+        var height = 0;
+        $(this).next().find(' > li').each(function() {
+          height += $(this).outerHeight(true);
+          // $(this).removeClass('on');
+        });
+        $(this).next().css({'height': height + 'px'});
+        $(this).parent().siblings().each(function() {
+          $(this).find('ul').css({'height': '0'});
+        });
+      }
+    }
+     
   });
 
 

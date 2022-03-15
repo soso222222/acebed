@@ -1,0 +1,100 @@
+{
+	"bedInfo":[
+		{
+			"name":"ROYAL ACE 400", 
+			"category-size":"LK / LK / K / LQ / DD / SS",
+			"category-rank":"ROYAL ACE",
+			"category-cushion":"PREMIUM SOFT",
+			"category-spring":"HYBRID Z",
+			"category-store":"ONLINE"
+		},
+		{
+			"name":"ROYAL ACE 380", 
+			"category-size":"LK / LK / K / LQ / DD / SS",
+			"category-rank":"ROYAL ACE",
+			"category-cushion":"PREMIUM SOFT",
+			"category-spring":"HYBRID Z",
+			"category-store":"ONLINE"
+		},
+		{
+			"name":"ROYAL ACE 360", 
+			"category-size":"LK / LK / K / LQ / DD / SS",
+			"category-rank":"ROYAL ACE",
+			"category-cushion":"SOFT",
+			"category-spring":"HYBRID s",
+			"category-store":"ONLINE"
+		},
+		{
+			"name":"ROYAL ACE 320D", 
+			"category-size":"LK / LK / K / LQ / DD / SS",
+			"category-rank":"ROYAL ACE",
+			"category-cushion":"PREMIUM SOFT",
+			"category-spring":"HYBRID Z",
+			"category-store":"ONLINE"
+		},
+		{
+			"name":"ROYAL ACE 320", 
+			"category-size":"LK / LK / K / LQ / DD / SS",
+			"category-rank":"ROYAL ACE",
+			"category-cushion":"SOFT",
+			"category-spring":"HYBRID Z",
+			"category-store":"ONLINE"
+		},
+		{
+			"name":"HYBRID TECH - RED", 
+			"category-size":"LK / LK / K / LQ / DD / SS",
+			"category-rank":"HYBRID TECH",
+			"category-cushion":"PREMIUM SOFT",
+			"category-spring":"HYBRID h",
+			"category-store":"ONLINE"
+		},
+		{
+			"name":"HYBRID TECH - VII", 
+			"category-size":"LK / LK / K / LQ / DD / SS",
+			"category-rank":"HYBRID TECH",
+			"category-cushion":"PREMIUM SOFT",
+			"category-spring":"HYBRID Z",
+			"category-store":"ONLINE"
+		},
+		{
+			"name":"HYBRID TECH - BLUE", 
+			"category-size":"LK / LK / K / LQ / DD / SS",
+			"category-rank":"HYBRID TECH",
+			"category-cushion":"PREMIUM SOFT",
+			"category-spring":"HYBRID Z",
+			"category-store":"ONLINE"
+		},
+		{
+			"name":"HYBRID TECH - V", 
+			"category-size":"LK / LK / K / LQ / DD / SS",
+			"category-rank":"HYBRID TECH",
+			"category-cushion":"PREMIUM SOFT",
+			"category-spring":"HYBRID Z",
+			"category-store":"ONLINE"
+		},
+		{
+			"name":"HYBRID TECH - III", 
+			"category-size":"K / LQ / DD / SS",
+			"category-rank":"HYBRID TECH",
+			"category-cushion":"SOFT",
+			"category-spring":"HYBRID Z",
+			"category-store":"ONLINE"
+		},
+		{
+			"name":"HYBRID TECH - WHITE", 
+			"category-size":"K / LQ / DD / SS",
+			"category-rank":"HYBRID TECH",
+			"category-cushion":"REG",
+			"category-spring":"HYBRID Z",
+			"category-store":"ONLINE"
+		},
+		{
+			"name":"HYBRID TECH - ALPHA", 
+			"category-size":"K / LQ / DD / SS",
+			"category-rank":"HYBRID TECH",
+			"category-cushion":"PREMIUM SOFT",
+			"category-spring":"HYBRID",
+			"category-store":"ONLINE"
+		}
+	]
+}
