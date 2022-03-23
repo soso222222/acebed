@@ -116,6 +116,7 @@ a.custom-arrow span::before {content: ''; position: absolute; left: calc(100% + 
   #main-visual div.image-slide > div.box {height: calc(100vh - 280px);}
   #main-visual div.image-slide video, 
   #main-visual div.image-slide img {width: 100%; height: calc(100vh - 280px); object-fit: cover;}
+  #main-visual div.image-slide img.m {display: none;}
 
 }
 @media screen and (max-width: 767.9px) {
@@ -130,8 +131,10 @@ a.custom-arrow span::before {content: ''; position: absolute; left: calc(100% + 
   body.main #header h1 a img.white {display: none;}
   body.sub #header h1 a img.black {display: none;}
   body.sub #header h1 a img.white {display: block;}
+  #main-visual {margin-top: 85px;}
   #main-visual div.image-slide video, 
-  #main-visual div.image-slide img {width: 100%; height: calc(100vh - 120px); object-fit: cover;}
+  #main-visual div.image-slide img {width: 100%; height: calc(100vh - 180px); object-fit: cover;}
+  #main-visual div.image-slide img.p {display: none;}
 }
 
 
@@ -191,7 +194,7 @@ a.custom-arrow span::before {content: ''; position: absolute; left: calc(100% + 
 
 /* module */
 div[class$="-slide"] {overflow: hidden;}
-div.image-slide > div.box {position: relative; width: calc(100vw - 70px); height: calc(100vh - 120px); margin: 0 auto; overflow: hidden;}
+div.image-slide > div.box {position: relative; width: 90vw; height: calc(100vh - 180px); margin: 0 auto; overflow: hidden;}
 div[class$="-slide"] p.dummy {opacity: 0;}
 ul.slide {position: absolute; left: 0; width: 100%; height: 100%;}
 div.image-slide ul.slide > li {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
@@ -491,6 +494,7 @@ body.sub #main div.sub-header h2 {font-size: 30px; font-weight: 700; color: #fff
   #sub-product-list div.side ul > li > ul > li > label::after {content: ''; position: absolute; display: none; top: 3px; left: 5px; width: 6px; height: 6px; background-color: #333; border-radius: 1px;}
   #sub-product-list div.side ul > li > ul > li > input:checked ~ label::after {display: inline-block;}
   
+  #sub-product-list div.list {position: relative; overflow: hidden; width: 75%; margin: 0 auto;}
   #sub-product-list div.list.row-3 > div.box > dl {width: 46%; margin-right: 4%;}
   #sub-product-list div.list.row-3 > div.box > dl:nth-child(2n) {margin-right: 0;}
   /* #sub-product-list div.list.row-3 > div.box > dl:nth-child(3n) {margin-right: 0;} */
@@ -532,11 +536,11 @@ body.sub #main div.sub-header h2 {font-size: 30px; font-weight: 700; color: #fff
 
   #sub-product-list div.bottom {position: relative; overflow: hidden;}
   #sub-product-list div.side {display: none;}
+  #sub-product-list div.list {position: relative; overflow: hidden; width: 90%; margin: 0 auto;}
   #sub-product-list div.list.row-2 > div.box > dl {width: 46%; margin-right: 4%;}
   #sub-product-list div.list.row-2 > div.box > dl:nth-child(2n) {margin-right: 0;}
   #sub-product-list div.list.row-1 > div.box > dl {width: 100%;}
 }
-#sub-product-list div.list {position: relative; overflow: hidden; width: 90%; margin: 0 auto;}
 #sub-product-list div.list > div.box {overflow: hidden;}
 #sub-product-list div.list > div.box > dl > dt > a {display: block; overflow: hidden;}
 #sub-product-list div.list > div.box > dl > dt img.photo {transition: transform 0.5s;}

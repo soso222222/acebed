@@ -49,7 +49,7 @@ body.sub #header h1 a img.black {display: none;}
 body.sub #header h1 a img.white {display: block;}
 #gnb > ul {position: absolute; top: 35%;}
 /* #gnb > ul {position: absolute; top: 50%; transform: translate(0, -50%);} */
-#gnb > ul > li {position: relative; float: left; color: #333; font-size: 17px; font-weight: 700;}
+#gnb > ul > li {float: left; color: #333; font-size: 17px; font-weight: 700;}
 #gnb > ul.etc > li.search {font-size: 18px;}
 body.main #gnb li.menu img.black {display: block;}
 body.main #gnb li.menu img.white {display: none;}
@@ -58,7 +58,8 @@ body.sub #gnb li.menu img.white {display: block;}
 
 #gnb > ul > li > a.kr {display: none;}
 #gnb > ul > li > a.en {display: block;}
-#gnb > ul > li.on > a {color: #0890c0;}
+#gnb > ul.about-ace > li.on > a, 
+#gnb > ul.bed-product > li.on > a {color: #0890c0;}
 #gnb > ul > li > ul {position: absolute; display: none; width: 100%; padding: 1em 0;}
 #gnb > ul > li > ul > li {font-size: 15px; font-weight: 400; padding: 0.5em 0;}
 #gnb > ul > li > ul > li > a {position: relative;}
@@ -77,7 +78,24 @@ body.sub #gnb li.menu img.white {display: block;}
 #header.open #gnb > ul.bed-product > li > a.en {display: none;}
 /* end of header mouse hover */
 
-#gnb div.search-box {position: absolute; width: 100%; height: 0; background: #ffffff; box-sizing: border-box; overflow: hidden;} 
+#gnb > ul > li > div.layer-mask {position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 5000; background-color: rgba(0, 0, 0, 0.5); display: none; z-index: -1;}
+#gnb > ul > li.on > div.layer-mask {display: block; animation: show-up-mask 1s ease 0s 1 normal forwards;}
+#gnb > ul > li.on > div.search-box {height: 280px;}
+#gnb > ul > li.on > div.search-box > div.box {height: 230px;}
+#gnb div.search-box {position: fixed; top: 120px; left: 0; width: 100%; box-sizing: border-box; overflow: hidden;} 
+#gnb div.search-box > div.box {position: relative; height: 0; background-color: #fff; transition: height 0.5s;}
+#gnb div.search-box p.search {position: relative; display: inline-block; top: 0; left: 50%; width: 40%; transform: translate(-50%, 0); padding: 80px 0;}
+#gnb div.search-box p.search > input[type="text"] {width: 100%; border: none; border-bottom: 3px solid #000; background-color: transparent; padding: 20px 0; font-size: 20px; color: #333;}
+#gnb div.search-box p.search > input[type="text"]::placeholder {overflow: hidden; white-space: nowrap; text-overflow: ellipsis; color: #888; font-size: 18px;}
+#gnb div.search-box p.search > label {position: absolute; top: 50%; right: 0; padding: 20px 0; font-size: 25px; transform: translate(0, -50%);}
+
+#gnb div.search-box p.close {position: absolute; bottom: -50px; width: 100%; text-align: center;}
+#gnb div.search-box p.close > a {display: inline-block; width: 24px; height: 24px;}
+#gnb div.search-box p.close > a::before {background-color: #fff; transition: all 0.3s;}
+#gnb div.search-box p.close > a::after {background-color: #fff; transition: all 0.3s;}
+
+
+
 
 @media screen and (min-width: 1700px) {
   #header > div.bottom > div.content-box {max-width: calc(100% - 160px);}
@@ -192,18 +210,11 @@ body.sub #gnb li.menu img.white {display: block;}
 #footer div.quick-link > ul.content div.quick-menu-list > ul > li:nth-child(2) a span {line-height: 40px; background: url(../img/footer-quick-link-icon-02.png) left center no-repeat; background-position-y: center; background-size: 45px auto;}
 #footer div.quick-link > ul.content div.quick-menu-list > ul > li:nth-child(3) a span {line-height: 40px; background: url(../img/footer-quick-link-icon-03.png) left center no-repeat; background-position-y: center; background-size: 45px auto;}
 
-#footer div.quick-link > ul.content div.quick-menu-list > p.close {position: absolute; right: 20px; bottom: 20px;}
-#footer div.quick-link > ul.content div.quick-menu-list > p.close a {position: relative; display: block; width: 24px; height: 24px;}
-#footer div.quick-link > ul.content div.quick-menu-list > p.close a::before {content: ''; position: absolute; top: 0; left: 50%; transform: translate(-50%, 0); width: 100%; height: 2px; background-color: #666; transition: all 0.3s;}
-#footer div.quick-link > ul.content div.quick-menu-list > p.close a span {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; height: 2px; background-color: #666; text-indent: -9999px; transition: all 0.3s;}
-#footer div.quick-link > ul.content div.quick-menu-list > p.close a::after {content: ''; position: absolute; left: 50%; bottom: 0; transform: translate(-50%, 50%); width: 100%; height: 2px; background-color: #666; transition: all 0.3s;}
-
-#footer div.quick-link > ul.content div.quick-menu-list > p.close a::before {top: 50%; width: 120%; transform: translate(-50%, -50%) rotate(45deg);}
-#footer div.quick-link > ul.content div.quick-menu-list > p.close a span {opacity: 0;}
-#footer div.quick-link > ul.content div.quick-menu-list > p.close a::after {bottom: 50%; width: 120%; transform: translate(-50%, 50%) rotate(-45deg);}
-
-
-
+#footer div.quick-link > ul.content div.quick-menu-list > p.close {right: 20px; bottom: 20px;}
+#footer div.quick-link > ul.content div.quick-menu-list > p.close a {width: 24px; height: 24px;}
+#footer div.quick-link > ul.content div.quick-menu-list > p.close a::before {background-color: #666; transition: all 0.3s;}
+#footer div.quick-link > ul.content div.quick-menu-list > p.close a span {background-color: #666;}
+#footer div.quick-link > ul.content div.quick-menu-list > p.close a::after {background-color: #666; transition: all 0.3s;}
 
 
 /* main (common) */
@@ -216,6 +227,21 @@ body.sub #gnb li.menu img.white {display: block;}
 
 /* main */
 #main {position: relative; padding-top: 170px;}
+
+/* animation */
+#main > section div.title > h3 {opacity: 0; transform: translateY(40%); transition: all 1s;}
+#main > section div.title > h3.on {opacity: 1; transform: translateY(0);}
+section.page #main-science-slide ul, 
+section.page #main-collection-slide, 
+section.page #main-event-slide ul,
+section.page div.gallery {opacity: 0; transform: translateY(20%); transition: all 1.5s;}
+section.page.on #main-science-slide ul, 
+section.page.on #main-collection-slide, 
+section.page.on #main-event-slide ul, 
+section.page.on div.gallery {opacity: 1; transform: translateY(0);}
+#main-collection.page > div.title > a {opacity: 0; transform: translateY(40%); transition: all 1.5s;}
+#main-collection.page.on > div.title > a {opacity: 1; transform: translateY(0);}
+#sub-product-list div.list-box {opacity: 0; transform: translateY(10%); transition: all 1.5s;}
 
 #main-visual {position: relative;}
 
@@ -263,7 +289,8 @@ body.sub #gnb li.menu img.white {display: block;}
 #main-collection div.image-scroll-slide ul.slide > li div.img > div.box::before {content: ''; position: absolute; display: block; top: 0; left: 50%; width: 100%; max-width: 1270px; height: 100%; max-height: 720px; background-color: rgba(0, 0, 0, 0.3); transform: translate(-50%, 0);}
 
 #main-collection div.image-scroll-slide div.pick div.preview-info {display: none;}
-#main-collection div.image-scroll-slide ul.slide div.preview-info {position: absolute; top: 15%; left: 12%; color: #fff; text-align: left; overflow: hidden;}
+#main-collection div.image-scroll-slide ul.slide > li.on div.preview-info {display: block; animation: textFadeInUp 1s;}
+#main-collection div.image-scroll-slide ul.slide div.preview-info {position: absolute; display: none; top: 15%; left: 12%; color: #fff; text-align: left; overflow: hidden;}
 #main-collection div.image-scroll-slide ul.slide div.preview-info > p.tag {font-size: 16px;}
 #main-collection div.image-scroll-slide ul.slide div.preview-info > p.tag span {display: inline-block; box-sizing: border-box; border: 1px solid #fff; border-radius: 50px; padding: 4px 10px;}
 #main-collection div.image-scroll-slide ul.slide div.preview-info > p.title {font-size: 30px; font-weight: 800; margin-top: 30px;}
@@ -415,7 +442,7 @@ body.sub #main div.sub-header h2 {font-size: 60px; font-weight: 700; color: #fff
 
 #sub-product-list div.bottom {position: relative; margin-top: 50px; overflow: hidden;}
 #sub-product-list div.side {float: left; width: 20%;}
-#sub-product-list div.side div.search-box {border: 1px solid #ebebeb; box-sizing: border-box; box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 5%);}
+#sub-product-list div.side div.search-box {display: none; border: 1px solid #ebebeb; box-sizing: border-box; box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 5%);}
 #sub-product-list div.side div.search-box > p {position: relative; line-height: 50px; background-color: #adc4ce; color: #fff;}
 #sub-product-list div.side div.search-box > p i {color: #fff;}
 #sub-product-list div.side div.search-box > p label {position: absolute; right: 5%;}
@@ -457,20 +484,21 @@ body.sub #main div.sub-header h2 {font-size: 60px; font-weight: 700; color: #fff
 /* #sub-product-list div.side label::before {content: '\f111'; font-family: 'Font Awesome 5 Free'; font-weight: 400; margin-right: 6px;} */
 /* #sub-product-list div.side input[type="checkbox"]:focus + label {outline: 2px dashed #05141f;} */
 
-#sub-product-list div.list {position: relative; overflow: hidden; width: 75%; max-width: 1380px; margin: 0 auto;}
-#sub-product-list div.list > div.box {overflow: hidden;}
-#sub-product-list div.list > div.box > dl > dt > a {display: block; overflow: hidden;}
-#sub-product-list div.list > div.box > dl > dt img.photo {transition: transform 0.5s;}
-#sub-product-list div.list > div.box > dl > dt > a:hover img.photo {transform: scale(1.05);}
-#sub-product-list div.list > div.box > dl {float: left; box-sizing: border-box;}
-#sub-product-list div.list.row-3 > div.box > dl {width: 32%; margin-right: 2%;}
-#sub-product-list div.list.row-3 > div.box > dl:nth-child(3n) {margin-right: 0;}
-#sub-product-list div.list.row-2 > div.box > dl {width: 46%; margin-right: 4%;}
-#sub-product-list div.list.row-2 > div.box > dl:nth-child(2n) {margin-right: 0;}
-#sub-product-list div.list > div.box > dl > dd {position: relative; margin: 30px 0;}
-#sub-product-list div.list > div.box > dl > dd p {font-size: 16px; font-weight: 400; color: #666; margin-bottom: 10px;}
-#sub-product-list div.list > div.box > dl > dd p.title {font-size: 18px; font-weight: 800; color: #333; margin-bottom: 6px;}
-#sub-product-list div.list > div.box > dl > dd img {position: absolute; top: 0; right: 0;}
+#sub-product-list div.list-box {position: relative; overflow: hidden; width: 75%; max-width: 1380px; margin: 0 auto;}
+#sub-product-list div.list-box > div.box {overflow: hidden;}
+#sub-product-list div.list-box ul.list > li > a {display: block; overflow: hidden;}
+#sub-product-list div.list-box ul.list > li img.photo {transition: transform 0.5s;}
+#sub-product-list div.list-box ul.list > li > a:hover img.photo {transform: scale(1.05);}
+#sub-product-list div.list-box ul.list > li {float: left; box-sizing: border-box;}
+#sub-product-list div.list-box.row-3 ul.list > li {width: 32%; margin-right: 2%;}
+#sub-product-list div.list-box.row-3 ul.list > li:nth-child(3n) {margin-right: 0;}
+#sub-product-list div.list-box.row-2 ul.list > li {width: 46%; margin-right: 4%;}
+#sub-product-list div.list-box.row-2 ul.list > li:nth-child(2n) {margin-right: 0;}
+#sub-product-list div.list-box ul.content {position: relative;}
+#sub-product-list div.list-box ul.info {position: relative; margin: 30px 0;}
+#sub-product-list div.list-box ul.info img {position: absolute; top: 0; right: 0;}
+#sub-product-list div.list-box ul.info > li p {font-size: 16px; font-weight: 400; color: #666; margin-bottom: 10px;}
+#sub-product-list div.list-box ul.info > li p.title {font-size: 18px; font-weight: 800; color: #333; margin-bottom: 6px;}
 
 #sub-product-list div.paging {margin-top: 60px; text-align: center;}
 #sub-product-list div.paging p.number {display: inline-block; font-size: 16px; font-weight: 800; color: #666; overflow: hidden;}
@@ -511,6 +539,11 @@ div.bar {position: relative; height: 60px;}
 div.bar::before {content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; box-sizing: border-box; border-radius: 50px; background-color: #C9C9C9;}
 div.bar span {position: absolute; top: 0; height: 4px; box-sizing: border-box; border-radius: 50px; transition: left 1s; background-color: #0890c0;}
 
+p.close.btn {position: absolute;}
+p.close.btn a {position: relative; display: block;}
+p.close.btn a::before {content: ''; position: absolute; top: 50%; left: 50%; width: 120%; height: 2px; transform: translate(-50%, -50%) rotate(45deg);}
+p.close.btn a span {position: absolute; top: 0; left: 0; transform: translate(-50%, -50%); width: 100%; height: 2px; transition: all 0.3s; opacity: 0;}
+p.close.btn a::after {content: ''; position: absolute; left: 50%; bottom: 50%; width: 120%; height: 2px; transform: translate(-50%, 50%) rotate(-45deg);}
 
 
 
@@ -534,18 +567,26 @@ div.bar span {position: absolute; top: 0; height: 4px; box-sizing: border-box; b
 }
 
 
-/* animation keyframes */
-/*
-@keyframes show-up {
-  0% {transform: translate(0, 50px); opacity: 0;}
-  100% {transform: translate(0, 0); opacity: 1;}
+@keyframes textFadeInUp {
+  0% {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }
-@keyframes btn-effect-right {
-  0% {transform: translate(0, 0);}
-  100% {transform: translate(5px, 0);}
+@keyframes sectionFadeInUp {
+  0% {
+      /* transform: translateY(30%); */
+      /* transform: translate3d(0, 100%, 0); */
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }
-#main-faq a.more:hover i {animation: btn-effect-right 0.3s ease 0s infinite alternate forwards;}
-*/
 
 
 

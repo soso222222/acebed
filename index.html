@@ -12,7 +12,7 @@
 
       <main id="main">
       
-        <section id="main-visual">
+        <section id="main-visual" class="page">
           <h3 class="ir-hidden">ACE침대 소개 및 주요 이벤트</h3>
           <div id="main-visual-slide" class="image-slide">
             <div class="box">
@@ -25,8 +25,18 @@
                     </video>
                   </a>
                 </li>
-                <li><a href="#"><img alt="웨딩 멤버스 가입하기" src="img/main-visual-02.jpg" /></a></li>
-                <li><a href="#"><img alt="고객 후기" src="img/main-visual-03.jpg" /></a></li>
+                <li>
+                  <a href="#">
+                    <img alt="웨딩 멤버스 가입하기" src="img/main-visual-02.jpg" class="p" />
+                    <img alt="웨딩 멤버스 가입하기" src="img/main-visual-m-02.jpg" class="m" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img alt="고객 후기" src="img/main-visual-03.jpg" class="p" />
+                    <img alt="고객 후기" src="img/main-visual-m-03.jpg" class="m" />
+                  </a>
+                </li>
               </ul>
               <ul class="indicator mobile">
               </ul>
@@ -48,7 +58,7 @@
           </div>
         </section>
       
-        <section id="main-science">
+        <section id="main-science" class="page">
           <div class="title">
             <h3>ACE SCIENCE</h3>
             <a href="#" class="more pc">more</a>
@@ -130,7 +140,7 @@
           </div>
         </section>
 
-        <section id="main-collection">
+        <section id="main-collection" class="page">
           <div class="title">
             <h3>ACE COLLECTION</h3>
             <a href="#" class="more pc">more</a>
@@ -315,7 +325,7 @@
           </div>
           </section>
 
-        <section id="main-event">
+        <section id="main-event" class="page">
           <div class="content-box">
             <div class="title">
               <h3>ACE NEWS</h3>
@@ -360,7 +370,7 @@
           </div>
         </section>
 
-        <section id="main-sns">
+        <section id="main-sns" class="page">
           <div class="content-box">
             <div class="title">
               <h3>NOW SNS</h3>
@@ -402,7 +412,7 @@
           </div>
         </section>
         
-        <section id="main-map">
+        <section id="main-map" class="page">
           <div class="map"></div>
           <div class="content-box">
             <div class="title pc">
@@ -425,7 +435,7 @@
           </div>
         </section>
 
-        <section id="main-contact">
+        <section id="main-contact" class="page">
           <div class="cs">
             <ul>
               <li>
@@ -465,6 +475,34 @@
   <script>
   'use strict';
   var lang = 'kr';
+  var numPage = $('section.page').length;
+  var pageNow = 0;
+  var pagePrev = 0;
+  var pageNext = 0;
+
+  checkPageNow();
+
+  $(window).on('scroll resize', function () {
+    checkPageNow();
+  });
+  function checkPageNow() {
+    var scrollAmt = $(document).scrollTop();
+    var n = 0;
+    $('section.page').each(function(i) {
+      var min = $(this).offset().top - ($(window).height() / 2);
+      var max = $(this).offset().top + $(this).outerHeight(true) - ($(window).height() / 2);
+      // console.log(i + ' -> ' + min + '~' + max);
+      if (scrollAmt > min && scrollAmt <= max) {
+        n = i + 1;
+        $(this).find('h3').addClass('on');
+        $(this).addClass('on');
+        return false;
+      }
+    });
+    pageNow = n;
+    pagePrev = (n <= 1) ? 1 : (n - 1);
+    pageNext = (n >= numPage) ? numPage : (n + 1);
+  }
 
   function ImageSlide(id, options) {
     // var $selector = $(selector);
@@ -484,6 +522,13 @@
     var delY = 0;
     var offsetX = 0;
     var offsetY = 0;
+    var startMX = 0;
+    var startMY = 0;
+    var delMX = 0;
+    var delMY = 0;
+    var offsetMX = 0;
+    var offsetMY = 0;
+    var direction = '';
     var isBlocked = false;
     var barWidth = 0;
 
@@ -500,6 +545,7 @@
       showTabItems(tabType);
       setTabSlide();
       setSwipe();
+      setMobileSwipe();
       barWidth = parseFloat((100 / totalNumSlide).toFixed(1));
       $selector.find('div.bar span').css({'width': barWidth + '%'});
     } else {
@@ -513,6 +559,7 @@
         showSlide(index + 1);
       });
       setSwipe();
+      setMobileSwipe();
     }
     showSlide(firstNumSlide);
 
@@ -585,12 +632,13 @@
           $selector.find('.slide li.text ul').css({ 'left': -((n - 1) * 100) + '%', 'transition': 'left 0.8s' });
         }
       } else if (slideType === 'article-once') {
+        $selector.find('.slide li.text ul li').removeClass('on');
+        $selector.find('.slide li.text ul li:eq(' + (n - 1) + ')').addClass('on');
         $selector.find('.slide li.visual ul').css({ 'left': -((n - 1) * 100) + '%', 'transition': 'left 0.8s' });
-        if (windowWidth >= 1280) {}
-        else {
-          $selector.find('div.bar span').css({'left': ((n - 1) * barWidth) + '%'});
-        }
+        $selector.find('div.bar span').css({'left': ((n - 1) * barWidth) + '%'});
       } else if (slideType === 'image-scroll') {
+        $selector.find('.slide li').removeClass('on');
+        $selector.find('.slide li.' + tabType + ':eq(' + (n - 1) + ')').addClass('on');
         if (windowWidth >= 1280) {
           $selector.find('.slide').css({ 'left': -((n - 1) * 110) + '%', 'transition': 'left 0.8s' });
         } else {
@@ -659,6 +707,7 @@
           showSlide(index + 1);
         });
         setSwipe();
+        setMobileSwipe();
       }
     }
     function setArticleOnceSlide() {
@@ -680,10 +729,11 @@
           showSlide(index + 1);
         });
       } else {
-        barWidth = parseFloat((100 / totalNumSlide).toFixed(1));
-        $selector.find('div.bar span').css({'width': barWidth + '%'});
         setSwipe();
+        setMobileSwipe();
       }
+      barWidth = parseFloat((100 / totalNumSlide).toFixed(1));
+      $selector.find('div.bar span').css({'width': barWidth + '%'});
     }
     function setTabSlide() {
       totalNumSlide = $selector.find('.slide li.' + tabType).length;
@@ -723,6 +773,7 @@
         setArticleSlide(false);
       }else if(slideType === 'article-once') {
         setSwipe();
+        setMobileSwipe();
       }else if(slideType === 'image-scroll') {
         showTabItems(tabType);
       }else {}
@@ -774,6 +825,67 @@
           isBlocked = false;
         }
       });
+    }
+    function setMobileSwipe() {
+      $selector.find('.slide').on('touchstart', function (e) {
+        $(this).css({ 'transition': 'none' });
+        //touches : 모바일에서는 멀티터치지원하므로 배열값으로 저장되어있음
+        //touches[0] : 첫번째로 터치된 값
+        startMX = e.touches[0].clientX;
+        startMY = e.touches[0].clientY;
+        offsetMX = $(this).position().left;
+        offsetMY = $(this).position().top;
+
+        //함수()없이 쓰는것 -> 레퍼런스 참고해주는 요소
+        document.addEventListener('touchmove', move, { passive: false });
+        $(document).on('touchend', function () {
+          if (delMX < -30 && curNumSlide !== totalNumSlide) {
+            showSlide(nextNumSlide);
+          } else if (delMX > 30 && curNumSlide !== 1) {
+            showSlide(prevNumSlide);
+          } else {
+            showSlide(curNumSlide);
+          }
+          delMX = 0;
+          direction = '';
+          document.removeEventListener('touchmove', move);
+          $(document).off('touchend');
+        });
+      });
+    }
+    // 위아래 -> 스크롤, 좌우 막힘 / 좌우 -> 슬라이드, 위아래 막힘
+    // . . . . . . . . . . . . . . . . .
+    // 5px area를 두고 넘어가면 좌우, 위아래, 가만히 판단
+    function move(e) {
+      delMX = e.touches[0].clientX - startMX;
+      delMY = e.touches[0].clientY - startMY;
+      if (direction === '') {
+        if (Math.abs(delMX) > 5) {
+          direction = 'horizon';
+        } else if (Math.abs(delMY > 5)) {
+          direction = 'vertical';
+        }
+        console.log('no');
+      } else if (direction === 'vertical') {
+        // console.log('vertical');
+        delX = 0;
+      } else if (direction === 'horizon') {
+        var slideLocation = '';
+        // console.log('horizon');
+        e.preventDefault();
+        if ((curNumSlide === 1 && delMX > 0) || (curNumSlide === totalNumSlide && delMX < 0)) {
+          delX = delX / 10; // 마지막슬라이드임을 나타내주기 위해 이동거리를 짧게 바꿔줌
+        }
+        if (slideType === 'article' || slideType === 'article-once') {
+          slideLocation = '.slide li.visual ul';
+        } else if (slideType === 'image-scroll' || slideType === 'image') {
+          slideLocation = '.slide';
+        }
+        var percentLeft = (offsetMX + delMX) * 100 / $selector.innerWidth();
+        $selector.find(slideLocation).css({'left': percentLeft + '%'});
+        // $selector.find(slideLocation).css({'left': (offsetX + delX) + 'px'});
+        // $selector.find('.slide').css({ 'left': (offsetX + delX) + 'px' });
+      }
     }
   }
   var mainVisualSlide = new ImageSlide('main-visual-slide', {
