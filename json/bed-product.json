@@ -1,5 +1,136 @@
 {
-	"bedInfo":[
+	"bedFrameInfo":[
+		{
+			"name":"TVCF 침대 'ZANA'", 
+			"img-src":"../img/bed-frame-01.jpg", 
+			"category-size":"K/LQ",
+			"category-purpose":"JR",
+			"category-material":"FABRIC",
+			"category-color":"#7b6d6d|#daadad",
+			"category-concept":"MODERN", 
+			"category-type":"L/C"
+		},
+		{
+			"name":"BMA-1164", 
+			"img-src":"../img/bed-frame-02.jpg", 
+			"category-size":"K/LQ",
+			"category-purpose":"JR",
+			"category-material":"FABRIC",
+			"category-color":"#7b6d6d|#daadad",
+			"category-concept":"MODERN", 
+			"category-type":"T"
+		},
+		{
+			"name":"ANELLO-W", 
+			"img-src":"../img/bed-frame-03.jpg", 
+			"category-size":"LQ",
+			"category-purpose":"JR",
+			"category-material":"FABRIC",
+			"category-color":"#7b6d6d",
+			"category-concept":"MODERN", 
+			"category-type":"L/C"
+		},
+		{
+			"name":"ALBERO -W", 
+			"img-src":"../img/bed-frame-04.jpg", 
+			"category-size":"K",
+			"category-purpose":"JR",
+			"category-material":"FABRIC",
+			"category-color":"#2a364d",
+			"category-concept":"MODERN", 
+			"category-type":"A"
+		},
+		{
+			"name":"IRINA", 
+			"img-src":"../img/bed-frame-05.jpg", 
+			"category-size":"LQ",
+			"category-purpose":"JR",
+			"category-material":"FABRIC",
+			"category-color":"#858a8f|#b8bbb7",
+			"category-concept":"MODERN", 
+			"category-type":"N"
+		},
+		{
+			"name":"IRINA", 
+			"img-src":"../img/bed-frame-06.jpg", 
+			"category-size":"SS",
+			"category-purpose":"JR",
+			"category-material":"FABRIC",
+			"category-color":"#858a8f|#b8bbb7",
+			"category-concept":"MODERN", 
+			"category-type":"N"
+		},
+		{
+			"name":"FOGLIA", 
+			"img-src":"../img/bed-frame-07.jpg", 
+			"category-size":"K",
+			"category-purpose":"JR",
+			"category-material":"FABRIC",
+			"category-color":"#d0c8b5",
+			"category-concept":"MODERN", 
+			"category-type":"A"
+		},
+		{
+			"name":"TEENSTER", 
+			"img-src":"../img/bed-frame-08.jpg", 
+			"category-size":"SS",
+			"category-purpose":"JR",
+			"category-material":"FABRIC",
+			"category-color":"#e5ddc9,#bfaf92",
+			"category-concept":"MODERN", 
+			"category-type":"C"
+		},
+		{
+			"name":"OMAGGIO", 
+			"img-src":"../img/bed-frame-09.jpg", 
+			"category-size":"SS",
+			"category-purpose":"JR",
+			"category-material":"FABRIC",
+			"category-color":"#ae8457,#b4a691",
+			"category-concept":"MODERN", 
+			"category-type":"C"
+		},
+		{
+			"name":"GRAFICA", 
+			"img-src":"../img/bed-frame-10.jpg", 
+			"category-size":"SS",
+			"category-purpose":"JR",
+			"category-material":"FABRIC",
+			"category-color":"#e9e2d0|#d3d8dc",
+			"category-concept":"MODERN", 
+			"category-type":"L/C"
+		},
+		{
+			"name":"OPIMO-II", 
+			"img-src":"../img/bed-frame-11.jpg", 
+			"category-size":"K/LQ",
+			"category-purpose":"JR",
+			"category-material":"FABRIC",
+			"category-color":"#cec2b3",
+			"category-concept":"MODERN", 
+			"category-type":"T"
+		},
+		{
+			"name":"LANOTTE", 
+			"img-src":"../img/bed-frame-12.jpg", 
+			"category-size":"LK/K/LQ",
+			"category-purpose":"JR",
+			"category-material":"FABRIC",
+			"category-color":"#9d9191",
+			"category-concept":"MODERN", 
+			"category-type":"T"
+		}
+	],
+	"bedMattressInfo":[
+		{
+			"name":"ACE BELLA-Ⅲ", 
+			"img-src":"../img/bed-mattress-17.jpg", 
+			"category-size":"LK/LK/K/LQ/DD/SS",
+			"category-rank":"ACE",
+			"category-cushion":"PREMIUM-SOFT",
+			"category-spring":"HYBRID-Z",
+			"category-store":"ONLINE"
+		},
 		{
 			"name":"ROYAL ACE 400", 
 			"img-src":"../img/bed-mattress-01.jpg", 
@@ -104,6 +235,42 @@
 			"img-src":"../img/bed-mattress-12.jpg", 
 			"category-size":"K/LQ/DD/SS",
 			"category-rank":"HYBRID-TECH",
+			"category-cushion":"PREMIUM-SOFT",
+			"category-spring":"HYBRID",
+			"category-store":"ONLINE"
+		},
+		{
+			"name":"CLUB ACE(2인용)", 
+			"img-src":"../img/bed-mattress-13.jpg", 
+			"category-size":"LQ/DD",
+			"category-rank":"ACE",
+			"category-cushion":"PREMIUM-SOFT",
+			"category-spring":"HYBRID",
+			"category-store":"ONLINE"
+		},
+		{
+			"name":"CLUB ACE(1인용)", 
+			"img-src":"../img/bed-mattress-14.jpg", 
+			"category-size":"SS/DS",
+			"category-rank":"ACE",
+			"category-cushion":"PREMIUM-SOFT",
+			"category-spring":"HYBRID",
+			"category-store":"ONLINE"
+		},
+		{
+			"name":"ACE VALICH Ⅳ", 
+			"img-src":"../img/bed-mattress-15.jpg", 
+			"category-size":"LK/K/LQ/DD/SS",
+			"category-rank":"ETC",
+			"category-cushion":"PREMIUM-SOFT",
+			"category-spring":"HYBRID",
+			"category-store":"ONLINE"
+		},
+		{
+			"name":"ACE FLEX", 
+			"img-src":"../img/bed-mattress-16.jpg", 
+			"category-size":"LQ/SS",
+			"category-rank":"ACE",
 			"category-cushion":"PREMIUM-SOFT",
 			"category-spring":"HYBRID",
 			"category-store":"ONLINE"

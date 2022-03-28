@@ -241,7 +241,11 @@ section.page.on #main-event-slide ul,
 section.page.on div.gallery {opacity: 1; transform: translateY(0);}
 #main-collection.page > div.title > a {opacity: 0; transform: translateY(40%); transition: all 1.5s;}
 #main-collection.page.on > div.title > a {opacity: 1; transform: translateY(0);}
-#sub-product-list div.list-box {opacity: 0; transform: translateY(10%); transition: all 1.5s;}
+
+/* #sub-product-list ul.list {opacity: 0.5; transform: translateY(5%);}
+#sub-product-list ul.list.on {opacity: 1; transform: translateY(0); transition: all 1s;} */
+#sub-product-list div.list-box ul.list > li {opacity: 0.5; transform: translateY(20%);}
+#sub-product-list div.list-box ul.list > li.on {opacity: 1; transform: translateY(0); transition: all 0.8s;}
 
 #main-visual {position: relative;}
 
@@ -442,7 +446,7 @@ body.sub #main div.sub-header h2 {font-size: 60px; font-weight: 700; color: #fff
 
 #sub-product-list div.bottom {position: relative; margin-top: 50px; overflow: hidden;}
 #sub-product-list div.side {float: left; width: 20%;}
-#sub-product-list div.side div.search-box {display: none; border: 1px solid #ebebeb; box-sizing: border-box; box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 5%);}
+#sub-product-list div.side div.search-box {border: 1px solid #ebebeb; box-sizing: border-box; box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 5%);}
 #sub-product-list div.side div.search-box > p {position: relative; line-height: 50px; background-color: #adc4ce; color: #fff;}
 #sub-product-list div.side div.search-box > p i {color: #fff;}
 #sub-product-list div.side div.search-box > p label {position: absolute; right: 5%;}
@@ -484,28 +488,54 @@ body.sub #main div.sub-header h2 {font-size: 60px; font-weight: 700; color: #fff
 /* #sub-product-list div.side label::before {content: '\f111'; font-family: 'Font Awesome 5 Free'; font-weight: 400; margin-right: 6px;} */
 /* #sub-product-list div.side input[type="checkbox"]:focus + label {outline: 2px dashed #05141f;} */
 
-#sub-product-list div.list-box {position: relative; overflow: hidden; width: 75%; max-width: 1380px; margin: 0 auto;}
-#sub-product-list div.list-box > div.box {overflow: hidden;}
-#sub-product-list div.list-box ul.list > li > a {display: block; overflow: hidden;}
+#sub-product-list div.list-box {position: relative; overflow: hidden; width: 75%; margin: 0 auto;}
+#sub-product-list div.list-box > div.box {overflow: hidden; width: 85%; max-width: 1380px; margin: 0 auto;}
+#sub-product-list div.list-box ul.list {overflow: hidden;}
+#sub-product-list div.list-box ul.list > li {position: relative; float: left; box-sizing: border-box;}
+#sub-product-list div.list-box ul.list > li div.like-alert,
+#sub-product-list div.list-box ul.list > li div.unlike-alert {position: absolute; top: 12%; left: 17%; width: 70%; height: 55%; background-color: rgba(8, 144, 192, 0.8); border-radius: 200px; opacity: 0; overflow: hidden; text-align: center; transition: all 1.3s;}
+#sub-product-list div.list-box ul.list > li.show-like div.like-alert {opacity: 1;}
+#sub-product-list div.list-box ul.list > li.show-unlike div.unlike-alert {opacity: 1;}
+#sub-product-list div.list-box ul.list > li.hide-like div.like-alert {opacity: 0;}
+#sub-product-list div.list-box ul.list > li.hide-unlike div.unlike-alert {opacity: 0;}
+#sub-product-list div.list-box ul.list > li div.like-alert > p,
+#sub-product-list div.list-box ul.list > li div.unlike-alert > p {position: relative; top: 50%; transform: translate(0, -50%); color: #fff; font-size: 13px; line-height: 1.5em;}
+#sub-product-list div.list-box ul.list > li div.like-alert > p > em {display: inline-block; font-size: 20px; font-weight: 700; line-height: 1.5em; margin-bottom: 10px;}
+#sub-product-list div.list-box ul.list > li a {display: block; overflow: hidden;}
 #sub-product-list div.list-box ul.list > li img.photo {transition: transform 0.5s;}
 #sub-product-list div.list-box ul.list > li > a:hover img.photo {transform: scale(1.05);}
-#sub-product-list div.list-box ul.list > li {float: left; box-sizing: border-box;}
-#sub-product-list div.list-box.row-3 ul.list > li {width: 32%; margin-right: 2%;}
+#sub-product-list div.list-box.row-3 ul.list > li {width: 30%; margin-right: 5%;}
 #sub-product-list div.list-box.row-3 ul.list > li:nth-child(3n) {margin-right: 0;}
 #sub-product-list div.list-box.row-2 ul.list > li {width: 46%; margin-right: 4%;}
 #sub-product-list div.list-box.row-2 ul.list > li:nth-child(2n) {margin-right: 0;}
 #sub-product-list div.list-box ul.content {position: relative;}
 #sub-product-list div.list-box ul.info {position: relative; margin: 30px 0;}
-#sub-product-list div.list-box ul.info img {position: absolute; top: 0; right: 0;}
+#sub-product-list div.list-box ul.info > a.like {position: absolute; display: block; top: 0; right: 0;}
 #sub-product-list div.list-box ul.info > li p {font-size: 16px; font-weight: 400; color: #666; margin-bottom: 10px;}
 #sub-product-list div.list-box ul.info > li p.title {font-size: 18px; font-weight: 800; color: #333; margin-bottom: 6px;}
 
 #sub-product-list div.paging {margin-top: 60px; text-align: center;}
 #sub-product-list div.paging p.number {display: inline-block; font-size: 16px; font-weight: 800; color: #666; overflow: hidden;}
 #sub-product-list div.paging p.number a {display: block; float: left; width: 34px; height: 34px; line-height: 34px; text-align: center;}
-#sub-product-list div.paging p.number a.on {color: #0890c0; border: 1px solid #0890c0; box-sizing: border-box;}
+#sub-product-list div.paging p.number a.page.on {color: #0890c0; border: 1px solid #0890c0; box-sizing: border-box;}
 #sub-product-list div.paging p.number a.prev_first {background: url(../img/paging-first-prev.png) center center no-repeat;}
 #sub-product-list div.paging p.number a.next-last {background: url(../img/paging-last-next.png) center center no-repeat;}
+
+/* color */
+.brown {background-color: #8d7674; border: 1px solid rgba(0, 0, 0, 0.1);}
+.beige {background-color: #ece1d4;}
+.navy {background-color: #35486b;}
+.gray {background-color: #c4c4c4;}
+.white {background-color: #fff;}
+.black {background-color: #000;}
+.blue {background-color: #5d7cb6;}
+.modern {background-image: url('../img/sub-bed-color-modern.png');}
+.warm {background-image: url('../img/sub-bed-color-warm.png');}
+.multi {background-image: url('../img/sub-bed-color-multi.png');}
+.etc {background-image: url('../img/sub-bed-color-etc.png');}
+
+
+
 
 
 
