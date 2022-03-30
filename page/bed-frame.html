@@ -2,17 +2,17 @@
 <html lang="ko">
   <head>
     <?php include '../include/head.html'; ?>
-    <title>매트리스 | 침대 | ACE BED</title>
+    <title>프레임 | 침대 | ACE BED</title>
     <meta name="description" content="ACE BED 매트리스 상품 안내" />
   </head>
-  <body class="sub bed bed-mattress">
+  <body class="sub bed bed-frame">
     <div id="wrapper">
       <?php include '../include/header.html'; ?>
 
       <main id="main">
         <div class="sub-header">
           <div class="background-matt">
-            <h2>매트리스</h2>
+            <h2>프레임</h2>
           </div>
         </div>
       
@@ -24,7 +24,7 @@
             <div class="content-box">
         
               <div class="top">
-                <p class="total-product">총 <strong class="num">20개</strong>의 제품이 있습니다.</p>
+                <p class="total-product">총 <strong class="num"></strong>의 제품이 있습니다.</p>
                 <div class="filter">
                   <span class="clear">검색 초기화</span>
                   <ul class="keyword">
@@ -58,7 +58,7 @@
                   <ul class="keyword">
                   </ul>
                 </div>
-                <p class="total-product">총 <strong class="num"></strong> 제품</p>
+                <p class="total-product">총 <strong class="num">20개</strong> 제품</p>
                 <div class="order">
                   <select class="arr" title="sort">
                     <option value="rec">추천순</option>
@@ -126,123 +126,185 @@
                         </li>
                       </ul>
                     </li>
-                    <li data-menu="rank">
+                    <li data-menu="purpose">
                       <a href="#">
-                        <em>매트리스 등급</em>
+                        <em>용도</em>
                         <img alt="분류 열기" src="../img/side-icon-on.png" class="open" />
                         <img alt="분류 닫기" src="../img/side-icon-off.png" class="close" />
                       </a>
                       <ul>
                         <li>
-                          <input type="checkbox" id="category-rank-royal" name="category-rank" value="royal-ace" />
-                          <label for="category-rank-royal">ROYAL ACE</label>
+                          <input type="checkbox" id="category-purpose-newlyweds" name="category-purpose" value="newlyweds" />
+                          <label for="category-purpose-newlyweds">신혼침대</label>
                         </li>
                         <li>
-                          <input type="checkbox" id="category-rank-hybrid" name="category-rank" value="hybrid-tech" />
-                          <label for="category-rank-hybrid">HYBRID TECH</label>
+                          <input type="checkbox" id="category-purpose-junior" name="category-purpose" value="junior" />
+                          <label for="category-purpose-junior">주니어침대</label>
                         </li>
                         <li>
-                          <input type="checkbox" id="category-rank-ace" name="category-rank" value="ace" />
-                          <label for="category-rank-ace">ACE</label>
+                          <input type="checkbox" id="category-purpose-family" name="category-purpose" value="family" />
+                          <label for="category-purpose-family">패밀리침대</label>
                         </li>
                         <li>
-                          <input type="checkbox" id="category-rank-etc" name="category-rank" value="etc" />
-                          <label for="category-rank-etc">기타</label>
+                          <input type="checkbox" id="category-purpose-twin" name="category-purpose" value="twin" />
+                          <label for="category-purpose-twin">트윈침대</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" id="category-purpose-low-rise" name="category-purpose" value="low-rise" />
+                          <label for="category-purpose-low-rise">저상형침대</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" id="category-purpose-storage" name="category-purpose" value="storage" />
+                          <label for="category-purpose-storage">수납형침대</label>
                         </li>
                       </ul>
                     </li>
-                    <li data-menu="cushion">
+                    <li data-menu="material">
                       <a href="#">
-                        <em>쿠션감</em>
+                        <em>소재</em>
                         <img alt="분류 열기" src="../img/side-icon-on.png" class="open" />
                         <img alt="분류 닫기" src="../img/side-icon-off.png" class="close" />
                       </a>
                       <ul>
                         <li>
-                          <input type="checkbox" id="category-cushion-premium-soft" name="category-cushion" value="premium-soft" />
-                          <label for="category-cushion-premium-soft">Premium Soft</label>
+                          <input type="checkbox" id="category-material-wood" name="category-material" value="wood" />
+                          <label for="category-material-wood">우드st</label>
                         </li>
                         <li>
-                          <input type="checkbox" id="category-cushion-soft" name="category-cushion" value="soft" />
-                          <label for="category-cushion-soft">Soft</label>
+                          <input type="checkbox" id="category-material-leather" name="category-material" value="leather" />
+                          <label for="category-material-leather">가죽st</label>
                         </li>
                         <li>
-                          <input type="checkbox" id="category-cushion-reg" name="category-cushion" value="regular" />
-                          <label for="category-cushion-reg">Regular</label>
+                          <input type="checkbox" id="category-material-fabric" name="category-material" value="fabric" />
+                          <label for="category-material-fabric">패브릭</label>
                         </li>
                         <li>
-                          <input type="checkbox" id="category-cushion-hard" name="category-cushion" value="hard" />
-                          <label for="category-cushion-hard">Hard</label>
-                        </li>
-                        <li>
-                          <input type="checkbox" id="category-cushion-super-hard" name="category-cushion" value="super-hard" />
-                          <label for="category-cushion-super-hard">Super Hard</label>
+                          <input type="checkbox" id="category-material-multi" name="category-material" value="multi" />
+                          <label for="category-material-multi">멀티소재</label>
                         </li>
                         </ul>
                         </li>
-                    <li data-menu="spring">
+                    <li data-menu="color">
                       <a href="#">
-                        <em>적용 스프링</em>
+                        <em>컬러</em>
                         <img alt="분류 열기" src="../img/side-icon-on.png" class="open" />
                         <img alt="분류 닫기" src="../img/side-icon-off.png" class="close" />
                       </a>
-                      <ul>
+                      <ul class="custom-scroll">
                         <li>
-                          <input type="checkbox" id="category-spring-hybrid-z" name="category-spring" value="hybrid-z" />
-                          <label for="category-spring-hybrid-z">Hybrid Z Spring</label>
+                          <input type="checkbox" id="category-color-brown" name="category-color" value="brown" />
+                          <label for="category-color-brown">브라운</label>
                         </li>
                         <li>
-                          <input type="checkbox" id="category-spring-hybrid-h" name="category-spring" value="hybrid-h" />
-                          <label for="category-spring-hybrid-h">Hybrid H Spring</label>
+                          <input type="checkbox" id="category-color-beige" name="category-color" value="beige" />
+                          <label for="category-color-beige">베이지</label>
                         </li>
                         <li>
-                          <input type="checkbox" id="category-spring-hybrid-s" name="category-spring" value="hybrid-s" />
-                          <label for="category-spring-hybrid-s">Hybrid S Spring</label>
+                          <input type="checkbox" id="category-color-blue" name="category-color" value="blue" />
+                          <label for="category-color-blue">블루</label>
                         </li>
                         <li>
-                          <input type="checkbox" id="category-spring-hybrid" name="category-spring" value="hybrid" />
-                          <label for="category-spring-hybrid">Hybrid Spring</label>
+                          <input type="checkbox" id="category-color-navy" name="category-color" value="navy" />
+                          <label for="category-color-navy">네이비</label>
                         </li>
                         <li>
-                          <input type="checkbox" id="category-spring-plus-power" name="category-spring" value="plus-power" />
-                          <label for="category-spring-plus-power">Plus Power Spring</label>
+                          <input type="checkbox" id="category-color-gray" name="category-color" value="gray" />
+                          <label for="category-color-gray">그레이</label>
                         </li>
                         <li>
-                          <input type="checkbox" id="category-spring-magin-power" name="category-spring" value="magin-power" />
-                          <label for="category-spring-magin-power">Magic Power Spring</label>
+                          <input type="checkbox" id="category-color-white" name="category-color" value="white" />
+                          <label for="category-color-white">화이트</label>
                         </li>
                         <li>
-                          <input type="checkbox" id="category-spring-super-power" name="category-spring" value="super-power" />
-                          <label for="category-spring-super-power">Super Power Spring</label>
+                          <input type="checkbox" id="category-color-black" name="category-color" value="black" />
+                          <label for="category-color-black">블랙</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" id="category-color-etc" name="category-color" value="etc" />
+                          <label for="category-color-etc">기타</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" id="category-color-modern" name="category-color" value="modern" />
+                          <label for="category-color-modern">모던한</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" id="category-color-warm" name="category-color" value="warm" />
+                          <label for="category-color-warm">따뜻한</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" id="category-color-multi" name="category-color" value="multi" />
+                          <label for="category-color-multi">멀티</label>
                         </li>
                       </ul>
                     </li>
-                    <li data-menu="store">
+                    <li data-menu="concept">
                       <a href="#">
-                        <em>판매처</em>
+                        <em>컨셉</em>
                         <img alt="분류 열기" src="../img/side-icon-on.png" class="open" />
                         <img alt="분류 닫기" src="../img/side-icon-off.png" class="close" />
                       </a>
                       <ul>
                         <li>
-                          <input type="checkbox" id="category-store-dept" name="category-store" value="dept" />
-                          <label for="category-store-dept">백화점</label>
+                          <input type="checkbox" id="category-concept-modern" name="category-concept" value="modern" />
+                          <label for="category-concept-modern">모던</label>
                         </li>
                         <li>
-                          <input type="checkbox" id="category-store-agency" name="category-store" value="agency" />
-                          <label for="category-store-agency">대리점</label>
+                          <input type="checkbox" id="category-concept-classic" name="category-concept" value="classic" />
+                          <label for="category-concept-classic">클래식</label>
                         </li>
                         <li>
-                          <input type="checkbox" id="category-store-online" name="category-store" value="online" />
-                          <label for="category-store-online">온라인몰</label>
+                          <input type="checkbox" id="category-concept-hotel" name="category-concept" value="hotel" />
+                          <label for="category-concept-hotel">호텔</label>
                         </li>
                         <li>
-                          <input type="checkbox" id="category-store-part" name="category-store" value="part" />
-                          <label for="category-store-part">일부매장</label>
+                          <input type="checkbox" id="category-concept-function" name="category-concept" value="function" />
+                          <label for="category-concept-function">기능성</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" id="category-concept-etc" name="category-concept" value="etc" />
+                          <label for="category-concept-etc">기타</label>
+                        </li>
+                      </ul>
+                    </li>
+                    <li data-menu="type">
+                      <a href="#">
+                        <em>타입</em>
+                        <img alt="분류 열기" src="../img/side-icon-on.png" class="open" />
+                        <img alt="분류 닫기" src="../img/side-icon-off.png" class="close" />
+                      </a>
+                      <ul>
+                        <li>
+                          <input type="checkbox" id="category-type-t" name="category-type" value="t" />
+                          <label for="category-type-t">T</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" id="category-type-lc" name="category-type" value="lc" />
+                          <label for="category-type-lc">L/C</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" id="category-type-e" name="category-type" value="e" />
+                          <label for="category-type-e">E</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" id="category-type-n" name="category-type" value="n" />
+                          <label for="category-type-n">N</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" id="category-type-a" name="category-type" value="a" />
+                          <label for="category-type-a">A</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" id="category-type-c" name="category-type" value="c" />
+                          <label for="category-type-c">C</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" id="category-type-etc" name="category-type" value="etc" />
+                          <label for="category-type-etc">기타</label>
                         </li>
                       </ul>
                     </li>
                   </ul>
+                  <a class="btn guide"><span>타입 가이드</span></a>
                 </div>
               </div>
         
@@ -271,7 +333,7 @@
   <script>
   'use strict';
   var bedInfoData = null;
-  var type = 'bedMattressInfo';
+  var type = 'bedFrameInfo';
   setLogo();
   setViewRow();
   loadList('../json/bed-product.json', type);
@@ -280,6 +342,6 @@
     setLogo();
     setViewRow();
   });
-
+  
   </script>
 </html>
