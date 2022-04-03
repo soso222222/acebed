@@ -81,12 +81,7 @@ function initEvent() {
     $('.family-site-link').toggleClass('close');
   });
   
-  $('#sub-product-list div.top > ul.arr-list > li.view > ul > li.row-3 a').on('click', function () {
-    showRowView('row-3');
-  });
-  $('#sub-product-list div.top > ul.arr-list > li.view > ul > li.row-2 a').on('click', function () {
-    showRowView('row-2');
-  });
+
   $('#sub-product-list .category-matt > ul > li > a').on('click', function () {
     var mattLi = $(this).parent();
     var mattUl = mattLi.find('ul');
@@ -175,12 +170,37 @@ function initEvent() {
   });
   $('#sub-product-list div.pages p.number').on('click', 'a.page', function() {
     var index = $(this).index();
+    showList(type, (index + 1));
+  });
+  $('#sub-product-list div.pages p.number').on('click', 'a.prev', function() {
+    var index = 0;
+    $(this).siblings().each(function (i) {
+      if($(this).hasClass('on')) index = parseInt($(this).attr('data-page'));
+      return;
+    });
+    index = (index - maxPage) <= 1 ? index = 1 : (index - maxPage);
+    // alert(index);
     showList(type, index);
+  });
+  $('#sub-product-list div.pages p.number').on('click', 'a.next', function() {
+    var index = 0;
+    $(this).siblings().each(function (i) {
+      if($(this).hasClass('on')) index = parseInt($(this).attr('data-page'));
+      return;
+    });
+    index = (index + maxPage) > totalPage ? index = totalPage - (totalPage % maxPage) + 1 : (index + maxPage);
+    // alert(index);
+    showList(type, index);
+  });
+  $('#sub-product-list div.pages p.number').on('click', 'a.first', function() {
+    showList(type, 1);
+  });
+  $('#sub-product-list div.pages p.number').on('click', 'a.last', function() {
+    showList(type, totalPage);
   });
   $('#sub-product-list div.list-box ul.list').on('click', 'ul.info > a.like', function() {
     var likeTimer = '';
     
-    // var curLi = $(this).parent().parent().parent().parent();
     var curLi = $(this).closest('ul.content').parent();
     if(curLi.hasClass('liked')) {
       curLi.addClass('show-unlike');
@@ -206,43 +226,29 @@ function initEvent() {
 }
 
 function showRowView(row) {
-  $('#sub-product-list ul.list > li').removeClass('on');
-  $('#sub-product-list div.top > ul.arr-list > li.view > ul > li').removeClass('on');
-  $('#sub-product-list div.list-box').removeClass('row-3 row-2');
-  if (row == 'row-3') {
-    $('#sub-product-list div.top > ul.arr-list > li.view > ul > li.row-3').addClass('on');
-    $('#sub-product-list div.list-box').addClass(row);
-  } else if (row == 'row-2') {
-    $('#sub-product-list div.top > ul.arr-list > li.view > ul > li.row-2').addClass('on');
-    $('#sub-product-list div.list-box').addClass(row);
-  }
+  $('#sub-product-list ul.list > li').removeClass('on'); // transition 초기화
+  $('#sub-product-list div.list-box').removeClass('row-3 row-2 row-1'); // list-view 초기화
+  $('ul.arr-list > li.view > ul > li').removeClass('on'); // tab 초기화
+  $('#sub-product-list div.top > ul.arr-list > li.view > ul > li.' + row).addClass('on');
+  $('#sub-product-list div.list-box').addClass(row);
+  // if (row == 'row-3') {
+  // } else if (row == 'row-2') {
+  // }
   
   $('#sub-product-list div.list-box ul.list > li').each(function(i) {
     var listupTimer = setTimeout(function() { $('#sub-product-list ul.list > li:eq(' + i + ')').addClass('on'); }, (i + 1) * 100);
   });
 }
-function setPage(list, curPage) {
-  var maxList = 12;
-  var pages = (list.length / maxList) + 1;
-  var curPage = (curPage === undefined) ? 1 : curPage;
-  // var startPage = '';
-  // var endPage = pages;
-  // var startList = ((curPage - 1) * maxList) + 1;
-  // var endList = (maxList * curPage);
-
-  $('#sub-product-list div.pages p.number').find('a').remove();
-
-  // >> : 최종값 of pages > 10
-  // << : 시작값 of pages > 11
-  $('#sub-product-list div.pages p.number').append('<a href="#" class="prev_first"></a>');
-  for (var i = 0; i < (pages - 1); i++) {
-    if (i === (curPage - 1)) {
-      $('#sub-product-list div.pages p.number').append('<a href="#" class="page on">'+ (i + 1) + '</a>');
-    } else {
-      $('#sub-product-list div.pages p.number').append('<a href="#" class="page">'+ (i + 1) + '</a>');
-    }
-  }
-  $('#sub-product-list div.pages p.number').append('<a href="#" class="next-last"></a>');
+function showRowViewM(row) {
+  $('#sub-product-list ul.list > li').removeClass('on'); // transition 초기화
+  $('#sub-product-list div.list-box').removeClass('row-3 row-2 row-1'); // list-view 초기화
+  $('ul.arr-list li').removeClass('on'); // mobile tab 초기화
+  $('#sub-product-list div.top-m ul.arr-list > li.' + row).addClass('on');
+  $('#sub-product-list div.list-box').addClass(row);
+  
+  $('#sub-product-list div.list-box ul.list > li').each(function(i) {
+    var listupTimer = setTimeout(function() { $('#sub-product-list ul.list > li:eq(' + i + ')').addClass('on'); }, (i + 1) * 100);
+  });
 }
 
 function loadList(url, key) {
@@ -262,7 +268,46 @@ function loadList(url, key) {
     }
   });
 }
+function setPage(list, curPage) {
+  var maxList = 12;
+  maxPage = 10;
+  totalPage = Math.floor((list.length / maxList) + 1);
+  var curPage = (curPage === undefined) ? 1 : curPage;
+  var startPage = (curPage % 10 === 0) ? (curPage - maxPage) + 1 : curPage - (curPage % maxPage) + 1; // 11
+  var endPage = startPage + maxPage - 1; //20
+  var isPrev = false;
+  var isNext = false;
+  // var startList = ((curPage - 1) * maxList) + 1;
+  // var endList = (maxList * curPage);
+  // remainderPage
 
+  $('#sub-product-list div.pages p.number').find('a').remove();
+  
+  if (endPage > totalPage) {
+    endPage = totalPage;
+  }
+  
+  // >>
+  // <<
+  if ((startPage + maxPage) <= totalPage) isNext = true
+  if ((endPage - maxPage) >= 1) isPrev = true;
+
+  if (isPrev) {
+    $('#sub-product-list div.pages p.number').append('<a href="#" class="first"></a>');
+    $('#sub-product-list div.pages p.number').append('<a href="#" class="prev"></a>');
+  }
+  for (var i = startPage; i < (endPage + 1); i++) {
+    if (i === curPage) {
+      $('#sub-product-list div.pages p.number').append('<a href="#" data-page="' + i + '" class="page on">' + i + '</a>');
+    } else {
+      $('#sub-product-list div.pages p.number').append('<a href="#" data-page="' + i + '" class="page">' + i + '</a>');
+    }
+  }
+  if (isNext) {
+    $('#sub-product-list div.pages p.number').append('<a href="#" class="next"></a>');
+    $('#sub-product-list div.pages p.number').append('<a href="#" class="last"></a>');
+  }
+}
 function showList(type, page) {
   var resultArr = bedInfoData;
   var categoryType = '';
@@ -296,40 +341,18 @@ function showList(type, page) {
     var categorySize = item['category-size'].replaceAll('|', ' / ');
     var imgSrc = item['img-src'];
     var contentText = '';
+    var appendStr = '';
 
     // `<li data-size="` + item['category-size'] + `" data-rank="` + item['category-rank'] + `" data-cushion="` + item['category-cushion'] + `" data-spring="` + item['category-spring'] + `" data-store="` + item['category-store'] + `">
     if(listType === 'bedMattressInfo'){
       var categoryRank = item['category-rank'].replaceAll('-', ' ');
-      contentText = 
+      appendStr = 
       `<li>
-          <ul class="content">
-            <li>
-              <a href="#">
-                <img alt="" src="` + imgSrc + `" class="photo" />
-                <div class="like-area">
-                  <div class="like-alert"><p><em>관심 제품으로<br />찜하였습니다.</em><br />마이페이지, 퀵 메뉴에서<br />확인하실 수 있습니다.</p></div>
-                  <div class="unlike-alert"><p>관심 제품에서<br /> 제외합니다.</p></div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <ul class="info">
-                <li>
-                  <p class="category-size">` + categorySize + `</p>
-                </li>
-                <li>
-                  <p class="title">` + categoryName + `</p>
-                </li>
-                <li>
-                  <p class="category-rank">` + categoryRank + `</p>
-                </li>
-                <a href="#" class="like"><img alt="찜하기" src="../img/icon-like.png" class="img-like" /></a>
-              </ul>
-            </li>
-          </ul>
+        <p class="category-rank">` + categoryRank + `</p>
       </li>`;
+
     } else if(listType === 'bedFrameInfo') {
-      var categoryType = item['category-type'];
+      var type = item['type'];
       // var colors = item['color'];
       var colors = item['color'].split('|');
       var linkColor = '';
@@ -338,7 +361,16 @@ function showList(type, page) {
 
       if (Array.isArray(colors) === true) {
         $.each(colors, function (i) {
-          spanColor = '<span class="color" style="background-color: ' + colors[i] + ';"></span>';
+          if(colors[i].includes(',')){
+            var colorsDetail = colors[i].split(',');
+            spanColor = '';
+
+            $.each(colorsDetail, function (j) {
+              spanColor += '<span class="color-2" style="background-color: ' + colorsDetail[j] + ';"></span>';
+            });
+          } else {
+            spanColor = '<span class="color" style="background-color: ' + colors[i] + ';"></span>';
+          }
           linkColor += '<a href="#">' + spanColor + '</span></a>';
           divColorInfo += '<div class="color-info">' + spanColor + '<span class="colorName">' + colors[i] + '</span>' + '</div>';
         });
@@ -346,40 +378,43 @@ function showList(type, page) {
         linkColor = '<a href="#"><span class="color" style="background-color: ' + colors + ';"></span></a>';
       }
 
+      appendStr = `
+      <li>
+        <p class="category-type">` + type + `</p>
+      </li>
+      <li>
+        <p class="palette">` + linkColor + `</p>
+        ` + divColorInfo + `
+      </li>
+      `;
 
-      contentText = 
-      `<li>
-          <ul class="content">
-            <li>
-              <a href="#">
-                <img alt="" src="` + imgSrc + `" class="photo" />
-                <div class="like-area">
-                  <div class="like-alert"><p><em>관심 제품으로<br />찜하였습니다.</em><br />마이페이지, 퀵 메뉴에서<br />확인하실 수 있습니다.</p></div>
-                  <div class="unlike-alert"><p>관심 제품에서<br /> 제외합니다.</p></div>
-                </div>
-                </a>
-            </li>
-            <li>
-              <ul class="info">
-                <li>
-                  <p class="category-size">` + categorySize + `</p>
-                </li>
-                <li>
-                  <p class="title">` + categoryName + `</p>
-                </li>
-                <li>
-                  <p class="category-type">` + categoryType + ` TYPE</p>
-                </li>
-                <li>
-                  <p class="palette">` + linkColor + `</p>
-                  ` + divColorInfo + `
-                </li>
-                <a href="#" class="like"><img alt="찜하기" src="../img/icon-like.png" class="img-like" /></a>
-              </ul>
-            </li>
-          </ul>
-      </li>`;
     }
+    contentText = 
+    `<li>
+        <ul class="content">
+          <li>
+            <a href="#">
+              <img alt="" src="` + imgSrc + `" class="photo" />
+              <div class="like-area">
+                <div class="like-alert"><p><em>관심 제품으로<br />찜하였습니다.</em><br />마이페이지, 퀵 메뉴에서<br />확인하실 수 있습니다.</p></div>
+                <div class="unlike-alert"><p>관심 제품에서<br /> 제외합니다.</p></div>
+              </div>
+              </a>
+          </li>
+          <li>
+            <ul class="info">
+              <li>
+                <p class="category-size">` + categorySize + `</p>
+              </li>
+              <li>
+                <p class="title">` + categoryName + `</p>
+              </li>
+              ` + appendStr + `
+              <a href="#" class="like"><img alt="찜하기" src="../img/icon-like.png" class="img-like" /></a>
+            </ul>
+          </li>
+        </ul>
+    </li>`;
 
     $('#sub-product-list div.list-box ul.list').append(contentText);
   }
@@ -397,22 +432,29 @@ function showList(type, page) {
 
 
 
-function setViewRow() {
-  var windowHeight = $(window).width();
-  if ($(window).height() < 768){
-    $('#sub-product-list div.list-box').removeClass('row-1');
-    $('#sub-product-list div.list-box').addClass('row-2');
-    $('ul.arr-list > li').removeClass('on');
-    $('div.top-m ul.arr-list > li:first-child').addClass('on');
+function setRowView() {
+  var windowWidth = $(window).width();
+  if (windowWidth < 1000){
+    showRowViewM('row-2');
   }else{
-    $('#sub-product-list div.list-box').removeClass('row-2');
-    $('#sub-product-list div.list-box').addClass('row-3');
-    $('ul.arr-list > li').removeClass('on');
-    $('div.top ul.arr-list > li:first-child').addClass('on');
+    showRowView('row-3');
   }
+  $('#sub-product-list div.top > ul.arr-list > li.view > ul > li.row-3 a').on('click', function () {
+    showRowView('row-3');
+  });
+  $('#sub-product-list div.top > ul.arr-list > li.view > ul > li.row-2 a').on('click', function () {
+    showRowView('row-2');
+  });
+  $('#sub-product-list div.top-m ul.arr-list > li.row-2 a').on('click', function () {
+    showRowViewM('row-1');
+  });
+  $('#sub-product-list div.top-m ul.arr-list > li.row-1 a').on('click', function () {
+    showRowViewM('row-2');
+  });
 }
 
 function setLogo() {
+  var visualBgTimer = setTimeout(function() {$('body.sub.bed #main div.background-matt').addClass('on');}, 500); 
   var windowHeight = $(window).width();
   if(windowHeight < 768){
     $('#mobile-menu img.black').css({'display': 'none'});

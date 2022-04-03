@@ -11,9 +11,8 @@
 
       <main id="main">
         <div class="sub-header">
-          <div class="background-matt">
-            <h2>프레임</h2>
-          </div>
+          <div class="background-matt"></div>
+          <h2>프레임</h2>
         </div>
       
       
@@ -33,7 +32,7 @@
                 <ul class="arr-list">
                   <li class="view">
                     <ul>
-                      <li class="row-3 on"><a href="#">3열 보기</a></li>
+                      <li class="row-3"><a href="#">3열 보기</a></li>
                       <li class="row-2"><a href="#">2열 보기</a></li>
                     </ul>
                   </li>
@@ -49,7 +48,7 @@
                 <div class="box">
                   <span>검색필터</span>
                   <ul class="arr-list">
-                    <li class="row-2 on"><a href="#">2열 보기</a></li>
+                    <li class="row-2"><a href="#">2열 보기</a></li>
                     <li class="row-1"><a href="#">1열 보기</a></li>
                   </ul>
                 </div>
@@ -150,8 +149,8 @@
                           <label for="category-purpose-twin">트윈침대</label>
                         </li>
                         <li>
-                          <input type="checkbox" id="category-purpose-low-rise" name="category-purpose" value="low-rise" />
-                          <label for="category-purpose-low-rise">저상형침대</label>
+                          <input type="checkbox" id="category-purpose-low-floor" name="category-purpose" value="low-floor" />
+                          <label for="category-purpose-low-floor">저상형침대</label>
                         </li>
                         <li>
                           <input type="checkbox" id="category-purpose-storage" name="category-purpose" value="storage" />
@@ -308,7 +307,7 @@
                 </div>
               </div>
         
-              <div class="list-box row-3">
+              <div class="list-box">
                 <div class="box">
                   <ul class="list">
                   </ul>
@@ -334,13 +333,15 @@
   'use strict';
   var bedInfoData = null;
   var type = 'bedFrameInfo';
+  var maxPage = 10;
+  var totalPage = 0;
   setLogo();
-  setViewRow();
+  setRowView();
   loadList('../json/bed-product.json', type);
   
   $(window).on('resize', function() {
     setLogo();
-    setViewRow();
+    setRowView();
   });
   
   </script>

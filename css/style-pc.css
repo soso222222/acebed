@@ -396,9 +396,10 @@ section.page.on div.gallery {opacity: 1; transform: translateY(0);}
 
 
 /* sub(page) */
-body.sub.bed #main div.background-matt {padding: 300px 0 160px 0;}
-body.sub.bed.bed-mattress #main div.background-matt {background: url(../img/sub-head-visual-mattress.jpg) center center no-repeat;}
-body.sub.bed.bed-frame #main div.background-matt {background: url(../img/sub-head-visual-frame.jpg) center center no-repeat;}
+body.sub.bed #main div.background-matt {height: 550px; transform: scale(1.2); transition: transform 0.8s;}
+body.sub.bed #main div.background-matt.on {transform: scale(1);}
+body.sub.bed-frame #main div.background-matt {background: url(../img/sub-head-visual-frame.jpg) center center no-repeat;}
+body.sub.bed-mattress #main div.background-matt {background: url(../img/sub-head-visual-mattress.jpg) center center no-repeat;}
 
 
 
@@ -411,8 +412,8 @@ body.sub #header:not(.open) #gnb > ul > li {color: #fff;}
 body.sub #header:not(.open) div.top ul > li:nth-child(3) > a {padding: 8px 15px 8px 33px; background: url(../img/wedding-icon.png) left 14px center no-repeat transparent; border: 1px solid #fff; border-radius: 50px; box-sizing: border-box; margin-right: 5px;}
 body.sub #header:not(.open) div.top ul > li:nth-child(4) > a {padding: 8px 15px; background-color: transparent; border: 1px solid #fff; border-radius: 50px; border-radius: 50px; box-sizing: border-box;} 
 
-body.sub #main p.sub-header {position: relative; width: 100%;}
-body.sub #main div.sub-header h2 {font-size: 60px; font-weight: 700; color: #fff; text-align: center;}
+body.sub #main div.sub-header {position: relative; width: 100%; overflow: hidden;}
+body.sub #main div.sub-header h2 {position: absolute; top: 55%; left: 50%; transform: translate(-50%, 0); font-size: 60px; font-weight: 800; color: #fff; text-align: center;}
 
 #sub-product-list {position: relative; padding-bottom: 160px; border-bottom: 1px solid #ebebeb; box-sizing: border-box;}
 #sub-product-list div.product {margin-top: 20px;}
@@ -492,7 +493,7 @@ body.sub #main div.sub-header h2 {font-size: 60px; font-weight: 700; color: #fff
 /* #sub-product-list div.side input[type="checkbox"]:focus + label {outline: 2px dashed #05141f;} */
 
 #sub-product-list div.list-box {position: relative; overflow: hidden; width: 75%; margin: 0 auto;}
-#sub-product-list div.list-box > div.box {overflow: hidden; width: 85%; max-width: 1380px; margin: 0 auto;}
+#sub-product-list div.list-box > div.box {overflow: hidden; width: 90%; max-width: 1380px; margin: 0 auto;}
 #sub-product-list div.list-box ul.list {overflow: hidden;}
 #sub-product-list div.list-box ul.list > li {position: relative; float: left; box-sizing: border-box;}
 #sub-product-list div.list-box ul.list > li div.like-area > div.like-alert,
@@ -509,16 +510,17 @@ body.sub #main div.sub-header h2 {font-size: 60px; font-weight: 700; color: #fff
 #sub-product-list div.list-box ul.list > li a:hover img.photo {transform: scale(1.05);}
 #sub-product-list div.list-box.row-3 ul.list > li {width: 30%; margin-right: 5%; margin-bottom: 3%;}
 #sub-product-list div.list-box.row-3 ul.list > li:nth-child(3n) {margin-right: 0;}
-#sub-product-list div.list-box.row-2 ul.list > li {width: 46%; margin-right: 4%;}
+#sub-product-list div.list-box.row-2 ul.list > li {width: 48%; margin-right: 4%;}
 #sub-product-list div.list-box.row-2 ul.list > li:nth-child(2n) {margin-right: 0;}
 #sub-product-list div.list-box ul.content {position: relative;}
 #sub-product-list div.list-box ul.info {position: relative; margin: 30px 0;}
 #sub-product-list div.list-box ul.info > a.like {position: absolute; display: block; top: 0; right: 0;}
 #sub-product-list div.list-box ul.info > li > p {font-size: 16px; font-weight: 400; color: #666; margin: 0.7em 0;}
 #sub-product-list div.list-box ul.info > li > p.title {font-size: 18px; font-weight: 800; color: #333; margin-bottom: 6px;}
-#sub-product-list div.list-box ul.info > li > p.palette > a {display: inline-block;}
+#sub-product-list div.list-box ul.info > li > p.palette > a {display: inline-block; width: 14px; height: 14px; border: 1px solid #d1d1d1; box-sizing: border-box;}
 #sub-product-list div.list-box ul.info > li > p.palette > a + a {margin-left: 5px;}
-#sub-product-list div.list-box ul.info > li > p.palette > a > span.color {display: inline-block; width: 14px; height: 14px; border: 1px solid #d1d1d1; box-sizing: border-box;}
+#sub-product-list div.list-box ul.info > li > p.palette > a > span.color {display: inline-block; width: 14px; height: 14px;}
+#sub-product-list div.list-box ul.info > li > p.palette > a > span.color-2 {display: inline-block; width: 6px; height: 14px;}
 #sub-product-list div.list-box ul.info > li > div.color-info {position: absolute; display: none; top: -50%; left: 10%; width: 60%; height: 60%; background-color: #fff; padding: 20px; border-radius: 20px;}
 #sub-product-list div.list-box ul.info > li > div.color-info.on {display: block;}
 #sub-product-list div.list-box ul.info > li > div.color-info > span.color {display: inline-block; width: 68px; height: 68px; border: 1px solid #d1d1d1; box-sizing: border-box;}
@@ -528,8 +530,10 @@ body.sub #main div.sub-header h2 {font-size: 60px; font-weight: 700; color: #fff
 #sub-product-list div.pages p.number {display: inline-block; font-size: 16px; font-weight: 800; color: #666; overflow: hidden;}
 #sub-product-list div.pages p.number a {display: block; float: left; width: 34px; height: 34px; line-height: 34px; text-align: center;}
 #sub-product-list div.pages p.number a.page.on {color: #0890c0; border: 1px solid #0890c0; box-sizing: border-box;}
-#sub-product-list div.pages p.number a.prev_first {background: url(../img/paging-first-prev.png) center center no-repeat;}
-#sub-product-list div.pages p.number a.next-last {background: url(../img/paging-last-next.png) center center no-repeat;}
+#sub-product-list div.pages p.number a.prev {background: url(../img/paging-prev.png) center center no-repeat;}
+#sub-product-list div.pages p.number a.next {background: url(../img/paging-next.png) center center no-repeat;}
+#sub-product-list div.pages p.number a.first {background: url(../img/paging-first-prev.png) center center no-repeat;}
+#sub-product-list div.pages p.number a.last {background: url(../img/paging-last-next.png) center center no-repeat;}
 
 /* color */
 /* .brown {background-color: #8d7674; border: 1px solid rgba(0, 0, 0, 0.1);}

@@ -11,9 +11,8 @@
 
       <main id="main">
         <div class="sub-header">
-          <div class="background-matt">
-            <h2>매트리스</h2>
-          </div>
+          <div class="background-matt"></div>
+          <h2>매트리스</h2>
         </div>
       
       
@@ -33,7 +32,7 @@
                 <ul class="arr-list">
                   <li class="view">
                     <ul>
-                      <li class="row-3 on"><a href="#">3열 보기</a></li>
+                      <li class="row-3"><a href="#">3열 보기</a></li>
                       <li class="row-2"><a href="#">2열 보기</a></li>
                     </ul>
                   </li>
@@ -49,7 +48,7 @@
                 <div class="box">
                   <span>검색필터</span>
                   <ul class="arr-list">
-                    <li class="row-2 on"><a href="#">2열 보기</a></li>
+                    <li class="row-2"><a href="#">2열 보기</a></li>
                     <li class="row-1"><a href="#">1열 보기</a></li>
                   </ul>
                 </div>
@@ -246,7 +245,7 @@
                 </div>
               </div>
         
-              <div class="list-box row-3">
+              <div class="list-box">
                 <div class="box">
                   <ul class="list">
                   </ul>
@@ -272,13 +271,14 @@
   'use strict';
   var bedInfoData = null;
   var type = 'bedMattressInfo';
+  var totalPage = 0;
   setLogo();
-  setViewRow();
+  setRowView();
   loadList('../json/bed-product.json', type);
   
   $(window).on('resize', function() {
     setLogo();
-    setViewRow();
+    setRowView();
   });
 
   </script>
