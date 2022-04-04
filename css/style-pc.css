@@ -448,7 +448,7 @@ body.sub #main div.sub-header h2 {position: absolute; top: 55%; left: 50%; trans
 #sub-product-list div.top > ul.arr-list li.order select.arr::-ms-expand {display: none;} /*IE10*/
 
 #sub-product-list div.bottom {position: relative; margin-top: 50px; overflow: hidden;}
-#sub-product-list div.side {float: left; width: 20%;}
+#sub-product-list div.side {float: left; width: 400px;}
 #sub-product-list div.side div.search-box {border: 1px solid #ebebeb; box-sizing: border-box; box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 5%);}
 #sub-product-list div.side div.search-box > p {position: relative; line-height: 50px; background-color: #adc4ce; color: #fff;}
 #sub-product-list div.side div.search-box > p i {color: #fff;}
@@ -465,7 +465,7 @@ body.sub #main div.sub-header h2 {position: absolute; top: 55%; left: 50%; trans
 #sub-product-list div.side div.search-box > div.keyword div.recommend-word ul li {padding-bottom: 6px;}
 
 #sub-product-list div.side div.category-matt {margin: 10% 10% 0 15%;}
-#sub-product-list div.side div.category-matt > a.btn {width: 100%; margin-top: 1em;}
+#sub-product-list div.side div.category-matt > a.btn.guide {width: 100%; margin-top: 1em;}
 #sub-product-list div.side ul > li > a {position: relative; display: block; line-height: 50px;}
 #sub-product-list div.side ul > li.on > a {margin-bottom: 15px;}
 #sub-product-list div.side ul > li > ul {transition: height 0.8s;}
@@ -483,16 +483,33 @@ body.sub #main div.sub-header h2 {position: absolute; top: 55%; left: 50%; trans
 #sub-product-list div.side ul > li.on > ul > li > a > img.open {display: block;}
 #sub-product-list div.side ul > li > ul > li > input {position: absolute; opacity: 0;}
 #sub-product-list div.side ul > li > ul > li > label {position: relative; line-height: 15px; font-size: 17px; vertical-align: middle;}
-#sub-product-list div.side ul > li > ul > li > label::before {content: ''; display: inline-block; width: 15px; height: 15px; border: 1px solid #888; margin-right: 10px; margin-top: 1px; vertical-align: middle;}
-#sub-product-list div.side ul > li > ul > li > label::after {content: ''; position: absolute; display: none; top: 7px; left: 6px; width: 6px; height: 6px; background-color: #333; border-radius: 1px;}
+#sub-product-list div.side ul > li > ul > li > label::before {content: ''; display: inline-block; width: 15px; height: 15px; border: 1px solid #888; margin-right: 10px; margin-top: 1px; vertical-align: middle; box-sizing: border-box;}
+#sub-product-list div.side ul > li > ul > li > label::after {content: ''; position: absolute; display: none; top: 7px; left: 5px; width: 6px; height: 6px; background-color: #333; border-radius: 1px; box-sizing: border-box;}
 #sub-product-list div.side ul > li > ul > li > input:checked ~ label::after {display: inline-block;}
 #sub-product-list div.side ul > li > ul > li > a > input:focus + label {outline: 2px dashed #05141f;}
+
+
+/* color */
+#sub-product-list div.side ul > li > ul.color > li > label::before {width: 17px; height: 17px; border-color: #d1d1d1; border-radius: 50px;}
+#sub-product-list div.side ul > li > ul.color > li > label::after {content: ''; position: absolute; display: none; top: 0; left: 0; width: 17px; height: 17px; border: 1px solid #333; background-color: transparent; border-radius: 50px;}
+#sub-product-list div.side ul > li > ul.color > li.brown > label::before {background-color: #8d7674;}
+#sub-product-list div.side ul > li > ul.color > li.beige > label::before {background-color: #ece1d4;}
+#sub-product-list div.side ul > li > ul.color > li.blue > label::before {background-color: #5d7cb6;}
+#sub-product-list div.side ul > li > ul.color > li.navy > label::before {background-color: #35486b;}
+#sub-product-list div.side ul > li > ul.color > li.gray > label::before {background-color: #c4c4c4;}
+#sub-product-list div.side ul > li > ul.color > li.white > label::before {background-color: #fff;}
+#sub-product-list div.side ul > li > ul.color > li.black > label::before {background-color: #000;}
+#sub-product-list div.side ul > li > ul.color > li.etc > label::before {background-image: url('../img/sub-bed-color-etc.png'); background-size: 16px 16px;}
+#sub-product-list div.side ul > li > ul.color > li.modern > label::before {background-image: url('../img/sub-bed-color-modern.png'); background-size: 16px 16px;}
+#sub-product-list div.side ul > li > ul.color > li.warm > label::before {background-image: url('../img/sub-bed-color-warm.png'); background-size: 16px 16px;}
+#sub-product-list div.side ul > li > ul.color > li.multi > label::before {background-image: url('../img/sub-bed-color-multi.png'); background-size: 16px 16px;}
+
 
 /* #sub-product-list div.side input[type="checkbox"] {position: absolute; opacity: 0;} */
 /* #sub-product-list div.side label::before {content: '\f111'; font-family: 'Font Awesome 5 Free'; font-weight: 400; margin-right: 6px;} */
 /* #sub-product-list div.side input[type="checkbox"]:focus + label {outline: 2px dashed #05141f;} */
 
-#sub-product-list div.list-box {position: relative; overflow: hidden; width: 75%; margin: 0 auto;}
+#sub-product-list div.list-box {position: relative; overflow: hidden; width: calc(100% - 400px); margin: 0 auto;}
 #sub-product-list div.list-box > div.box {overflow: hidden; width: 90%; max-width: 1380px; margin: 0 auto;}
 #sub-product-list div.list-box ul.list {overflow: hidden;}
 #sub-product-list div.list-box ul.list > li {position: relative; float: left; box-sizing: border-box;}
@@ -521,10 +538,13 @@ body.sub #main div.sub-header h2 {position: absolute; top: 55%; left: 50%; trans
 #sub-product-list div.list-box ul.info > li > p.palette > a + a {margin-left: 5px;}
 #sub-product-list div.list-box ul.info > li > p.palette > a > span.color {display: inline-block; width: 14px; height: 14px;}
 #sub-product-list div.list-box ul.info > li > p.palette > a > span.color-2 {display: inline-block; width: 6px; height: 14px;}
-#sub-product-list div.list-box ul.info > li > div.color-info {position: absolute; display: none; top: -50%; left: 10%; width: 60%; height: 60%; background-color: #fff; padding: 20px; border-radius: 20px;}
+#sub-product-list div.list-box ul.info > li > div.color-info {position: absolute; display: none; bottom: 30%; left: 0; width: 60%; height: 100%; border: 1px solid #ccc; background-color: #fff; padding: 20px; border-radius: 18px; box-sizing: border-box; word-break: break-word;}
 #sub-product-list div.list-box ul.info > li > div.color-info.on {display: block;}
-#sub-product-list div.list-box ul.info > li > div.color-info > span.color {display: inline-block; width: 68px; height: 68px; border: 1px solid #d1d1d1; box-sizing: border-box;}
-#sub-product-list div.list-box ul.info > li > div.color-info > span.colorName {position: absolute; top: 50%; transform: translate(0, -50%); font-size: 18px; font-weight: 800; color: #333; margin-left: 10px;}
+#sub-product-list div.list-box ul.info > li > div.color-info::after {content: ''; position: absolute; display: block; bottom: -10px; left: 0; width: 10px; height: 20px; background: url(../img/color-info-icon.png) left center no-repeat;}
+#sub-product-list div.list-box ul.info > li > div.color-info > div.color-box {display: inline-block; width: 68px; height: 68px; border: 1px solid #d1d1d1; box-sizing: border-box;}
+#sub-product-list div.list-box ul.info > li > div.color-info > div.color-box > span.color {display: inline-block; width: 68px; height: 68px;}
+#sub-product-list div.list-box ul.info > li > div.color-info > div.color-box > span.color-2 {display: inline-block; width: 33px; height: 68px;}
+#sub-product-list div.list-box ul.info > li > div.color-info > span.colorName {position: absolute; top: 50%; transform: translate(0, -50%); font-size: 17px; font-weight: 700; color: #333; margin: 0 20px 0 15px;}
 
 #sub-product-list div.pages {margin-top: 60px; text-align: center;}
 #sub-product-list div.pages p.number {display: inline-block; font-size: 16px; font-weight: 800; color: #666; overflow: hidden;}
@@ -534,19 +554,6 @@ body.sub #main div.sub-header h2 {position: absolute; top: 55%; left: 50%; trans
 #sub-product-list div.pages p.number a.next {background: url(../img/paging-next.png) center center no-repeat;}
 #sub-product-list div.pages p.number a.first {background: url(../img/paging-first-prev.png) center center no-repeat;}
 #sub-product-list div.pages p.number a.last {background: url(../img/paging-last-next.png) center center no-repeat;}
-
-/* color */
-/* .brown {background-color: #8d7674; border: 1px solid rgba(0, 0, 0, 0.1);}
-.beige {background-color: #ece1d4;}
-.blue {background-color: #5d7cb6;}
-.navy {background-color: #35486b;}
-.gray {background-color: #c4c4c4;}
-.white {background-color: #fff;}
-.black {background-color: #000;}
-.etc {background-image: url('../img/sub-bed-color-etc.png');}
-.modern {background-image: url('../img/sub-bed-color-modern.png');}
-.warm {background-image: url('../img/sub-bed-color-warm.png');}
-.multi {background-image: url('../img/sub-bed-color-multi.png');} */
 
 
 

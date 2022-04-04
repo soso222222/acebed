@@ -216,10 +216,10 @@ function initEvent() {
       $(this).find(".img-like").attr('src', '../img/icon-liked.png');
     }
   });
-  $('#sub-product-list div.list-box ul.list').on('mouseenter', 'p.palette > a', function () {
+  $('#sub-product-list div.list-box ul.list').on('mouseenter focusin', 'p.palette > a', function () {
     var index = $(this).index();
     $(this).closest('li').find('div.color-info:eq(' + index + ')').addClass('on');
-  }).on('mouseleave', 'p.palette > a', function () {
+  }).on('mouseleave focusout', 'p.palette > a', function () {
     $(this).closest('li').find('div.color-info').removeClass('on');
   });
 
@@ -231,9 +231,6 @@ function showRowView(row) {
   $('ul.arr-list > li.view > ul > li').removeClass('on'); // tab 초기화
   $('#sub-product-list div.top > ul.arr-list > li.view > ul > li.' + row).addClass('on');
   $('#sub-product-list div.list-box').addClass(row);
-  // if (row == 'row-3') {
-  // } else if (row == 'row-2') {
-  // }
   
   $('#sub-product-list div.list-box ul.list > li').each(function(i) {
     var listupTimer = setTimeout(function() { $('#sub-product-list ul.list > li:eq(' + i + ')').addClass('on'); }, (i + 1) * 100);
@@ -353,30 +350,40 @@ function showList(type, page) {
 
     } else if(listType === 'bedFrameInfo') {
       var type = item['type'];
-      // var colors = item['color'];
-      var colors = item['color'].split('|');
+      var colorInfo = item['color'];
       var linkColor = '';
       var spanColor = '';
       var divColorInfo = ''
+      var leftPosition = 6;
 
-      if (Array.isArray(colors) === true) {
-        $.each(colors, function (i) {
-          if(colors[i].includes(',')){
-            var colorsDetail = colors[i].split(',');
-            spanColor = '';
+      $.each(colorInfo, function (i) {
+        var colorName = colorInfo[i]['name'].split('|');
+        var colorHex = colorInfo[i]['hex'].split('|');
+        spanColor = '';
+        linkColor = '';
 
-            $.each(colorsDetail, function (j) {
-              spanColor += '<span class="color-2" style="background-color: ' + colorsDetail[j] + ';"></span>';
+        
+        $.each(colorHex, function (j) {
+          if (colorHex[j].indexOf(',') > -1) {
+            var colorsDetail = colorHex[j].split(',');
+            // if (Array.isArray(colorHex) === true) {}
+            $.each(colorsDetail, function (z) {
+              spanColor += '<span class="color-2" style="background-color: ' + colorsDetail[z] + ';"></span>';
             });
           } else {
-            spanColor = '<span class="color" style="background-color: ' + colors[i] + ';"></span>';
+            spanColor = '<span class="color" style="background-color: ' + colorHex[j] + ';"></span>';
           }
           linkColor += '<a href="#">' + spanColor + '</span></a>';
-          divColorInfo += '<div class="color-info">' + spanColor + '<span class="colorName">' + colors[i] + '</span>' + '</div>';
+          divColorInfo += `
+          <div class="color-info" style="left: ` + (j * leftPosition) + `%;">
+            <div class="color-box">
+              ` + spanColor + `
+            </div>
+            <span class="colorName">` + colorName[j ] + `</span>
+          </div>`;
         });
-      } else {
-        linkColor = '<a href="#"><span class="color" style="background-color: ' + colors + ';"></span></a>';
-      }
+        
+      });
 
       appendStr = `
       <li>

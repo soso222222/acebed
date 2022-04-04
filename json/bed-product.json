@@ -3,7 +3,7 @@
 		{
 			"name":"FLEX", 
 			"img-src":"../img/bed-frame-128.jpg", 
-			"color":"#9d9191",
+			"color": [{"name": "그레이", "hex": "#9d9191"}], 
 			"type": "T TYPE",
 			"category-size":"K|LQ",
 			"category-purpose":"NEWLYWEDS",
@@ -15,7 +15,7 @@
 		{
 			"name":"BMA-1165", 
 			"img-src":"../img/bed-frame-129.png", 
-			"color":"#624233|#ac8e68",
+			"color": [{"name": "월넛|내추럴오크", "hex": "#624233|#ac8e68"}], 
 			"type": "L/C TYPE",
 			"category-size":"LQ|SS",
 			"category-purpose":"NEWLYWEDS",
@@ -27,7 +27,7 @@
 		{
 			"name":"TVCF 침대 'ZANA'", 
 			"img-src":"../img/bed-frame-01.jpg", 
-			"color":"#7b6d6d|#daadad",
+			"color": [{"name": "팬텀그레이|피치블라썸", "hex": "#7b6d6d|#daadad"}], 
 			"type": "L/C TYPE",
 			"category-size":"K|LQ",
 			"category-purpose":"NEWLYWEDS",
@@ -39,7 +39,7 @@
 		{
 			"name":"BMA-1164", 
 			"img-src":"../img/bed-frame-02.jpg", 
-			"color":"#7b6d6d|#daadad",
+			"color": [{"name": "샌드베이지|틸그레이", "hex": "#bbb4a5|#797876"}], 
 			"type": "T TYPE",
 			"category-size":"K|LQ",
 			"category-purpose":"NEWLYWEDS",
@@ -51,7 +51,7 @@
 		{
 			"name":"ANELLO-W", 
 			"img-src":"../img/bed-frame-03.jpg", 
-			"color":"#7b6d6d",
+			"color": [{"name": "그레이", "hex": "#7b6d6d"}], 
 			"type": "L/C TYPE",
 			"category-size":"LQ",
 			"category-purpose":"NEWLYWEDS",
@@ -63,7 +63,7 @@
 		{
 			"name":"ALBERO -W", 
 			"img-src":"../img/bed-frame-04.jpg", 
-			"color":"#2a364d",
+			"color": [{"name": "제트블루", "hex": "#2a364d"}], 
 			"type": "A TYPE",
 			"category-size":"K",
 			"category-purpose":"NEWLYWEDS",
@@ -75,7 +75,7 @@
 		{
 			"name":"IRINA", 
 			"img-src":"../img/bed-frame-05.jpg", 
-			"color":"#858a8f|#b8bbb7",
+			"color": [{"name": "그레이|민트", "hex": "#858a8f|#b8bbb7"}], 
 			"type": "N TYPE",
 			"category-size":"LQ",
 			"category-purpose":"NEWLYWEDS",
@@ -87,7 +87,7 @@
 		{
 			"name":"IRINA", 
 			"img-src":"../img/bed-frame-06.jpg", 
-			"color":"#858a8f|#b8bbb7",
+			"color": [{"name": "그레이|민트", "hex": "#858a8f|#b8bbb7"}], 
 			"type": "N TYPE",
 			"category-size":"SS",
 			"category-purpose":"TWIN|JUNIOR",
@@ -99,7 +99,7 @@
 		{
 			"name":"FOGLIA", 
 			"img-src":"../img/bed-frame-07.jpg", 
-			"color":"#d0c8b5",
+			"color": [{"name": "엔틱 브라운", "hex": "#d0c8b5"}], 
 			"type": "A TYPE",
 			"category-size":"K",
 			"category-purpose":"JUNIOR",
@@ -111,7 +111,7 @@
 		{
 			"name":"TEENSTER", 
 			"img-src":"../img/bed-frame-08.jpg", 
-			"color":"#e5ddc9,#bfaf92",
+			"color": [{"name": "아이보리+브라운", "hex": "#e5ddc9,#bfaf92"}], 
 			"type": "C TYPE",
 			"category-size":"SS",
 			"category-purpose":"JUNIOR|STORAGE",
@@ -123,7 +123,7 @@
 		{
 			"name":"OMAGGIO", 
 			"img-src":"../img/bed-frame-09.jpg", 
-			"color":"#ae8457,#b4a691",
+			"color": [{"name": "내추럴 오크+브라운", "hex": "#ae8457,#b4a691"}], 
 			"type": "C TYPE",
 			"category-size":"SS",
 			"category-purpose":"JUNIOR|STORAGE",
@@ -135,7 +135,7 @@
 		{
 			"name":"GRAFICA", 
 			"img-src":"../img/bed-frame-10.jpg", 
-			"color":"#e9e2d0|#d3d8dc",
+			"color": [{"name": "린넨 베이지|틴트 블루", "hex": "#e9e2d0|#d3d8dc"}], 
 			"type": "L/C TYPE",
 			"category-size":"SS",
 			"category-purpose":"JUNIOR|TWIN",
@@ -147,7 +147,7 @@
 		{
 			"name":"OPIMO-II", 
 			"img-src":"../img/bed-frame-11.jpg", 
-			"color":"#cec2b3",
+			"color": [{"name": "덴버 오크", "hex": "#cec2b3"}], 
 			"type": "T TYPE",
 			"category-size":"K|LQ",
 			"category-purpose":"NEWLYWEDS|STORAGE",
@@ -159,7 +159,7 @@
 		{
 			"name":"LANOTTE", 
 			"img-src":"../img/bed-frame-12.jpg", 
-			"color":"#9d9191",
+			"color": [{"name": "그레이", "hex": "#9d9191"}], 
 			"type": "T TYPE",
 			"category-size":"LK|K|LQ",
 			"category-purpose":"NEWLYWEDS",
@@ -171,7 +171,7 @@
 		{
 			"name":"LANOTTE", 
 			"img-src":"../img/bed-frame-13.jpg", 
-			"color":"#9d9191",
+			"color": [{"name": "그레이", "hex": "#9d9191"}], 
 			"type": "L/C TYPE",
 			"category-size":"SS",
 			"category-purpose":"NEWLYWEDS",
@@ -183,7 +183,7 @@
 		{
 			"name":"TANGO", 
 			"img-src":"../img/bed-frame-14.jpg", 
-			"color":"#dfc5a5|#703c2c",
+			"color": [{"name": "어스베이지|마호가니", "hex": "#dfc5a5|#703c2c"}], 
 			"type": "A TYPE",
 			"category-size":"K",
 			"category-purpose":"aa",
@@ -195,7 +195,7 @@
 		{
 			"name":"BMA-1163", 
 			"img-src":"../img/bed-frame-15.jpg", 
-			"color":"#d5cec6|#8c5639",
+			"color": [{"name": "그레이화이트|테라코타", "hex": "#d5cec6|#8c5639"}], 
 			"type": "T TYPE",
 			"category-size":"K",
 			"category-purpose":"NEWLYWEDS",
@@ -207,7 +207,7 @@
 		{
 			"name":"LUCE-III", 
 			"img-src":"../img/bed-frame-16.jpg", 
-			"color":"#5d402e",
+			"color": [{"name": "콜롬비아 월넛", "hex": "#5d402e"}], 
 			"type": "T TYPE",
 			"category-size":"K|LQ",
 			"category-purpose":"NEWLYWEDS|STORAGE",
@@ -219,7 +219,7 @@
 		{
 			"name":"DADO", 
 			"img-src":"../img/bed-frame-17.jpg", 
-			"color":"#acacac",
+			"color": [{"name": "그레이", "hex": "#acacac"}], 
 			"type": "N TYPE",
 			"category-size":"LQ",
 			"category-purpose":"FAMILY|TWIN",
@@ -231,7 +231,7 @@
 		{
 			"name":"DADO", 
 			"img-src":"../img/bed-frame-18.jpg", 
-			"color":"#acacac",
+			"color": [{"name": "그레이", "hex": "#acacac"}], 
 			"type": "N TYPE",
 			"category-size":"DD|SS",
 			"category-purpose":"JUNIOR|TWIN",
@@ -243,7 +243,7 @@
 		{
 			"name":"BMA-1157", 
 			"img-src":"../img/bed-frame-19.jpg", 
-			"color":"#5b4140,#954637|#cb9966,967a65",
+			"color": [{"name": "월넛+레드오렌지|오크+브라운", "hex": "#5b4140,#954637|#cb9966,967a65"}], 
 			"type": "A TYPE",
 			"category-size":"K|LQ",
 			"category-purpose":"NEWLYWEDS",
@@ -255,7 +255,7 @@
 		{
 			"name":"ARNO", 
 			"img-src":"../img/bed-frame-20.jpg", 
-			"color":"#b9966b",
+			"color": [{"name": "새들브라운", "hex": "#b9966b"}], 
 			"type": "T TYPE",
 			"category-size":"K",
 			"category-purpose":"NEWLYWEDS",
@@ -267,7 +267,7 @@
 		{
 			"name":"BMA-1162", 
 			"img-src":"../img/bed-frame-21.jpg", 
-			"color":"#5b4140",
+			"color": [{"name": "월넛", "hex": "#5b4140"}], 
 			"type": "L/C TYPE",
 			"category-size":"LQ",
 			"category-purpose":"aa",
@@ -279,7 +279,7 @@
 		{
 			"name":"PERTE", 
 			"img-src":"../img/bed-frame-22.jpg", 
-			"color":"#303642",
+			"color": [{"name": "폴라네이비", "hex": "#303642"}], 
 			"type": "L/C TYPE",
 			"category-size":"LQ",
 			"category-purpose":"NEWLYWEDS",
@@ -291,7 +291,7 @@
 		{
 			"name":"PERTE", 
 			"img-src":"../img/bed-frame-23.jpg", 
-			"color":"#303642",
+			"color": [{"name": "폴라네이비", "hex": "#303642"}], 
 			"type": "L/C TYPE",
 			"category-size":"SS",
 			"category-purpose":"JUNIOR|TWIN",
@@ -303,7 +303,7 @@
 		{
 			"name":"BMA-1160", 
 			"img-src":"../img/bed-frame-24.jpg", 
-			"color":"#4e526d",
+			"color": [{"name": "네이비", "hex": "#4e526d"}], 
 			"type": "T TYPE",
 			"category-size":"K",
 			"category-purpose":"NEWLYWEDS",
@@ -315,7 +315,7 @@
 		{
 			"name":"OPALO", 
 			"img-src":"../img/bed-frame-25.jpg", 
-			"color":"#58595d|#9d8d80",
+			"color": [{"name": "차콜그레이|월넛오트밀", "hex": "#4e526d"}], 
 			"type": "N TYPE",
 			"category-size":"LQ",
 			"category-purpose":"NEWLYWEDS|FABRIC",
@@ -327,7 +327,7 @@
 		{
 			"name":"OPALO", 
 			"img-src":"../img/bed-frame-26.jpg", 
-			"color":"#58595d|#9d8d80",
+			"color": [{"name": "차콜그레이|월넛오트밀", "hex": "#4e526d"}], 
 			"type": "N TYPE",
 			"category-size":"SS",
 			"category-purpose":"aaaa",
@@ -339,7 +339,7 @@
 		{
 			"name":"BMA-1158", 
 			"img-src":"../img/bed-frame-27.jpg", 
-			"color":"#aaaa",
+			"color": [{"name": "아이보리|그린", "hex": "#fdfbee|#77958d"}], 
 			"type": "E TYPE",
 			"category-size":"DS",
 			"category-purpose":"JUNIOR",
@@ -351,7 +351,7 @@
 		{
 			"name":"MONOS 패브릭", 
 			"img-src":"../img/bed-frame-28.jpg", 
-			"color":"#acacac",
+			"color": [{"name": "그레이", "hex": "#acacac"}], 
 			"type": "L/C TYPE",
 			"category-size":"K|LQ",
 			"category-purpose":"FAMILY|LOW-FLOOR",
@@ -363,7 +363,7 @@
 		{
 			"name":"MONOS 패브릭", 
 			"img-src":"../img/bed-frame-29.jpg", 
-			"color":"#acacac",
+			"color": [{"name": "그레이", "hex": "#acacac"}], 
 			"type": "L/C TYPE",
 			"category-size":"SS",
 			"category-purpose":"FAMILY|LOW-FLOOR",
@@ -375,7 +375,7 @@
 		{
 			"name":"MONOS", 
 			"img-src":"../img/bed-frame-30.jpg", 
-			"color":"#595754",
+			"color": [{"name": "네로그레이", "hex": "#595754"}], 
 			"type": "L/C TYPE",
 			"category-size":"LQ",
 			"category-purpose":"FAMILY",
@@ -387,7 +387,7 @@
 		{
 			"name":"MONOS", 
 			"img-src":"../img/bed-frame-31.jpg", 
-			"color":"#595754",
+			"color": [{"name": "네로그레이", "hex": "#595754"}], 
 			"type": "L/C TYPE",
 			"category-size":"SS",
 			"category-purpose":"FAMILY",
@@ -399,7 +399,7 @@
 		{
 			"name":"REGINA", 
 			"img-src":"../img/bed-frame-32.jpg", 
-			"color":"#75685f",
+			"color": [{"name": "더스트핑크", "hex": "#75685f"}], 
 			"type": "A TYPE",
 			"category-size":"K",
 			"category-purpose":"NEWLYWEDS",
@@ -411,7 +411,7 @@
 		{
 			"name":"CERCHIO", 
 			"img-src":"../img/bed-frame-33.jpg", 
-			"color":"#4b6d77",
+			"color": [{"name": "피코크블루", "hex": "#4b6d77"}], 
 			"type": "A TYPE",
 			"category-size":"K",
 			"category-purpose":"NEWLYWEDS",
@@ -423,7 +423,7 @@
 		{
 			"name":"BRA-1449", 
 			"img-src":"../img/bed-frame-34.jpg", 
-			"color":"#e6c8c0|#b7ad75",
+			"color": [{"name": "핑크|올리브그린", "hex": "#e6c8c0|#b7ad75"}], 
 			"type": "S TYPE",
 			"category-size":"SS",
 			"category-purpose":"JUNIOR",
@@ -435,7 +435,7 @@
 		{
 			"name":"BSA-165", 
 			"img-src":"../img/bed-frame-35.jpg", 
-			"color":"#9d6026",
+			"color": [{"name": "월넛내추럴", "hex": "#9d6026"}], 
 			"type": "T TYPE",
 			"category-size":"SS",
 			"category-purpose":"TWIN",
@@ -447,7 +447,7 @@
 		{
 			"name":"BSA-165", 
 			"img-src":"../img/bed-frame-36.jpg", 
-			"color":"#9d6026",
+			"color": [{"name": "월넛내추럴", "hex": "#9d6026"}], 
 			"type": "N TYPE",
 			"category-size":"SS",
 			"category-purpose":"TWIN",
@@ -459,7 +459,7 @@
 		{
 			"name":"LUNATO-Ⅲ", 
 			"img-src":"../img/bed-frame-37.jpg", 
-			"color":"#acacac|#363539",
+			"color": [{"name": "그레이|사이런트블루", "hex": "#acacac|#363539"}], 
 			"type": "T TYPE",
 			"category-size":"LK|K",
 			"category-purpose":"NEWLYWEDS",
@@ -471,7 +471,7 @@
 		{
 			"name":"LUNATO-Ⅲ", 
 			"img-src":"../img/bed-frame-38.jpg", 
-			"color":"#8c7652",
+			"color": [{"name": "카멜브라운", "hex": "#8c7652"}], 
 			"type": "T TYPE",
 			"category-size":"K",
 			"category-purpose":"aaaa",
@@ -483,7 +483,7 @@
 		{
 			"name":"VENATO", 
 			"img-src":"../img/bed-frame-39.jpg", 
-			"color":"#ac794c|#9d6026",
+			"color": [{"name": "오크내추럴|월넛내추럴", "hex": "#ac794c|#9d6026"}], 
 			"type": "T TYPE",
 			"category-size":"K|LQ",
 			"category-purpose":"aaaa",
@@ -495,7 +495,7 @@
 		{
 			"name":"VENATO", 
 			"img-src":"../img/bed-frame-40.jpg", 
-			"color":"#9d6026",
+			"color": [{"name": "월넛내추럴", "hex": "#9d6026"}], 
 			"type": "L/C TYPE",
 			"category-size":"SS",
 			"category-purpose":"aaaa",
@@ -507,7 +507,7 @@
 		{
 			"name":"FLORA II", 
 			"img-src":"../img/bed-frame-41.jpg", 
-			"color":"#4e526d",
+			"color": [{"name": "네이비", "hex": "#4e526d"}], 
 			"type": "T TYPE",
 			"category-size":"K",
 			"category-purpose":"NEWLYWEDS",
@@ -519,7 +519,7 @@
 		{
 			"name":"BMA-1150", 
 			"img-src":"../img/bed-frame-42.jpg", 
-			"color":"#595754|#dfdee3|#4e526d|#b1c5c4",
+			"color": [{"name": "네로그레이|그레이화이트|네이비|파우더블루", "hex": "#595754|#dfdee3|#4e526d|#b1c5c4"}], 
 			"type": "L/C TYPE",
 			"category-size":"LQ",
 			"category-purpose":"FAMILY|LOW-FLOOR",
@@ -531,7 +531,7 @@
 		{
 			"name":"BMA-1150", 
 			"img-src":"../img/bed-frame-43.jpg", 
-			"color":"##595754|#dfdee3|#4e526d|#b1c5c4",
+			"color": [{"name": "네로그레이|그레이화이트|네이비|파우더블루", "hex": "#595754|#dfdee3|#4e526d|#b1c5c4"}], 
 			"type": "L/C TYPE",
 			"category-size":"SS",
 			"category-purpose":"FAMILY|LOW-FLOOR",
@@ -543,7 +543,7 @@
 		{
 			"name":"BMA-1148", 
 			"img-src":"../img/bed-frame-44.jpg", 
-			"color":"#ba9978|#5b4140|#dddad5",
+			"color": [{"name": "내추럴오크|월넛|화이트", "hex": "#ba9978|#5b4140|#dddad5"}], 
 			"type": "T TYPE",
 			"category-size":"LK|K",
 			"category-purpose":"NEWLYWEDS",
@@ -555,7 +555,7 @@
 		{
 			"name":"BMA-1148", 
 			"img-src":"../img/bed-frame-45.jpg", 
-			"color":"#ba9978|#5b4140|#dddad5",
+			"color": [{"name": "내추럴오크|월넛|화이트", "hex": "#ba9978|#5b4140|#dddad5"}], 
 			"type": "N TYPE",
 			"category-size":"K",
 			"category-purpose":"NEWLYWEDS",
@@ -567,7 +567,7 @@
 		{
 			"name":"BMA-1147", 
 			"img-src":"../img/bed-frame-46.jpg", 
-			"color":"#ba9978|#5b4140",
+			"color": [{"name": "내추럴오크|월넛", "hex": "#ba9978|#5b4140"}], 
 			"type": "T TYPE",
 			"category-size":"LK|K",
 			"category-purpose":"NEWLYWEDS|TWIN",
@@ -579,7 +579,7 @@
 		{
 			"name":"BMA-1147", 
 			"img-src":"../img/bed-frame-47.jpg", 
-			"color":"#ba9978|#5b4140",
+			"color": [{"name": "내추럴오크|월넛", "hex": "#ba9978|#5b4140"}], 
 			"type": "T TYPE",
 			"category-size":"LK|K",
 			"category-purpose":"NEWLYWEDS|TWIN",
@@ -591,7 +591,7 @@
 		{
 			"name":"BMA-1147", 
 			"img-src":"../img/bed-frame-48.jpg", 
-			"color":"#ba9978|#5b4140",
+			"color": [{"name": "내추럴오크|월넛", "hex": "#ba9978|#5b4140"}], 
 			"type": "N TYPE",
 			"category-size":"K",
 			"category-purpose":"NEWLYWEDS|TWIN",
@@ -603,7 +603,7 @@
 		{
 			"name":"BMA-1147", 
 			"img-src":"../img/bed-frame-49.jpg", 
-			"color":"#ba9978|#5b4140",
+			"color": [{"name": "내추럴오크|월넛", "hex": "#ba9978|#5b4140"}], 
 			"type": "N TYPE",
 			"category-size":"SS",
 			"category-purpose":"NEWLYWEDS|TWIN",
@@ -615,7 +615,7 @@
 		{
 			"name":"BRA-1446", 
 			"img-src":"../img/bed-frame-50.jpg", 
-			"color":"#dfdee3|#3c3940|#363539",
+			"color": [{"name": "그레이화이트|사일런트블랙|사일런트블루", "hex": "#dfdee3|#3c3940|#363539"}], 
 			"type": "N TYPE",
 			"category-size":"K|LQ",
 			"category-purpose":"LOW-FLOOR",
@@ -627,7 +627,7 @@
 		{
 			"name":"BRA-1446", 
 			"img-src":"../img/bed-frame-51.jpg", 
-			"color":"#dfdee3|#3c3940|#363539",
+			"color": [{"name": "그레이화이트|사일런트블랙|사일런트블루", "hex": "#dfdee3|#3c3940|#363539"}], 
 			"type": "N TYPE",
 			"category-size":"SS",
 			"category-purpose":"LOW-FLOOR",
@@ -639,7 +639,7 @@
 		{
 			"name":"BRA-1439", 
 			"img-src":"../img/bed-frame-52.jpg", 
-			"color":"#5b4140|#ffffff",
+			"color": [{"name": "월넛|화이트", "hex": "#5b4140|#ffffff"}], 
 			"type": "T TYPE",
 			"category-size":"LK|K|LQ",
 			"category-purpose":"STORAGE",
@@ -651,7 +651,7 @@
 		{
 			"name":"BRA-1439", 
 			"img-src":"../img/bed-frame-53.jpg", 
-			"color":"#5b4140|#ffffff",
+			"color": [{"name": "월넛|화이트", "hex": "#5b4140|#ffffff"}], 
 			"type": "T TYPE",
 			"category-size":"SS",
 			"category-purpose":"STORAGE",
@@ -663,7 +663,7 @@
 		{
 			"name":"BRA-1439", 
 			"img-src":"../img/bed-frame-54.jpg", 
-			"color":"#5b4140|#ffffff",
+			"color": [{"name": "월넛|화이트", "hex": "#5b4140|#ffffff"}], 
 			"type": "N TYPE",
 			"category-size":"SS",
 			"category-purpose":"STORAGE",
@@ -675,7 +675,7 @@
 		{
 			"name":"BRA-1448", 
 			"img-src":"../img/bed-frame-55.jpg", 
-			"color":"#5b4140",
+			"color": [{"name": "월넛", "hex": "#5b4140"}], 
 			"type": "깔판형 TYPE",
 			"category-size":"K|LQ",
 			"category-purpose":"NEWLYWEDS",
@@ -687,7 +687,7 @@
 		{
 			"name":"BMA-1139", 
 			"img-src":"../img/bed-frame-56.jpg", 
-			"color":"#ba9978|#5b4140|#ffffff",
+			"color": [{"name": "내추럴오크|월넛|화이트", "hex": "#ba9978|#5b4140|#ffffff"}], 
 			"type": "N TYPE",
 			"category-size":"LQ",
 			"category-purpose":"NEWLYWEDS",
@@ -699,7 +699,7 @@
 		{
 			"name":"BMA-1139", 
 			"img-src":"../img/bed-frame-57.jpg", 
-			"color":"#ba9978|#5b4140|#ffffff",
+			"color": [{"name": "내추럴오크|월넛|화이트", "hex": "#ba9978|#5b4140|#ffffff"}], 
 			"type": "N TYPE",
 			"category-size":"DD|SS",
 			"category-purpose":"JUNIOR",
@@ -711,7 +711,7 @@
 		{
 			"name":"BMA-1139", 
 			"img-src":"../img/bed-frame-58.jpg", 
-			"color":"#ba9978|#5b4140|#ffffff",
+			"color": [{"name": "내추럴오크|월넛|화이트", "hex": "#ba9978|#5b4140|#ffffff"}], 
 			"type": "E TYPE",
 			"category-size":"LQ",
 			"category-purpose":"NEWLYWEDS",
@@ -723,7 +723,7 @@
 		{
 			"name":"BMA-1139", 
 			"img-src":"../img/bed-frame-59.jpg", 
-			"color":"#ba9978|#5b4140|#ffffff",
+			"color": [{"name": "내추럴오크|월넛|화이트", "hex": "#ba9978|#5b4140|#ffffff"}], 
 			"type": "E TYPE",
 			"category-size":"DD|SS",
 			"category-purpose":"JUNIOR",
@@ -735,7 +735,7 @@
 		{
 			"name":"BMA-1139", 
 			"img-src":"../img/bed-frame-60.jpg", 
-			"color":"#ba9978|#5b4140|#ffffff",
+			"color": [{"name": "내추럴오크|월넛|화이트", "hex": "#ba9978|#5b4140|#ffffff"}], 
 			"type": "이단 TYPE",
 			"category-size":"DS",
 			"category-purpose":"JUNIOR",
@@ -747,7 +747,7 @@
 		{
 			"name":"BMA-1138", 
 			"img-src":"../img/bed-frame-61.jpg", 
-			"color":"#666565|#b7ad75",
+			"color": [{"name": "샤크그레이|올리브그린", "hex": "#666565|#b7ad75"}], 
 			"type": "N TYPE",
 			"category-size":"LQ",
 			"category-purpose":"FAMILY|STORAGE",
@@ -759,7 +759,7 @@
 		{
 			"name":"BMA-1138", 
 			"img-src":"../img/bed-frame-62.jpg", 
-			"color":"#666565|#b7ad75",
+			"color": [{"name": "샤크그레이|올리브그린", "hex": "#666565|#b7ad75"}], 
 			"type": "N TYPE",
 			"category-size":"SS",
 			"category-purpose":"FAMILY|STORAGE",
@@ -771,7 +771,7 @@
 		{
 			"name":"BMA-1119", 
 			"img-src":"../img/bed-frame-63.jpg", 
-			"color":"#5b4140|#c4ab8c",
+			"color": [{"name": "월넛|내추럴체리", "hex": "#5b4140|#c4ab8c"}], 
 			"type": "C TYPE",
 			"category-size":"LQ",
 			"category-purpose":"NEWLYWEDS|STORAGE",
@@ -783,7 +783,7 @@
 		{
 			"name":"BMA-1119", 
 			"img-src":"../img/bed-frame-64.jpg", 
-			"color":"#5b4140|#c4ab8c",
+			"color": [{"name": "월넛|내추럴체리", "hex": "#5b4140|#c4ab8c"}], 
 			"type": "C TYPE",
 			"category-size":"SS",
 			"category-purpose":"STORAGE",
@@ -795,7 +795,7 @@
 		{
 			"name":"BMA-1119 수납", 
 			"img-src":"../img/bed-frame-65.jpg", 
-			"color":"#5b4140|#c4ab8c",
+			"color": [{"name": "월넛|내추럴체리", "hex": "#5b4140|#c4ab8c"}], 
 			"type": "C TYPE",
 			"category-size":"LQ",
 			"category-purpose":"NEWLYWEDS|STORAGE",
@@ -807,7 +807,7 @@
 		{
 			"name":"BMA-1119 수납", 
 			"img-src":"../img/bed-frame-66.jpg", 
-			"color":"#5b4140|#c4ab8c",
+			"color": [{"name": "월넛|내추럴체리", "hex": "#5b4140|#c4ab8c"}], 
 			"type": "C TYPE",
 			"category-size":"SS",
 			"category-purpose":"STORAGE",
@@ -819,7 +819,7 @@
 		{
 			"name":"BMA-1119", 
 			"img-src":"../img/bed-frame-67.jpg", 
-			"color":"#5b4140|#c4ab8c",
+			"color": [{"name": "월넛|내추럴체리", "hex": "#5b4140|#c4ab8c"}], 
 			"type": "A TYPE",
 			"category-size":"LQ",
 			"category-purpose":"NEWLYWEDS|STORAGE",
@@ -831,7 +831,7 @@
 		{
 			"name":"BMA-1119", 
 			"img-src":"../img/bed-frame-68.jpg", 
-			"color":"#5b4140|#c4ab8c",
+			"color": [{"name": "월넛|내추럴체리", "hex": "#5b4140|#c4ab8c"}], 
 			"type": "A TYPE",
 			"category-size":"SS",
 			"category-purpose":"STORAGE",
@@ -843,7 +843,7 @@
 		{
 			"name":"BMA-1119 수납", 
 			"img-src":"../img/bed-frame-69.jpg", 
-			"color":"#5b4140|#c4ab8c",
+			"color": [{"name": "월넛|내추럴체리", "hex": "#5b4140|#c4ab8c"}], 
 			"type": "A TYPE",
 			"category-size":"LQ",
 			"category-purpose":"NEWLYWEDS|STORAGE",
@@ -855,7 +855,7 @@
 		{
 			"name":"BMA-1119 수납", 
 			"img-src":"../img/bed-frame-70.jpg", 
-			"color":"#5b4140|#c4ab8c",
+			"color": [{"name": "월넛|내추럴체리", "hex": "#5b4140|#c4ab8c"}], 
 			"type": "A TYPE",
 			"category-size":"SS",
 			"category-purpose":"STORAGE",
@@ -867,7 +867,7 @@
 		{
 			"name":"BMA-1119 책꽂이", 
 			"img-src":"../img/bed-frame-71.jpg", 
-			"color":"#5b4140|#c4ab8c",
+			"color": [{"name": "월넛|내추럴체리", "hex": "#5b4140|#c4ab8c"}], 
 			"type": "C TYPE",
 			"category-size":"SS",
 			"category-purpose":"STORAGE",
@@ -879,7 +879,7 @@
 		{
 			"name":"BMA-1119 책꽂이", 
 			"img-src":"../img/bed-frame-72.jpg", 
-			"color":"#5b4140|#c4ab8c",
+			"color": [{"name": "월넛|내추럴체리", "hex": "#5b4140|#c4ab8c"}], 
 			"type": "A TYPE",
 			"category-size":"SS",
 			"category-purpose":"STORAGE",
@@ -891,7 +891,7 @@
 		{
 			"name":"BMA-1086", 
 			"img-src":"../img/bed-frame-73.jpg", 
-			"color":"#ba9978|#ffffff",
+			"color": [{"name": "내추럴오크|화이트", "hex": "#ba9978|#ffffff"}], 
 			"type": "T TYPE",
 			"category-size":"LQ",
 			"category-purpose":"STORAGE",
@@ -903,7 +903,7 @@
 		{
 			"name":"BMA-1086", 
 			"img-src":"../img/bed-frame-74.jpg", 
-			"color":"#ba9978|#ffffff",
+			"color": [{"name": "내추럴오크|화이트", "hex": "#ba9978|#ffffff"}], 
 			"type": "N TYPE",
 			"category-size":"LQ",
 			"category-purpose":"STORAGE",
@@ -915,7 +915,7 @@
 		{
 			"name":"BMA-1086", 
 			"img-src":"../img/bed-frame-75.jpg", 
-			"color":"#ba9978|#ffffff",
+			"color": [{"name": "내추럴오크|화이트", "hex": "#ba9978|#ffffff"}], 
 			"type": "C TYPE",
 			"category-size":"LQ",
 			"category-purpose":"STORAGE",
@@ -927,7 +927,7 @@
 		{
 			"name":"BMA-1086", 
 			"img-src":"../img/bed-frame-76.jpg", 
-			"color":"#ba9978|#ffffff",
+			"color": [{"name": "내추럴오크|화이트", "hex": "#ba9978|#ffffff"}], 
 			"type": "C TYPE",
 			"category-size":"SS",
 			"category-purpose":"STORAGE",
@@ -939,7 +939,7 @@
 		{
 			"name":"BMA-1086", 
 			"img-src":"../img/bed-frame-77.jpg", 
-			"color":"#ba9978|#ffffff",
+			"color": [{"name": "내추럴오크|화이트", "hex": "#ba9978|#ffffff"}], 
 			"type": "A TYPE",
 			"category-size":"SS",
 			"category-purpose":"STORAGE",
@@ -951,7 +951,7 @@
 		{
 			"name":"LIETO", 
 			"img-src":"../img/bed-frame-78.jpg", 
-			"color":"#dfdee3",
+			"color": [{"name": "그레이화이트", "hex": "#dfdee3"}], 
 			"type": "L/C TYPE",
 			"category-size":"LK|K|LQ",
 			"category-purpose":"NEWLYWEDS",
@@ -963,7 +963,7 @@
 		{
 			"name":"STARLET Ⅳ", 
 			"img-src":"../img/bed-frame-79.jpg", 
-			"color":"#ffffff",
+			"color": [{"name": "화이트", "hex": "#ffffff"}], 
 			"type": "N TYPE",
 			"category-size":"SS",
 			"category-purpose":"aaaa",
@@ -975,7 +975,7 @@
 		{
 			"name":"STARLET Ⅳ", 
 			"img-src":"../img/bed-frame-80.jpg", 
-			"color":"#ffffff",
+			"color": [{"name": "화이트", "hex": "#ffffff"}], 
 			"type": "E TYPE",
 			"category-size":"SS",
 			"category-purpose":"aaaa",
@@ -987,7 +987,7 @@
 		{
 			"name":"NOVELLA", 
 			"img-src":"../img/bed-frame-81.jpg", 
-			"color":"#ac794c",
+			"color": [{"name": "오크내추럴", "hex": "#ac794c"}], 
 			"type": "T TYPE",
 			"category-size":"K",
 			"category-purpose":"NEWLYWEDS",
@@ -999,7 +999,7 @@
 		{
 			"name":"BSA-204-4", 
 			"img-src":"../img/bed-frame-82.jpg", 
-			"color":"#e4e0dd|#9d6026",
+			"color": [{"name": "화이트그레이|월넛내추럴", "hex": "#e4e0dd|#9d6026"}], 
 			"type": "200 TYPE",
 			"category-size":"LQ",
 			"category-purpose":"aaaa",
@@ -1011,7 +1011,7 @@
 		{
 			"name":"BSA-203-3", 
 			"img-src":"../img/bed-frame-83.jpg", 
-			"color":"#e4e0dd",
+			"color": [{"name": "화이트그레이", "hex": "#e4e0dd"}], 
 			"type": "200 TYPE",
 			"category-size":"LQ",
 			"category-purpose":"aaaa",
@@ -1023,7 +1023,7 @@
 		{
 			"name":"BSA-158", 
 			"img-src":"../img/bed-frame-84.jpg", 
-			"color":"#6b3932",
+			"color": [{"name": "진브라운", "hex": "#6b3932"}], 
 			"type": "T TYPE",
 			"category-size":"LK|K",
 			"category-purpose":"aaaa",
@@ -1035,7 +1035,7 @@
 		{
 			"name":"BSA-143", 
 			"img-src":"../img/bed-frame-85.jpg", 
-			"color":"#5b4140|#dfdee3",
+			"color": [{"name": "월넛|그레이화이트", "hex": "#5b4140|#dfdee3"}], 
 			"type": "100 TYPE",
 			"category-size":"K|LQ",
 			"category-purpose":"aaaa",
@@ -1047,7 +1047,7 @@
 		{
 			"name":"BSA-132", 
 			"img-src":"../img/bed-frame-86.jpg", 
-			"color":"#6b3932|#fdfbee",
+			"color": [{"name": "진브라운|아이보리", "hex": "#6b3932|#fdfbee"}], 
 			"type": "100 TYPE",
 			"category-size":"LK|K",
 			"category-purpose":"aaaa",
@@ -1059,7 +1059,7 @@
 		{
 			"name":"BSA-104-4", 
 			"img-src":"../img/bed-frame-87.jpg", 
-			"color":"#e4e0dd|#9d6026",
+			"color": [{"name": "화이트그레이|월넛내추럴", "hex": "#e4e0dd|#9d6026"}], 
 			"type": "100 TYPE",
 			"category-size":"LQ",
 			"category-purpose":"aaaa",
@@ -1071,7 +1071,7 @@
 		{
 			"name":"BSA-103-3", 
 			"img-src":"../img/bed-frame-88.jpg", 
-			"color":"#e4e0dd",
+			"color": [{"name": "화이트그레이", "hex": "#e4e0dd"}], 
 			"type": "100 TYPE",
 			"category-size":"K|LQ",
 			"category-purpose":"NEWLYWEDS",
@@ -1083,7 +1083,7 @@
 		{
 			"name":"BRA-1441", 
 			"img-src":"../img/bed-frame-89.jpg", 
-			"color":"#ac794c",
+			"color": [{"name": "오크내추럴", "hex": "#ac794c"}], 
 			"type": "N TYPE",
 			"category-size":"DD",
 			"category-purpose":"STORAGE",
@@ -1095,7 +1095,7 @@
 		{
 			"name":"BRA-1441", 
 			"img-src":"../img/bed-frame-90.jpg", 
-			"color":"#ac794c",
+			"color": [{"name": "오크내추럴", "hex": "#ac794c"}], 
 			"type": "N TYPE",
 			"category-size":"SS",
 			"category-purpose":"STORAGE",
@@ -1107,7 +1107,7 @@
 		{
 			"name":"BRA-1441", 
 			"img-src":"../img/bed-frame-91.jpg", 
-			"color":"#ac794c",
+			"color": [{"name": "오크내추럴", "hex": "#ac794c"}], 
 			"type": "E TYPE",
 			"category-size":"DD",
 			"category-purpose":"STORAGE",
@@ -1119,7 +1119,7 @@
 		{
 			"name":"BRA-1441", 
 			"img-src":"../img/bed-frame-92.jpg", 
-			"color":"#ac794c",
+			"color": [{"name": "오크내추럴", "hex": "#ac794c"}], 
 			"type": "E TYPE",
 			"category-size":"SS",
 			"category-purpose":"STORAGE",
@@ -1131,7 +1131,7 @@
 		{
 			"name":"BRA-1437", 
 			"img-src":"../img/bed-frame-93.jpg", 
-			"color":"#9d6026|#ac794c",
+			"color": [{"name": "월넛내추럴|오크내추럴", "hex": "#9d6026|#ac794c"}], 
 			"type": "T TYPE",
 			"category-size":"K|LQ",
 			"category-purpose":"aaaa",
@@ -1143,7 +1143,7 @@
 		{
 			"name":"BRA-1437", 
 			"img-src":"../img/bed-frame-94.jpg", 
-			"color":"#9d6026|#ac794c",
+			"color": [{"name": "월넛내추럴|오크내추럴", "hex": "#9d6026|#ac794c"}], 
 			"type": "T TYPE",
 			"category-size":"SS",
 			"category-purpose":"aaaa",
@@ -1155,7 +1155,7 @@
 		{
 			"name":"BRA-1437", 
 			"img-src":"../img/bed-frame-95.jpg", 
-			"color":"#9d6026|#ac794c",
+			"color": [{"name": "월넛내추럴|오크내추럴", "hex": "#9d6026|#ac794c"}], 
 			"type": "N TYPE",
 			"category-size":"LQ",
 			"category-purpose":"aaaa",
@@ -1167,7 +1167,7 @@
 		{
 			"name":"BRA-1437", 
 			"img-src":"../img/bed-frame-96.jpg", 
-			"color":"#9d6026|#ac794c",
+			"color": [{"name": "월넛내추럴|오크내추럴", "hex": "#9d6026|#ac794c"}], 
 			"type": "N TYPE",
 			"category-size":"SS",
 			"category-purpose":"aaaa",
@@ -1179,7 +1179,7 @@
 		{
 			"name":"BRA-1436", 
 			"img-src":"../img/bed-frame-97.jpg", 
-			"color":"#c7b4a3|#5b4140",
+			"color": [{"name": "레귤러오크|월넛", "hex": "#c7b4a3|#5b4140"}], 
 			"type": "E TYPE",
 			"category-size":"SS",
 			"category-purpose":"aaaa",
@@ -1191,7 +1191,7 @@
 		{
 			"name":"BRA-1433", 
 			"img-src":"../img/bed-frame-98.jpg", 
-			"color":"#c7b4a3|#5b4140",
+			"color": [{"name": "레귤러오크|월넛", "hex": "#c7b4a3|#5b4140"}], 
 			"type": "T TYPE",
 			"category-size":"LQ",
 			"category-purpose":"STORAGE",
@@ -1203,7 +1203,7 @@
 		{
 			"name":"BRA-1433", 
 			"img-src":"../img/bed-frame-99.jpg", 
-			"color":"#c7b4a3|#5b4140",
+			"color": [{"name": "레귤러오크|월넛", "hex": "#c7b4a3|#5b4140"}], 
 			"type": "N TYPE",
 			"category-size":"LQ",
 			"category-purpose":"STORAGE",
@@ -1215,7 +1215,7 @@
 		{
 			"name":"BRA-1433", 
 			"img-src":"../img/bed-frame-100.jpg", 
-			"color":"#c7b4a3|#5b4140",
+			"color": [{"name": "레귤러오크|월넛", "hex": "#c7b4a3|#5b4140"}], 
 			"type": "C TYPE",
 			"category-size":"SS",
 			"category-purpose":"STORAGE",
@@ -1227,7 +1227,7 @@
 		{
 			"name":"BRA-1433", 
 			"img-src":"../img/bed-frame-101.jpg", 
-			"color":"#c7b4a3|#5b4140",
+			"color": [{"name": "레귤러오크|월넛", "hex": "#c7b4a3|#5b4140"}], 
 			"type": "A TYPE",
 			"category-size":"SS",
 			"category-purpose":"STORAGE",
@@ -1239,7 +1239,7 @@
 		{
 			"name":"BRA-1432", 
 			"img-src":"../img/bed-frame-102.jpg", 
-			"color":"#c7b4a3|#e5e1d8",
+			"color": [{"name": "레귤러오크|레귤러화이트", "hex": "#c7b4a3|#e5e1d8"}], 
 			"type": "N TYPE",
 			"category-size":"SS",
 			"category-purpose":"JUNIOR",
@@ -1251,7 +1251,7 @@
 		{
 			"name":"BRA-1432", 
 			"img-src":"../img/bed-frame-103.jpg", 
-			"color":"#c7b4a3|#e5e1d8",
+			"color": [{"name": "레귤러오크|레귤러화이트", "hex": "#c7b4a3|#e5e1d8"}], 
 			"type": "E TYPE",
 			"category-size":"SS",
 			"category-purpose":"JUNIOR",
@@ -1263,7 +1263,7 @@
 		{
 			"name":"BRA-1432", 
 			"img-src":"../img/bed-frame-104.jpg", 
-			"color":"#c7b4a3|#e5e1d8",
+			"color": [{"name": "레귤러오크|레귤러화이트", "hex": "#c7b4a3|#e5e1d8"}], 
 			"type": "E/L TYPE",
 			"category-size":"SS",
 			"category-purpose":"JUNIOR",
@@ -1275,7 +1275,7 @@
 		{
 			"name":"BRA-1432", 
 			"img-src":"../img/bed-frame-105.jpg", 
-			"color":"#c7b4a3|#e5e1d8",
+			"color": [{"name": "레귤러오크|레귤러화이트", "hex": "#c7b4a3|#e5e1d8"}], 
 			"type": "C TYPE",
 			"category-size":"SS",
 			"category-purpose":"JUNIOR|STORAGE",
@@ -1287,7 +1287,7 @@
 		{
 			"name":"BRA-1432", 
 			"img-src":"../img/bed-frame-106.jpg", 
-			"color":"#c7b4a3|#e5e1d8",
+			"color": [{"name": "레귤러오크|레귤러화이트", "hex": "#c7b4a3|#e5e1d8"}], 
 			"type": "A TYPE",
 			"category-size":"SS",
 			"category-purpose":"JUNIOR",
@@ -1299,7 +1299,7 @@
 		{
 			"name":"BRA-1430", 
 			"img-src":"../img/bed-frame-107.jpg", 
-			"color":"#5b4140",
+			"color": [{"name": "월넛", "hex": "#5b4140"}], 
 			"type": "T TYPE",
 			"category-size":"K|LQ",
 			"category-purpose":"aaaa",
@@ -1311,7 +1311,7 @@
 		{
 			"name":"BRA-1430", 
 			"img-src":"../img/bed-frame-108.jpg", 
-			"color":"#5b4140",
+			"color": [{"name": "월넛", "hex": "#5b4140"}], 
 			"type": "T TYPE",
 			"category-size":"SS",
 			"category-purpose":"aaaa",
@@ -1323,7 +1323,7 @@
 		{
 			"name":"BRA-1430", 
 			"img-src":"../img/bed-frame-109.jpg", 
-			"color":"#5b4140",
+			"color": [{"name": "월넛", "hex": "#5b4140"}], 
 			"type": "N TYPE",
 			"category-size":"LQ",
 			"category-purpose":"aaaa",
@@ -1335,7 +1335,7 @@
 		{
 			"name":"BRA-1430", 
 			"img-src":"../img/bed-frame-110.jpg", 
-			"color":"#5b4140",
+			"color": [{"name": "월넛", "hex": "#5b4140"}], 
 			"type": "N TYPE",
 			"category-size":"SS",
 			"category-purpose":"aaaa",
@@ -1347,7 +1347,7 @@
 		{
 			"name":"BRA-1426-T", 
 			"img-src":"../img/bed-frame-111.jpg", 
-			"color":"#f0ece9|#52342a",
+			"color": [{"name": "애쉬아이보리|애쉬웬지", "hex": "#f0ece9|#52342a"}], 
 			"type": "T TYPE",
 			"category-size":"K|LQ",
 			"category-purpose":"aaaa",
@@ -1359,7 +1359,7 @@
 		{
 			"name":"BRA-1399", 
 			"img-src":"../img/bed-frame-112.jpg", 
-			"color":"#5b4140",
+			"color": [{"name": "월넛", "hex": "#5b4140"}], 
 			"type": "T TYPE",
 			"category-size":"LQ",
 			"category-purpose":"NEWLYWEDS",
@@ -1371,7 +1371,7 @@
 		{
 			"name":"BRA-1399", 
 			"img-src":"../img/bed-frame-113.jpg", 
-			"color":"#5b4140",
+			"color": [{"name": "월넛", "hex": "#5b4140"}], 
 			"type": "N TYPE",
 			"category-size":"LQ",
 			"category-purpose":"NEWLYWEDS",
@@ -1383,7 +1383,7 @@
 		{
 			"name":"BRA-1399", 
 			"img-src":"../img/bed-frame-114.jpg", 
-			"color":"#5b4140",
+			"color": [{"name": "월넛", "hex": "#5b4140"}], 
 			"type": "N TYPE",
 			"category-size":"DD|SS",
 			"category-purpose":"JUNIOR",
@@ -1395,7 +1395,7 @@
 		{
 			"name":"BRA-1399", 
 			"img-src":"../img/bed-frame-115.jpg", 
-			"color":"#5b4140",
+			"color": [{"name": "월넛", "hex": "#5b4140"}], 
 			"type": "E TYPE",
 			"category-size":"SS",
 			"category-purpose":"JUNIOR",
@@ -1407,7 +1407,7 @@
 		{
 			"name":"BRA-1326", 
 			"img-src":"../img/bed-frame-116.jpg", 
-			"color":"#9d6026",
+			"color": [{"name": "월넛내추럴", "hex": "#9d6026"}], 
 			"type": "T TYPE",
 			"category-size":"K|LQ",
 			"category-purpose":"NEWLYWEDS",
@@ -1419,7 +1419,7 @@
 		{
 			"name":"BMA-1145", 
 			"img-src":"../img/bed-frame-117.jpg", 
-			"color":"#9d6026",
+			"color": [{"name": "월넛내추럴", "hex": "#9d6026"}], 
 			"type": "L/C TYPE",
 			"category-size":"LQ",
 			"category-purpose":"FAMILY|STORAGE",
@@ -1431,7 +1431,7 @@
 		{
 			"name":"BMA-1145", 
 			"img-src":"../img/bed-frame-118.jpg", 
-			"color":"#9d6026",
+			"color": [{"name": "월넛내추럴", "hex": "#9d6026"}], 
 			"type": "L/C TYPE",
 			"category-size":"SS",
 			"category-purpose":"FAMILY|STORAGE",
@@ -1443,7 +1443,7 @@
 		{
 			"name":"BMA-1143", 
 			"img-src":"../img/bed-frame-119.jpg", 
-			"color":"#9d6026",
+			"color": [{"name": "월넛내추럴", "hex": "#9d6026"}], 
 			"type": "T TYPE",
 			"category-size":"LQ",
 			"category-purpose":"NEWLYWEDS|LOW-FLOOR",
@@ -1455,7 +1455,7 @@
 		{
 			"name":"BMA-1038-E", 
 			"img-src":"../img/bed-frame-120.jpg", 
-			"color":"#fdfbee,#a99982|#fdfbee,#5b4140",
+			"color": [{"name": "아이보리+파인|아이보리+월넛", "hex": "#fdfbee,#a99982|#fdfbee,#5b4140"}], 
 			"type": "E TYPE",
 			"category-size":"SS",
 			"category-purpose":"JUNIOR",
@@ -1467,7 +1467,7 @@
 		{
 			"name":"BMA-1034", 
 			"img-src":"../img/bed-frame-121.jpg", 
-			"color":"#fdfbee",
+			"color": [{"name": "아이보리", "hex": "#fdfbee"}], 
 			"type": "N TYPE",
 			"category-size":"SS",
 			"category-purpose":"JUNIOR",
@@ -1479,7 +1479,7 @@
 		{
 			"name":"BMA-1034", 
 			"img-src":"../img/bed-frame-122.jpg", 
-			"color":"#fdfbee",
+			"color": [{"name": "아이보리", "hex": "#fdfbee"}], 
 			"type": "E TYPE",
 			"category-size":"SS",
 			"category-purpose":"JUNIOR",
@@ -1491,7 +1491,7 @@
 		{
 			"name":"BMA-1034", 
 			"img-src":"../img/bed-frame-123.jpg", 
-			"color":"#fdfbee",
+			"color": [{"name": "아이보리", "hex": "#fdfbee"}], 
 			"type": "A TYPE",
 			"category-size":"SS",
 			"category-purpose":"JUNIOR",
@@ -1503,7 +1503,7 @@
 		{
 			"name":"BACIO", 
 			"img-src":"../img/bed-frame-124.jpg", 
-			"color":"#666565",
+			"color": [{"name": "샤크그레이", "hex": "#666565"}], 
 			"type": "N TYPE",
 			"category-size":"LQ",
 			"category-purpose":"STORAGE",
@@ -1515,7 +1515,7 @@
 		{
 			"name":"BACIO", 
 			"img-src":"../img/bed-frame-125.jpg", 
-			"color":"#666565",
+			"color": [{"name": "샤크그레이", "hex": "#666565"}], 
 			"type": "N TYPE",
 			"category-size":"SS",
 			"category-purpose":"STORAGE",
@@ -1527,7 +1527,7 @@
 		{
 			"name":"ANELLO III", 
 			"img-src":"../img/bed-frame-126.jpg", 
-			"color":"#3c3940",
+			"color": [{"name": "사일런트블랙", "hex": "#3c3940"}], 
 			"type": "N TYPE",
 			"category-size":"K|LQ",
 			"category-purpose":"NEWLYWEDS",
@@ -1539,7 +1539,7 @@
 		{
 			"name":"ALBERO Ⅲ", 
 			"img-src":"../img/bed-frame-127.jpg", 
-			"color":"#ffffff|#302e33",
+			"color": [{"name": "화이트|다크그레이", "hex": "#ffffff|#302e33"}], 
 			"type": "T TYPE",
 			"category-size":"LQ",
 			"category-purpose":"NEWLYWEDS",

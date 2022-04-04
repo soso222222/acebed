@@ -442,8 +442,8 @@ body.sub #header:not(.open) #gnb > ul > li {color: #fff;}
 body.sub #header:not(.open) div.top ul > li:nth-child(3) > a {padding: 8px 15px 8px 33px; background: url(../img/wedding-icon.png) left 14px center no-repeat transparent; border: 1px solid #fff; border-radius: 50px; box-sizing: border-box; margin-right: 5px;}
 body.sub #header:not(.open) div.top ul > li:nth-child(4) > a {padding: 8px 15px; background-color: transparent; border: 1px solid #fff; border-radius: 50px; border-radius: 50px; box-sizing: border-box;} 
 
-body.sub #main p.sub-header {position: relative; width: 100%;}
-body.sub #main div.sub-header h2 {font-size: 30px; font-weight: 700; color: #fff; text-align: center;}
+body.sub #main div.sub-header {position: relative; width: 100%; margin-bottom: 20px;}
+body.sub #main div.sub-header h2 {position: absolute; top: 50%; left: 50%; transform: translate(-50%, 0); font-size: 30px; font-weight: 700; color: #fff;}
 
 @media screen and (min-width: 768px) and (max-width: 1279.9px) {body.sub #main {position: relative; padding-top: 0;}
   body.sub.bed #main div.background-matt {padding: 300px 0 160px 0;}
@@ -473,7 +473,7 @@ body.sub #main div.sub-header h2 {font-size: 30px; font-weight: 700; color: #fff
   #sub-product-list div.top-m {display: none;}
 
   #sub-product-list div.bottom {position: relative; margin-top: 50px; overflow: hidden;}
-  #sub-product-list div.side {float: left; width: 25%;}
+  #sub-product-list div.side {float: left; width: 300px;}
   #sub-product-list div.side div.search-box {border: 1px solid #ebebeb; box-sizing: border-box; box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 5%);}
   #sub-product-list div.side div.search-box > p {position: relative; line-height: 50px; background-color: #adc4ce; color: #fff;}
   #sub-product-list div.side div.search-box > p i {color: #fff;}
@@ -488,6 +488,7 @@ body.sub #main div.sub-header h2 {font-size: 30px; font-weight: 700; color: #fff
   #sub-product-list div.side div.search-box > div.keyword div.recent-word {padding: 30px 0; border-bottom: 1px solid #ebebeb; box-sizing: border-box;}
   #sub-product-list div.side div.search-box > div.keyword div.recommend-word {padding: 30px 0;}
   #sub-product-list div.side div.search-box > div.keyword div.recommend-word ul li {padding-bottom: 6px;}
+  #sub-product-list div.side div.category-matt > a.btn.guide {width: 100%; text-align: center;}
 
   #sub-product-list div.side div.category-matt {margin: 10% 10% 0 15%;}
   #sub-product-list div.side ul > li > a {position: relative; display: block; line-height: 50px;}
@@ -511,7 +512,7 @@ body.sub #main div.sub-header h2 {font-size: 30px; font-weight: 700; color: #fff
   #sub-product-list div.side ul > li > ul > li > label::after {content: ''; position: absolute; display: none; top: 3px; left: 5px; width: 6px; height: 6px; background-color: #333; border-radius: 1px;}
   #sub-product-list div.side ul > li > ul > li > input:checked ~ label::after {display: inline-block;}
   
-  #sub-product-list div.list-box {position: relative; overflow: hidden; width: 75%; margin: 0 auto;}
+  #sub-product-list div.list-box {position: relative; overflow: hidden; width: calc(100% - 300px); margin: 0 auto;}
   #sub-product-list div.list-box > div.box {overflow: hidden; width: 90%; margin: 0 auto;}
   #sub-product-list div.list-box.row-3 ul.list > li {width: 30%; margin-right: 5%; margin-bottom: 3%;}
   #sub-product-list div.list-box.row-3 ul.list > li:nth-child(3n) {margin-right: 0;}
