@@ -3,6 +3,7 @@
 $(document).ready(function () {
   preventDefaultAnchor();
   initEvent();
+  setToggleUI();
 });
 
 function preventDefaultAnchor() {
@@ -11,6 +12,26 @@ function preventDefaultAnchor() {
   });
 }
 
+
+function getScrollTop() {
+  if(window.pageYOffset !== undefined)
+  {
+      return window.pageYOffset;
+  } else {
+      return document.documentElement.scrollTop;
+      // || document.body.scrollTop;
+  }
+}
+function checkHeaderScroll() {
+  var scrollAmt = getScrollTop();
+  var headerHeight = Number($('#header').outerHeight()) + 10;
+  
+  if (scrollAmt > headerHeight) {
+    $('#header').addClass('scroll');
+  }else if (scrollAmt <= headerHeight) {
+    $('#header').removeClass('scroll');
+  }
+}
 function setHeaderMouseEvents(status, className) {
 
   if (status == 'enter') {
@@ -41,6 +62,9 @@ function setHeaderMouseEvents(status, className) {
 
 // main-menu mouse hover 처리
 function initEvent() {
+  $(window).on('scroll', function () {
+    checkHeaderScroll();
+  });
   $('#gnb > ul.bed-product').on('mouseenter focusin', function () {
     setHeaderMouseEvents('enter', 'bed-product');
   }).on('mouseleave', function () {
@@ -80,6 +104,7 @@ function initEvent() {
   $('#footer .family-site-link > div.arrow > a').on('click', function () {
     $('.family-site-link').toggleClass('close');
   });
+
   
 
   $('#sub-product-list .category-matt > ul > li > a').on('click', function () {
@@ -495,6 +520,67 @@ function delTag(type, id) {
   }
 }
 
+function setToggleUI() {
+  // $('a.btn-toggle').each(function() {
+  //   var value = $(this).find('input').val();
+  //   var valueLeft = $(this).find('input').attr('data-left');
+  //   var valueRight = $(this).find('input').attr('data-right');
+  //   $(this).attr({'title': value});
+  //   if (value === valueRight) {
+  //     $(this).addClass('on');
+  //   } else {
+  //     $(this).removeClass('on');
+  //   }
+  // });
+
+  // $('a.btn-toggle').on('click', function() {
+  //   var value = $(this).find('input').val();
+  //   var valueLeft = $(this).find('input').attr('data-left');
+  //   var valueRight = $(this).find('input').attr('data-right');
+  //   if($(this).hasClass('disabled') === true){
+  //     return false;
+  //   }
+  //   if ($(this).hasClass('on') === true) {
+  //     $(this).removeClass('on');
+  //     $(this).find('input').val(valueLeft);
+  //     $(this).attr({'title': valueLeft});
+  //   } else {
+  //     $(this).addClass('on');
+  //     $(this).find('input').val(valueRight);
+  //     $(this).attr({'title': valueRight});
+  //   }
+  // });
+
+  setTogglePW();
+}
+function setTogglePW() {
+  $('.toggle-box').each(function(i) {
+    $(this).addClass('hide');
+  });
+
+  $('.toggle-box > .btn-eye').on('click', function(e) {
+    var $toggleBtn = $(this);
+    var $toggleInput = $(this).siblings('input');
+    var $toggleBox = $(this).parent();
+    var isToggle = false;
+    var toggleType = '';
+    var toggleClass = '';
+
+    isToggle = ($toggleInput.attr('type') === 'password') ? isToggle = true : isToggle = false;
+    $toggleBox.removeClass('show hide');
+
+    if(isToggle === true) {
+      toggleType = 'text';
+      toggleClass = 'show';
+    } else {
+      toggleType = 'password';
+      toggleClass = 'hide';
+    }
+
+    $toggleInput.attr('type', toggleType);
+    $toggleBox.addClass(toggleClass);
+  });
+}
 
 
 
