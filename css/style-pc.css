@@ -25,6 +25,8 @@ body {font-family: 'NanumSquare', sans-serif; font-size: 14px; color: #000000; b
 #skip-nav {position: fixed; top: -40px; left: 0; width: 100%; line-height: 40px; text-align: center; background-color: rgba(0, 0, 0, 0.8); color: #ffffff; font-size: 16px; transition: top 0.3s; z-index: 100000;}
 #skip-nav:focus {top: 0;}
 
+.circle {border: 1px solid #ebebeb; border-radius: 50%; box-sizing: border-box;}
+
 /* form design */
 .form-box.type-2 > div {float: left; width: calc(50% - 10px); margin-right: 20px;}
 .form-box.type-2 > div:nth-child(2n) {margin-right: 0;}
@@ -461,10 +463,15 @@ section.page.on div.gallery {opacity: 1; transform: translateY(0);}
 
  
 /* login */
-body.login .sub-header {border-bottom: 1px solid #ebebeb;}
-body.login .sub-header h2 {font-size: 60px; padding: 80px 0; font-weight: 800; text-align: center;}
-section.login {margin-top: 80px;}
-section.login .login-box {position: relative; width: 470px; margin: 0 auto; font-size: 16px; font-weight: 500;}
+body.member main {border-bottom: 1px solid #ebebeb;}
+body.member .sub-header {border-bottom: 1px solid #ebebeb;}
+body.member .sub-header h2 {font-size: 60px; padding: 80px 0; font-weight: 800; text-align: center;}
+section.login,
+section.join {margin: 80px 0 160px 0;}
+section.login .login-box, 
+section.join .join-box {position: relative; margin: 0 auto;}
+section.login .login-box {width: 470px; font-size: 16px; font-weight: 500;}
+section.join .join-box {width: 580px;}
 section.login .login-box input {margin-bottom: 20px;}
 section.login .login-box > a.link {float: right; color: #888; font-weight: 700;}
 section.login .login-box > p.line {font-size: 18px; font-weight: 700; margin: 10px 0;}
@@ -473,12 +480,27 @@ section.login .login-box > p.line.etc {border-bottom: 1px solid #ddd; padding-bo
 section.login .login-box > p.line.login > .btn,
 section.login .login-box > p.line.etc > .btn {height: 60px; font-size: 18px; font-weight: 700;}
 section.login .login-box > p.line.etc > .btn {font-size: 16px; color: #666;}
-section.login .login-box > p.line.sign-up {margin: 40px 0 80px 0;}
+section.login .login-box > p.line.sign-up {margin-top: 40px;}
 section.login .login-box > p.line.sign-up > span {line-height: 50px; font-size: 20px; font-weight: 300;}
 section.login .login-box > p.line.sign-up > a.btn {height: 50px; float: right; padding: 5px 35px;}
 section.login .login-box > p.line.sign-up > a.btn > span {font-size: 17px;}
-body.login main {border-bottom: 1px solid #ebebeb;}
 
+section.join .join-box {text-align: center; overflow: hidden;}
+section.join .join-box > p.title {font-size: 30px; margin-bottom: 20px;}
+section.join .join-box > p.text {font-size: 17px; font-weight: 300; color: #666; margin-bottom: 55px;}
+section.join .join-box > a {float: left; width: 220px;}
+section.join .join-box > a:last-child {width: 240px; margin-left: 120px;}
+section.join .join-box > a:hover .circle {border: 1px solid #0890c0; box-shadow: 1px 11px 24px 0px rgb(0 0 0 / 10%);}
+section.join .join-box > a:hover .title {color: #0890c0;}
+section.join .join-box > a > div.img {position: relative; width: 220px; height: 220px;}
+section.join .join-box > a > div.img > img {position: absolute; top: 0; left: 0;}
+section.join .join-box > a > div.img > img.off {opacity: 1;}
+section.join .join-box > a > div.img > img.on {opacity: 0;}
+section.join .join-box > a:hover > div.img > img.off {opacity: 0;}
+section.join .join-box > a:hover > div.img > img.on {opacity: 1;}
+section.join .join-box > a > div.text-area {position: relative; margin-top: 36px; font-weight: 600;}
+section.join .join-box > a > div.text-area > p.title {font-size: 20px; margin-bottom: 16px;}
+section.join .join-box > a > div.text-area > p.text {font-size: 15px; color: #aaa;}
 
 
 /* sub(page) */
@@ -486,6 +508,9 @@ body.sub.bed #main div.background-matt {height: 550px; transform: scale(1.2); tr
 body.sub.bed #main div.background-matt.on {transform: scale(1);}
 body.sub.bed-frame #main div.background-matt {background: url(../img/sub-head-visual-frame.jpg) center center no-repeat;}
 body.sub.bed-mattress #main div.background-matt {background: url(../img/sub-head-visual-mattress.jpg) center center no-repeat;}
+body.sub.bed-new #main, 
+body.sub.bed-new #main div.sub-header {margin-bottom: 160px; overflow: hidden;}
+body.sub.bed-new #main div.background-matt {background: url(../img/sub-head-visual-new.jpg) center center no-repeat;}
 
 
 
@@ -501,7 +526,9 @@ body.sub #header:not(.open) div.top ul > li:nth-child(4) > a {padding: 8px 15px;
 body.sub #main div.sub-header {position: relative; width: 100%; overflow: hidden;}
 body.sub #main div.sub-header h2 {position: absolute; top: 55%; left: 50%; transform: translate(-50%, 0); font-size: 60px; font-weight: 800; color: #fff; text-align: center;}
 
-#sub-product-list {position: relative; padding-bottom: 160px; border-bottom: 1px solid #ebebeb; box-sizing: border-box;}
+body.sub #footer {border-top: 1px solid #ebebeb;}
+
+#sub-product-list {position: relative; padding-bottom: 160px;}
 #sub-product-list div.product {margin-top: 20px;}
 #sub-product-list > div.product > div.content-box {position: relative; max-width: calc(100% - 80px); margin: 0 auto;}
 #sub-product-list div.top-m {display: none;}
@@ -644,6 +671,41 @@ body.sub #main div.sub-header h2 {position: absolute; top: 55%; left: 50%; trans
 
 
 
+/* sub type(img test) */
+body.bed-new .page {overflow: hidden; max-width: 1920px; width: 75%;}
+body.bed-new .page.left {float: left;}
+body.bed-new .page.right {float: right;}
+body.bed-new .page > .img-area {position: relative; max-height: 810px; opacity: 0; overflow: hidden; transition: all 1.2s ease-out;}
+body.bed-new .page.left > .img-area {left: -100%;}
+body.bed-new .page.right > .img-area {right: -100%;}
+body.bed-new .page > .img-area > img {transform: scale(1.2) rotate(0.001deg); transition: transform 1.2s ease-out;}
+body.bed-new .page > .img-area > .tag {position: absolute; top: 0; right: 0; padding: 8px 24px; color: #fff; font-size: 17px; font-weight: 800; background-color: rgba(0, 0, 0, 0.6);}
+body.bed-new .page > .text-area {position: relative; overflow: hidden; color: #333; padding: 75px 0 160px 0; letter-spacing: 2px;}
+body.bed-new .page > .text-area > div {float: left;}
+body.bed-new .page.left > .text-area > .left {width: 42%;}
+body.bed-new .page.left > .text-area > .right {width: 58%;}
+body.bed-new .page.right > .text-area > .left {width: 25%;}
+body.bed-new .page.right > .text-area > .right {width: 65%;}
+body.bed-new .page > .text-area > .left > p.en, 
+body.bed-new .page > .text-area > .left > p.kr {transform: translateY(200%); opacity: 0; transition: transform 0.8s;}
+body.bed-new .page.left > .text-area > .left > p.en, 
+body.bed-new .page.left > .text-area > .left > p.kr {position: relative; left: 40%;}
+body.bed-new .page > .text-area > .left > p.en {font-size: 36px; font-weight: 800; margin-bottom: 10px;}
+body.bed-new .page > .text-area > .left > p.kr {font-size: 16px; color: #333; letter-spacing: 0;}
+body.bed-new .page > .text-area > .right > p.title {font-size: 30px; font-weight: 600; margin-bottom: 30px; transform: translateY(200%); opacity: 0; transition: transform 0.8s;}
+body.bed-new .page > .text-area > .right > p.text {line-height: 1.5em; font-size: 20px; font-weight: 300; color: #333; margin-bottom: 40px; transform: translateY(100%); opacity: 0; transition: transform 0.8s}
+body.bed-new .page > .text-area > .right > a.btn {transform: translateY(200%); opacity: 0; transition: transform 0.8s}
+
+
+body.bed-new .page.left.on > .img-area {left: 0; opacity: 1;}
+body.bed-new .page.right.on > .img-area {right: 0; opacity: 1;}
+body.bed-new .page.on > .img-area > img {transform: scale(1) rotate(0.001deg);}
+body.bed-new .page > .text-area.on p.en, 
+body.bed-new .page > .text-area.on p.kr, 
+body.bed-new .page > .text-area.on p.title, 
+body.bed-new .page > .text-area.on p.text,
+body.bed-new .page > .text-area.on a.btn {transform: translateY(0); opacity: 1;}
+
 
 
 /* module */
@@ -666,7 +728,8 @@ p.control > a.next > span {right: 100%;}
 p.control > a > span.on {opacity: 1;}
 p.control > a:first-child > span {transform: rotate(180deg);}
 
-.btn {position: relative; display: inline-block; min-width: 100px; height: 40px; line-height: 40px; box-sizing: border-box; border: 1px solid #d1d1d1; text-align: center;}
+.btn {position: relative; display: inline-block; min-width: 100px; height: 40px; line-height: 40px; box-sizing: border-box; border: 1px solid #d1d1d1; text-align: center; cursor: pointer;}
+.btn.regular {height: 50px; line-height: 50px; font-size: 16px; padding: 0 40px;}
 .btn:not(.normal):before {content: ''; position: absolute; left: 0; bottom: 0; display: block; width: 100%; height: 0; background-color: #0890c0; box-sizing: border-box;}
 .btn:hover::before {height: 100%; color: #fff; transition: height 0.5s ease-out;}
 .btn > span {position: relative; font-weight: 700; z-index: 1;}

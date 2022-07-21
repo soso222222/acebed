@@ -14,13 +14,14 @@ function preventDefaultAnchor() {
 
 
 function getScrollTop() {
-  if(window.pageYOffset !== undefined)
-  {
-      return window.pageYOffset;
-  } else {
-      return document.documentElement.scrollTop;
-      // || document.body.scrollTop;
-  }
+  return $(document).scrollTop();
+  // if(window.pageYOffset !== undefined)
+  // {
+  //     return window.pageYOffset;
+  // } else {
+  //     return document.documentElement.scrollTop;
+  //     // || document.body.scrollTop;
+  // }
 }
 function checkHeaderScroll() {
   var scrollAmt = getScrollTop();

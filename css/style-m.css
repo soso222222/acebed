@@ -24,6 +24,8 @@ body {font-family: 'NanumSquare', sans-serif; font-size: 14px; color: #000000; b
 #skip-nav {position: fixed; top: -40px; left: 0; width: 100%; line-height: 40px; text-align: center; background-color: rgba(0, 0, 0, 0.8); color: #ffffff; font-size: 16px; transition: top 0.3s; z-index: 100000;}
 #skip-nav:focus {top: 0;}
 
+.circle {border: 1px solid #ebebeb; border-radius: 50%; box-sizing: border-box;}
+
 #mobile-menu {position: relative; top: 50%; left: 50%; width: calc(100% - 40px); transform: translate(-50%, -50%);}
 #mobile-menu > ul {color: #666; font-size: 15px; font-weight: 400; overflow: hidden;}
 #mobile-menu > ul > li {line-height: 24px;}
@@ -287,6 +289,7 @@ ul.indicator > li > a {display: block; width: 10px; height: 10px; border-radius:
 ul.indicator > li.on > a {background-color: rgba(255, 255, 255, 1);}
 
 .btn {position: relative; display: inline-block; min-width: 100px; height: 40px; line-height: 40px; box-sizing: border-box; border: 1px solid #d1d1d1;}
+.btn.regular {height: 50px; line-height: 50px; font-size: 16px; padding: 0 20px;}
 .btn:not(.normal)::before {content: ''; position: absolute; left: 0; bottom: 0; display: block; width: 100%; height: 0; background-color: #0890c0; box-sizing: border-box;}
 .btn:hover::before {height: 100%; color: #fff; transition: height 0.5s ease-out;}
 .btn > span {position: relative; font-weight: 700; z-index: 1;}
@@ -504,11 +507,16 @@ div.bar span {position: absolute; top: 0; height: 4px; box-sizing: border-box; b
 /* #main-contact div.app ul.app-store li + li {margin-left: 8px;} */
 
 
-/* login */
-body.login .sub-header {border-bottom: 1px solid #ebebeb;}
-body.login .sub-header h2 {font-size: 30px; padding: 40px 0; font-weight: 800; text-align: center;}
-section.login {margin-top: 40px;}
-section.login .login-box {position: relative; width: 90%; margin: 0 auto; font-size: 14px; font-weight: 800;}
+/* member */
+body.member main {margin-top: 85px; border-bottom: 1px solid #ebebeb;}
+body.member .sub-header {border-bottom: 1px solid #ebebeb;}
+body.member .sub-header h2 {font-size: 30px; padding: 40px 0; font-weight: 800; text-align: center;}
+section.login,
+section.join {margin: 40px 0 80px 0;}
+section.login .login-box, 
+section.join .join-box {position: relative; margin: 0 auto;}
+section.login .login-box {width: 90%; font-size: 14px; font-weight: 800;}
+section.join .join-box {width: 325px;}
 section.login .login-box input {margin-bottom: 15px;}
 section.login .login-box > a.link {float: right; color: #888; font-weight: 700;}
 section.login .login-box > p.line {font-size: 14px; font-weight: 700; margin: 10px 0;}
@@ -520,8 +528,23 @@ section.login .login-box > p.line.sign-up {margin: 10px 0 80px 0;}
 section.login .login-box > p.line.sign-up > span {display: block; text-align: center; line-height: 50px; font-size: 14px; font-weight: 400;}
 section.login .login-box > p.line.sign-up > a.btn {width: 100%; text-align: center;}
 section.login .login-box > p.line.sign-up > a.btn > span {font-size: 14px; font-weight: 800;}
-body.login main {margin-top: 85px; border-bottom: 1px solid #ebebeb;}
 
+section.join .join-box {text-align: center; overflow: hidden;}
+section.join .join-box > p.title {font-size: 18px; margin-bottom: 14px;}
+section.join .join-box > p.text {font-size: 14px; font-weight: 300; color: #333; margin-bottom: 55px;}
+section.join .join-box > a {float: left; width: 145px;}
+section.join .join-box > a:last-child {margin-left: 20px;}
+section.join .join-box > a:hover .circle {border: 1px solid #0890c0; box-shadow: 1px 11px 24px 0px rgb(0 0 0 / 10%);}
+section.join .join-box > a:hover .title {color: #0890c0;}
+section.join .join-box > a > div.img {position: relative; height: 145px;}
+section.join .join-box > a > div.img > img {position: absolute; top: 0; left: 0;}
+section.join .join-box > a > div.img > img.off {opacity: 1;}
+section.join .join-box > a > div.img > img.on {opacity: 0;}
+section.join .join-box > a:hover > div.img > img.off {opacity: 0;}
+section.join .join-box > a:hover > div.img > img.on {opacity: 1;}
+section.join .join-box > a > div.text-area {position: relative; margin-top: 36px; font-weight: 700;}
+section.join .join-box > a > div.text-area > p.title {font-size: 14px; margin-bottom: 16px;}
+section.join .join-box > a > div.text-area > p.text {font-size: 12px; color: #aaa;}
 
 /* sub(page) */
 
@@ -536,12 +559,17 @@ body.sub #header:not(.open) div.top ul > li:nth-child(4) > a {padding: 8px 15px;
 body.sub #main div.sub-header {position: relative; width: 100%; margin-bottom: 20px;}
 body.sub #main div.sub-header h2 {position: absolute; top: 50%; left: 50%; transform: translate(-50%, 0); font-size: 30px; font-weight: 700; color: #fff;}
 
+body.sub #footer {border-top: 1px solid #ebebeb;}
+
 @media screen and (min-width: 768px) and (max-width: 1279.9px) {body.sub #main {position: relative; padding-top: 0;}
   body.sub.bed #main div.background-matt {padding: 300px 0 160px 0;}
   body.sub.bed-frame #main div.background-matt {background: url(../img/sub-head-visual-frame.jpg) center center no-repeat;}
   body.sub.bed-mattress #main div.background-matt {background: url(../img/sub-head-visual-mattress.jpg) center center no-repeat;}
+  body.sub.bed-new #main, 
+  body.sub.bed-new #main div.sub-header {margin-bottom: 160px; overflow: hidden;}
+  body.sub.bed-new #main div.background-matt {background: url(../img/sub-head-visual-new.jpg) center center no-repeat;}
 
-  #sub-product-list {position: relative; padding-bottom: 160px; border-bottom: 1px solid #ebebeb; box-sizing: border-box;}
+  #sub-product-list {position: relative; padding-bottom: 160px; box-sizing: border-box;}
   #sub-product-list div.product {margin-top: 20px;}
   #sub-product-list > div.product > div.content-box {position: relative; max-width: calc(100% - 80px); margin: 0 auto;}
   #sub-product-list div.top {position: relative; margin-bottom: 30px; overflow: hidden;}
@@ -609,14 +637,53 @@ body.sub #main div.sub-header h2 {position: absolute; top: 50%; left: 50%; trans
   #sub-product-list div.list-box.row-3 ul.list > li:nth-child(3n) {margin-right: 0;}
   #sub-product-list div.list-box.row-2 ul.list > li {width: 48%; margin-right: 4%;}
   #sub-product-list div.list-box.row-2 ul.list > li:nth-child(2n) {margin-right: 0;}
+
+
+  /* sub type(img test) */
+  body.bed-new .page {overflow: hidden; width: 90%;}
+  body.bed-new .page.left {float: left;}
+  body.bed-new .page.right {float: right;}
+  body.bed-new .page > .img-area {position: relative; opacity: 0; overflow: hidden; transition: all 1.2s ease-out;}
+  body.bed-new .page.left > .img-area {left: -100%;}
+  body.bed-new .page.right > .img-area {right: -100%;}
+  body.bed-new .page > .img-area > img {transform: scale(1.2) rotate(0.001deg); transition: transform 1.2s ease-out;}
+  body.bed-new .page > .img-area > .tag {position: absolute; top: 0; right: 0; padding: 8px 24px; color: #fff; font-size: 17px; font-weight: 800; background-color: rgba(0, 0, 0, 0.6);}
+  body.bed-new .page > .text-area {position: relative; overflow: hidden; color: #333; padding: 75px 0 160px 0; letter-spacing: 2px;}
+  body.bed-new .page > .text-area > div {float: left;}
+  body.bed-new .page.left > .text-area > .left {width: 42%;}
+  body.bed-new .page.left > .text-area > .right {width: 58%;}
+  body.bed-new .page.right > .text-area > .left {width: 25%;}
+  body.bed-new .page.right > .text-area > .right {width: 65%;}
+  body.bed-new .page > .text-area > .left > p.en, 
+  body.bed-new .page > .text-area > .left > p.kr {transform: translateY(200%); opacity: 0; transition: transform 0.8s;}
+  body.bed-new .page.left > .text-area > .left > p.en, 
+  body.bed-new .page.left > .text-area > .left > p.kr {position: relative; left: 12%;}
+  body.bed-new .page > .text-area > .left > p.en {font-size: 36px; font-weight: 800; margin-bottom: 10px;}
+  body.bed-new .page > .text-area > .left > p.kr {font-size: 16px; color: #333; letter-spacing: 0;}
+  body.bed-new .page > .text-area > .right > p.title {font-size: 30px; font-weight: 600; margin-bottom: 30px; transform: translateY(200%); opacity: 0; transition: transform 0.8s;}
+  body.bed-new .page > .text-area > .right > p.text {line-height: 1.5em; font-size: 20px; font-weight: 300; color: #333; margin-bottom: 40px; transform: translateY(100%); opacity: 0; transition: transform 0.8s}
+  body.bed-new .page > .text-area > .right > a.btn {transform: translateY(200%); opacity: 0; transition: transform 0.8s}
+
+
+  body.bed-new .page.left.on > .img-area {left: 0; opacity: 1;}
+  body.bed-new .page.right.on > .img-area {right: 0; opacity: 1;}
+  body.bed-new .page.on > .img-area > img {transform: scale(1) rotate(0.001deg);}
+  body.bed-new .page > .text-area.on p.en, 
+  body.bed-new .page > .text-area.on p.kr, 
+  body.bed-new .page > .text-area.on p.title, 
+  body.bed-new .page > .text-area.on p.text,
+  body.bed-new .page > .text-area.on a.btn {transform: translateY(0); opacity: 1;}
   }
 @media screen and (max-width: 767.9px) {
   body.sub #header:not(.open) {background-color: transparent;}
   body.sub.bed #main div.background-matt {background-size: cover; padding: 140px 0 130px 0;}
   body.sub.bed-frame #main div.background-matt {background: url(../img/sub-head-visual-frame.jpg) center center no-repeat;}
   body.sub.bed-mattress #main div.background-matt {background: url(../img/sub-head-visual-mattress-m.jpg) center center no-repeat;}
+  body.sub.bed-new #main, 
+  body.sub.bed-new #main div.sub-header {margin-bottom: 160px;}
+  body.sub.bed-new #main div.background-matt {background: url(../img/sub-head-visual-new.jpg) center center no-repeat;}
   
-  #sub-product-list {position: relative; padding-bottom: 160px; border-bottom: 1px solid #ebebeb; box-sizing: border-box;}
+  #sub-product-list {position: relative; padding-bottom: 160px;}
   #sub-product-list div.product {}
   #sub-product-list > div.product > div.content-box {position: relative;}
   #sub-product-list div.top {display: none;}
@@ -651,6 +718,35 @@ body.sub #main div.sub-header h2 {position: absolute; top: 50%; left: 50%; trans
   #sub-product-list div.list-box.row-2 ul.list > li {width: 48%; margin-right: 4%;}
   #sub-product-list div.list-box.row-2 ul.list > li:nth-child(2n) {margin-right: 0;}
   #sub-product-list div.list-box.row-1 ul.list > li {width: 100%;}
+
+
+  /* sub type(img test) */
+  body.bed-new .page {overflow: hidden; width: 100%;}
+  body.bed-new .page > .img-area {position: relative; opacity: 0; overflow: hidden; transition: all 1.2s ease-out;}
+  body.bed-new .page.left > .img-area {left: -100%;}
+  body.bed-new .page.right > .img-area {right: -100%;}
+  body.bed-new .page > .img-area > img {transform: scale(1.2) rotate(0.001deg); transition: transform 1.2s ease-out;}
+  body.bed-new .page > .img-area > .tag {position: absolute; top: 0; right: 0; padding: 4px 12px; color: #fff; font-size: 11px; font-weight: 800; background-color: rgba(0, 0, 0, 0.6);}
+  body.bed-new .page > .text-area {position: relative; width: 90%; overflow: hidden; color: #333; padding: 30px 0 80px 0; margin: 0 auto; letter-spacing: 2px;}
+  body.bed-new .page > .text-area > .left {margin-bottom: 20px;}
+  body.bed-new .page > .text-area > .left > p.en, 
+  body.bed-new .page > .text-area > .left > p.kr {transform: translateY(200%); opacity: 0; transition: transform 0.8s;}
+  body.bed-new .page > .text-area > .left > p.en {font-size: 15px; font-weight: 800; margin-bottom: 2px;}
+  body.bed-new .page > .text-area > .left > p.kr {font-size: 12px; color: #333; letter-spacing: 0;}
+  body.bed-new .page > .text-area > .right > p.title {font-size: 20px; font-weight: 600; margin-bottom: 20px; transform: translateY(200%); opacity: 0; transition: transform 0.8s;}
+  body.bed-new .page > .text-area > .right > p.text {line-height: 1.5em; font-size: 14px; font-weight: 400; color: #333; margin-bottom: 30px; transform: translateY(100%); opacity: 0; transition: transform 0.8s}
+  body.bed-new .page > .text-area > .right > a.btn {transform: translateY(200%); opacity: 0; transition: transform 0.8s}
+
+
+  body.bed-new .page.left.on > .img-area {left: 0; opacity: 1;}
+  body.bed-new .page.right.on > .img-area {right: 0; opacity: 1;}
+  body.bed-new .page.on > .img-area > img {transform: scale(1) rotate(0.001deg);}
+  body.bed-new .page > .text-area.on p.en, 
+  body.bed-new .page > .text-area.on p.kr, 
+  body.bed-new .page > .text-area.on p.title, 
+  body.bed-new .page > .text-area.on p.text,
+  body.bed-new .page > .text-area.on a.btn {transform: translateY(0); opacity: 1;}
+
 } 
 #sub-product-list div.list-box ul.list > li {position: relative; float: left; box-sizing: border-box; opacity: 0.5; transform: translateY(20%);}
 #sub-product-list div.list-box ul.list > li.on {opacity: 1; transform: translateY(0); transition: all 0.8s;}
