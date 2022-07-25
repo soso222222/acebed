@@ -504,7 +504,7 @@
     pageNext = (n >= numPage) ? numPage : (n + 1);
   }
 
-  function ImageSlide(id, options) {
+  function mainImageSlide(id, options) {
     // var $selector = $(selector);
     var $selector = $('#' + id);
     var slideType = (options.slideType === undefined || options.slideType === undefined) ? 'image' : options.slideType;
@@ -888,16 +888,16 @@
       }
     }
   }
-  var mainVisualSlide = new ImageSlide('main-visual-slide', {
+  var mainVisualSlide = new mainImageSlide('main-visual-slide', {
     slideType: 'image',
   });
-  var mainScienceSlide = new ImageSlide('main-science-slide', {
+  var mainScienceSlide = new mainImageSlide('main-science-slide', {
     slideType: 'article',
   });
-  var mainCollectionSlide = new ImageSlide('main-collection-slide', {
+  var mainCollectionSlide = new mainImageSlide('main-collection-slide', {
     slideType: 'image-scroll',
   });
-  var mainEventSlide = new ImageSlide('main-event-slide', {
+  var mainEventSlide = new mainImageSlide('main-event-slide', {
     slideType: 'article-once',
   });
 

@@ -137,6 +137,7 @@
   'use strict';
   setLogo();
   setScroll();
+  var visualBgTimer = setTimeout(function() {$('body.sub #main div.background-matt').addClass('on');}, 500); 
 
 function setScroll() {
   var totalPage = $('section.page').length;

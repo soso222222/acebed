@@ -19,6 +19,12 @@ br.only-m {content: '';}
 br.only-m::after {content: '\00a0';}
 
 
+/* color  */
+:root{
+  --color-blue: #0890c0;
+}
+
+
 /* common */
 body {font-family: 'NanumSquare', sans-serif; font-size: 14px; color: #000000; background: #ffffff;}
 #wrapper {min-width: 768px; overflow: hidden;}
@@ -26,6 +32,20 @@ body {font-family: 'NanumSquare', sans-serif; font-size: 14px; color: #000000; b
 #skip-nav:focus {top: 0;}
 
 .circle {border: 1px solid #ebebeb; border-radius: 50%; box-sizing: border-box;}
+
+span.alert {position: absolute; display: block; border-radius: 10px; box-sizing: border-box; text-align: center; color: #fff; font-size: 12px; margin-left: 1px;}
+
+span.alert.small {width: 8px; height: 8px; line-height: 6px;}
+span.alert.regular {width: 20px; height: 20px; line-height: 18px;}
+span.alert.large {width: 30px; height: 30px; line-height: 28px;}
+
+span.alert.top {top: 0; right: 0; transform: translate(75%, 0);}
+span.alert.middle {top: 50%; right: 0; transform: translate(0, -50%);}
+span.alert.bottom {bottom: 0; right: 0;}
+
+span.alert.red {background-color: rgba(174, 32, 18, 0.8);}
+span.alert.yellow {background-color: rgba(255, 188, 0, 0.8);}
+span.alert.green {background-color: rgba(10, 147, 150, 0.8);}
 
 /* form design */
 .form-box.type-2 > div {float: left; width: calc(50% - 10px); margin-right: 20px;}
@@ -94,6 +114,31 @@ a.btn-toggle.disabled {opacity: 0.5; background-color: #f9f9f9 !important; curso
 
 
 
+/* tabview */
+div.tabview {position: relative; margin: 50px auto; min-width: 850px;}
+div.tabview ul.tab {position: relative; width: 100%; padding: 0 15%; overflow: hidden;}
+div.tabview ul.tab > li {position: relative; float: left;}
+div.tabview ul.tab > li + li {margin-left: 5em;}
+div.tabview ul.tab > li > a {display: block; padding: 10px 0; color: #888; font-size: 20px; font-weight: 800; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+div.tabview ul.tab > a.close {position: absolute; top: 35px; right: 10px; transform: translate(0, -50%);}
+div.tabview ul.tab > li.on > a {color: #333;}
+div.tabview .tab-content {padding: 0 12%;}
+div.tabview .tab-content > li {display: none;}
+div.tabview .tab-content > li.on {display: block;}
+
+div.tabview.border > ul.tab::before {content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 1px; background-color: #ebebeb; box-sizing: border-box;}
+div.tabview.border > ul.tab > li {border-bottom: 4px solid transparent;}
+div.tabview.border > ul.tab > li.on {border-bottom-color: var(--color-blue); margin-bottom: 1px;}
+
+div.tabview .box {position: relative; left: 0; top: 0; width: 100%; height: 100%; overflow: hidden;}
+div.tabview .box img {width: 100%;}
+div.tabview .dummy {opacity: 0;}
+div.tabview ul.slide {position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+div.tabview ul.slide > li {position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: none;}
+div.tabview ul.slide > li.on {display: block;}
+
+
+
 /* header */
 #header {position: fixed; top: 0; left: 0; width: 100%; height: 120px; z-index: 10000;}
 
@@ -105,33 +150,38 @@ a.btn-toggle.disabled {opacity: 0.5; background-color: #f9f9f9 !important; curso
 #header div.top > div.content-box > ul > li:nth-child(n+3) {color: #fff; font-weight: 700;}
 #header div.top > div.content-box > ul > li:nth-child(3) > a {padding: 8px 15px 8px 33px; background: url(../img/wedding-icon.png) left 14px center no-repeat #139cae; border-radius: 50px; box-sizing: border-box; margin-right: 5px;}
 #header div.top > div.content-box > ul > li:nth-child(4) > a {padding: 8px 15px; background: #9badb6; border-radius: 50px; border-radius: 50px; box-sizing: border-box;} 
+#header div.top > div.content-box > ul > li > a {position: relative;}
 
 #header div.bottom {}
 #header > div.bottom > div.content-box {position: relative; height: 52px; margin: 0 auto;}
 #header h1 a {display: block;}
 #header h1 a img {display: block;}
-body.main #header h1 a img.black {display: block;}
-body.main #header h1 a img.white {display: none;}
-body.sub #header h1 a img.black {display: none;}
-body.sub #header h1 a img.white {display: block;}
+body.main #header h1 a img.black, 
+body.sub #header h1 a img.black{display: block;}
+body.main #header h1 a img.white, 
+body.sub #header h1 a img.white{display: none;}
+body.bed #header h1 a img.black {display: none;}
+body.bed #header h1 a img.white {display: block;}
 #gnb > ul {position: absolute; top: 35%;}
 /* #gnb > ul {position: absolute; top: 50%; transform: translate(0, -50%);} */
 #gnb > ul > li {float: left; color: #333; font-size: 17px; font-weight: 700;}
 #gnb > ul.etc > li.search {font-size: 18px;}
-body.main #gnb li.menu img.black {display: block;}
-body.main #gnb li.menu img.white {display: none;}
-body.sub #gnb li.menu img.black {display: none;}
-body.sub #gnb li.menu img.white {display: block;}
+body.main #gnb li.menu img.black, 
+body.sub #gnb li.menu img.black{display: block;}
+body.main #gnb li.menu img.white, 
+body.sub #gnb li.menu img.white{display: none;}
+body.bed #gnb li.menu img.black {display: none;}
+body.bed #gnb li.menu img.white {display: block;}
 
 #gnb > ul > li > a.kr {display: none;}
 #gnb > ul > li > a.en {display: block;}
 #gnb > ul.about-ace > li.on > a, 
-#gnb > ul.bed-product > li.on > a {color: #0890c0;}
+#gnb > ul.bed-product > li.on > a {color: var(--color-blue);}
 #gnb > ul > li > ul {position: absolute; display: none; width: 100%; padding: 1em 0;}
 #gnb > ul > li > ul > li {font-size: 15px; font-weight: 400; padding: 0.5em 0;}
 #gnb > ul > li > ul > li > a {position: relative;}
 #gnb > ul > li > ul > li span {display: inline-block; white-space: nowrap;}
-#gnb > ul > li > ul > li span::before {content: ''; position: absolute; display: block; left: 0; bottom: 0; width: 0; height: 4px; background: #d6eff8;}
+#gnb > ul > li > ul > li span:not(.alert)::before {content: ''; position: absolute; display: block; left: 0; bottom: 0; width: 0; height: 4px; background: #d6eff8;}
 #gnb > ul > li > ul > li > a:hover span::before {width: 100%; transition: width 0.8s ease-out;}
 #gnb > ul.about-ace > li:last-child, 
 #gnb > ul.bed-product > li:last-child {padding-right: 0;}
@@ -160,7 +210,7 @@ body.sub #gnb li.menu img.white {display: block;}
 #gnb div.search-box p.search > input[type="text"]::placeholder {overflow: hidden; white-space: nowrap; text-overflow: ellipsis; color: #888; font-size: 18px;}
 #gnb div.search-box p.search > label {position: absolute; top: 50%; right: 0; padding: 20px 0; font-size: 25px; transform: translate(0, -50%);}
 
-#gnb div.search-box p.close {position: absolute; bottom: -50px; width: 100%; text-align: center;}
+#gnb div.search-box p.close {position: absolute; bottom: -50px; width: 100%; text-align: center; color: #fff;}
 #gnb div.search-box p.close > a {display: inline-block; width: 24px; height: 24px;}
 #gnb div.search-box p.close > a::before {background-color: #fff; transition: all 0.3s;}
 #gnb div.search-box p.close > a::after {background-color: #fff; transition: all 0.3s;}
@@ -253,7 +303,7 @@ body.sub #gnb li.menu img.white {display: block;}
 #footer div.quick-link > ul.menu > li:last-child {height: 80px;}
 #footer div.quick-link > ul.menu > li:first-child > a {display: block; line-height: 50px; text-align: center; font-size: 13px; font-weight: 700;}
 #footer div.quick-link > ul.menu > li:last-child > a {display: block; width: 80px; height: 80px; line-height: 80px; background-color: #f0f0f0; transition: all 0.5s ease;}
-#footer div.quick-link > ul.menu > li:last-child > a:hover {background-color: #0890c0;}
+#footer div.quick-link > ul.menu > li:last-child > a:hover {background-color: var(--color-blue);}
 #footer div.quick-link > ul.menu > li:last-child > a > p {display: block;}
 #footer div.quick-link > ul.menu > li:last-child > a > p > span.more {position: absolute; display: inline-block; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 28px; height: 28px; font-size: 13px; font-weight: 700;}
 #footer div.quick-link > ul.menu > li:last-child > a > p > span.more:before {content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; height: 2px; background-color: #919191;}
@@ -339,7 +389,7 @@ section.page.on div.gallery {opacity: 1; transform: translateY(0);}
 #main-science div.article-slide ul.slide li.title > ul {position: relative; top: 50%; left: 50%; width: 60%; transform: translate(-50%, -50%);}
 #main-science div.article-slide ul.slide li.title > ul > li {font-size: 16px; color: #666; letter-spacing: 0.03em;}
 #main-science div.article-slide ul.slide li.title > ul > li > a {display: block; line-height: 50px;}
-#main-science div.article-slide ul.slide li.title > ul > li.on > a {font-size: 22px; color: #0890c0; font-weight: 800; transition: all 0.3s;}
+#main-science div.article-slide ul.slide li.title > ul > li.on > a {font-size: 22px; color: var(--color-blue); font-weight: 800; transition: all 0.3s;}
 #main-science div.article-slide ul.slide li.text {position: absolute; top: 37%; right: 0; height: 100%;}
 #main-science div.article-slide ul.slide li.text p.title {line-height: 54px; font-size: 35px; color: #333; font-weight: 700; margin-bottom: 24px; letter-spacing: -0.1em;}
 #main-science div.article-slide ul.slide li.text p.content {width: 80%; min-height: 100%; line-height: 30px; font-size: 18px; color: #666; white-space: pre-line; overflow: hidden;}
@@ -352,7 +402,7 @@ section.page.on div.gallery {opacity: 1; transform: translateY(0);}
 #main-collection div.image-scroll-slide {position: relative;}
 #main-collection div.image-scroll-slide p.tab {text-align: center; margin-top: 40px; margin-bottom: 50px;}
 #main-collection div.image-scroll-slide p.tab span {font-size: 22px; color: #888; cursor: pointer;}
-#main-collection div.image-scroll-slide p.tab span.on {color: #0890c0; font-weight: 800;}
+#main-collection div.image-scroll-slide p.tab span.on {color: var(--color-blue); font-weight: 800;}
 #main-collection div.image-scroll-slide p.tab span + span::before {content: '|'; margin: 0 20px; font-size: 20px; color: #ddd;}
 
 #main-collection div.image-scroll-slide > div.box {position: relative; width: calc(100% - 200px); max-width: 1270px; height: 100%; margin: 50px auto;}
@@ -397,8 +447,8 @@ section.page.on div.gallery {opacity: 1; transform: translateY(0);}
 #main-event div.article-slide ul.slide li.text > ul {position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%);}
 #main-event div.article-slide ul.slide li.text > ul li {font-size: 16px; color: #666; letter-spacing: 0.03em;}
 #main-event div.article-slide ul.slide li.text > ul li a {display: block; line-height: 50px; box-sizing: border-box; border-bottom: 1px solid #ebebeb; padding: 40px 0;}
-#main-event div.article-slide ul.slide li.text > ul > li.on a em {color: #0890c0;}
-#main-event div.article-slide ul.slide li.text > ul > li.on a p {color: #0890c0;}
+#main-event div.article-slide ul.slide li.text > ul > li.on a em {color: var(--color-blue);}
+#main-event div.article-slide ul.slide li.text > ul > li.on a p {color: var(--color-blue);}
 #main-event div.article-slide ul.slide li.text a em {font-size: 16px; color: #333; font-weight: 700; margin-bottom: 24px; letter-spacing: -0.1em;}
 #main-event div.article-slide ul.slide li.text a p {display: block; width: 80%; min-height: 100%; line-height: 30px;  font-size: 20px; color: #666; white-space: pre-line; overflow: hidden;}
 
@@ -419,7 +469,7 @@ section.page.on div.gallery {opacity: 1; transform: translateY(0);}
 #main-map div.map {height: 500px; background: url(../img/main-store-map.jpg) center center no-repeat; background-size: cover;}
 #main-map > div.content-box {position: relative; max-width: calc(100% - 80px); margin: 0 auto;}
 
-#main-map div.close-store {position: absolute; right: 0; bottom: 30%; width: 340px; height: 340px; background-color: #0890c0; transition: width 0.8s;}
+#main-map div.close-store {position: absolute; right: 0; bottom: 30%; width: 340px; height: 340px; background-color: var(--color-blue); transition: width 0.8s;}
 #main-map div.close-store div.box {margin: 90px 70px;}
 #main-map div.close-store p.text {line-height: 30px; font-size: 20px; color: #fff; text-align: center; word-break: keep-all;}
 #main-map div.close-store p.search {box-sizing: border-box; border-bottom: 2px solid #fff; color: #fff; margin-top: 50px; overflow: hidden;}
@@ -490,8 +540,8 @@ section.join .join-box > p.title {font-size: 30px; margin-bottom: 20px;}
 section.join .join-box > p.text {font-size: 17px; font-weight: 300; color: #666; margin-bottom: 55px;}
 section.join .join-box > a {float: left; width: 220px;}
 section.join .join-box > a:last-child {width: 240px; margin-left: 120px;}
-section.join .join-box > a:hover .circle {border: 1px solid #0890c0; box-shadow: 1px 11px 24px 0px rgb(0 0 0 / 10%);}
-section.join .join-box > a:hover .title {color: #0890c0;}
+section.join .join-box > a:hover .circle {border: 1px solid var(--color-blue); box-shadow: 1px 11px 24px 0px rgb(0 0 0 / 10%);}
+section.join .join-box > a:hover .title {color: var(--color-blue);}
 section.join .join-box > a > div.img {position: relative; width: 220px; height: 220px;}
 section.join .join-box > a > div.img > img {position: absolute; top: 0; left: 0;}
 section.join .join-box > a > div.img > img.off {opacity: 1;}
@@ -512,19 +562,166 @@ body.sub.bed-new #main,
 body.sub.bed-new #main div.sub-header {margin-bottom: 160px; overflow: hidden;}
 body.sub.bed-new #main div.background-matt {background: url(../img/sub-head-visual-new.jpg) center center no-repeat;}
 
+body.sub.science #main div.background-matt {max-width: 1920px; width: 98vw; height: 96vh; margin: 1vw auto; transition: all 0.8s ease-out;}
+body.sub.science #main div.background-matt.on {width: 92vw; height: 620px; margin: 200px auto 100px auto;}
+body.sub.sci-spring #main div.background-matt {background: url(../img/sub-sci-spring-bg-1.jpg) center center no-repeat;}
 
+section.gen {background: url(../img/sub-sci-spring-bg-2.jpg) center center no-repeat; padding: 50px 0 160px 0;}
+section.page > p.title {line-height: 1.5em; font-size: 40px; font-weight: 400; color: #333; text-align: center; margin-bottom: 80px; transform: translateY(100%); opacity: 0; transition: all 0.8s;}
+section.page.on > p.title {transform: translateY(0); opacity: 1;}
+ul.gallery {width: 1200px; margin: 0 auto; overflow: hidden;}
+ul.gallery.type-2 > div {float: left; width: 50%; overflow: hidden; text-align: center;}
+ul.gallery.type-2 > div.right {float: right;}
+ul.gallery.type-2 > div > li {position: relative;}
+ul.gallery.type-2 > div > li > div.img {background-color: #fff; overflow: hidden;}
+ul.gallery.type-2 > .left > li {float: left; width: calc(50% - 30px); margin-right: 30px;}
+ul.gallery.type-2 > .left > li:nth-child(2n) {margin-right: 0;}
+ul.gallery.type-2 > .left > li:nth-child(n+3) {margin-top: 30px;}
+ul.gallery.type-2 > div > li img {transform: translateY(100%); opacity: 0; transition: all 0.8s;}
+section.gen.on ul.gallery.type-2 > div > li img {transform: translateY(0); opacity: 1;}
+ul.gallery.type-2 > div > li > p {font-size: 17px; font-weight: 700; margin-top: 15px;}
+ul.gallery.type-2 > div > li > p > span {font-size: 14px; color: #666; margin-right: 5px;}
 
+section.system {background: url(../img/sub-sci-spring-bg-3.jpg) bottom center no-repeat; padding: 160px 0 450px 0;}
+section.system ul.list {width: 1440px; margin: 0 auto; overflow: hidden;}
+section.system ul.list > li {float: left; width: 20%; text-align: center;}
+section.system ul.list > li img {visibility: hidden; margin: 0 auto;}
+section.system ul.list > li > p.title {margin: 15px 0 20px 0;}
+section.system ul.list > li > p.title > span {display: inline-block; font-size: 30px; font-weight: 600; color: rgba(51, 51, 51, 0.3); transform: translateX(50%); transition: all 0.4s;}
+section.system ul.list > li > p.title > span.ef {margin-left: 10px; transform: translateX(30%); opacity: 0;}
+section.system ul.list > li > p.text {line-height: 1.5em; font-size: 17px; font-weight: 300; color: #666; transform: translateY(100%); opacity: 0; transition: all 0.8s;}
+
+section.system ul.list > li.on img {visibility: visible;}
+section.system ul.list > li.on > p.title > span {color: #333; transform: translateX(0);}
+section.system ul.list > li.on  > p.title > span.ef {opacity: 1;}
+section.system ul.list > li.on > p.text {transform: translateY(0); opacity: 1;}
+
+section.spec {padding: 160px 0;}
+section.spec div.box {width: 1440px; margin: 0 auto; overflow: hidden;}
+section.spec div.box > div {position: relative;}
+section.spec .left {float: left; width: 39%;}
+section.spec .left::after {content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 100%; background-color: #fff; transition: height 1.5s ease-out;}
+section.spec .right {float: right; width: 51%; margin-left: 10%;}
+section.spec .left > div {float: left; overflow: hidden;}
+section.spec .left > .zone {width: 58%; font-size: 16px; text-align: right;}
+section.spec .left > .zone > .up {position: relative; height: 100px;}
+section.spec .left > .zone > .up::after {content: ''; position: absolute; top: 15px; right: 0; width: 6px; height: calc(100% - 18px); background-color: #eb6262;}
+section.spec .left > .zone > .up > p {padding: 50px 20px 5px 0;}
+section.spec .left > .zone > .up > em {padding: 0 20px 0 0;}
+section.spec .left > .zone > .down {position: relative; height: 405px;}
+section.spec .left > .zone > .down::after {content: ''; position: absolute; top: 0; right: 0; width: 6px; height: 100%; background-color: #6292eb;}
+section.spec .left > .zone > .down > p {padding: 180px 20px 5px 0;}
+section.spec .left > .zone > .down > em {padding: 0 20px 0 0;}
+section.spec .left > .zone p {}
+section.spec .left > .zone em {font-weight: 600;}
+section.spec .left > .img {position: relative; width: 42%;}
+section.spec .left > .img > img {display: block; margin: 0 auto;}
+section.spec .left > .img > .pointer {position: absolute; top: 0; left: 0;}
+section.spec .left > .img > .spot {position: absolute; width: 44px; height: 44px; animation: grow 1s infinite;}
+section.spec .left > .img > .spot.red {top: 50px; left: 50px;}
+section.spec .left > .img > .spot.blue {top: 260px; left: 150px;}
+section.spec .right > p.title {line-height: 1.5em; font-size: 26px; font-weight: 500; margin-bottom: 66px; transform: translateY(100%); opacity: 0; transition: transform 0.8s;}
+section.spec .right > div.info {margin-bottom: 70px; transform: translateY(100%); opacity: 0; transition: transform 0.8s;}
+section.spec .right > div.info:last-child {margin-bottom: 0;}
+section.spec .right > div.info > p.title {line-height: 40px; font-size: 20px; font-weight: 400; margin-bottom: 20px;}
+section.spec .right > div.info > p.title > a.tag {line-height: 40px; font-size: 15px; font-weight: 800; border: 2px solid #ddd; border-radius: 20px; padding: 8px 20px; margin-right: 10px;}
+section.spec .right > div.info > p.text {line-height: 1.5em; font-size: 16px; color: #666;}
+
+section.spec .left.on::after {width: 100%; height: 0;}
+section.spec .right.on > p.title, 
+section.spec .right.on > div.info {transform: translateY(0); opacity: 1;}
+
+@keyframes grow {
+	0% {transform: scale(0.8);}
+	50% {transform: scale(1);}
+	100% {transform: scale(0.8);}
+}
+
+section.life {height: 470px; background: url(../img/sub-sci-spring-bg-4.jpg) bottom center no-repeat; background-attachment: fixed; padding-top: 245px;}
+section.life div.box {width: 1440px; height: 300px; margin: 0 auto; overflow: hidden; background-color: #fff; padding: 100px 0 70px 0; text-align: center;}
+section.life > div.box > p.title {line-height: 1.5em; font-size: 40px; font-weight: 300; color: #333; text-align: center; margin-bottom: 35px; transform: translateY(100%); opacity: 0; transition: all 0.8s;}
+section.life > div.box > p.title strong {font-weight: 400;}
+section.life div.box > p.text {line-height: 1.5em; font-size: 26px; font-weight: 400; margin-bottom: 25px; transform: translateY(100%); opacity: 0; transition: all 0.8s;}
+section.life div.box > p.noti {font-size: 16px; font-weight: 400; color: #888; transform: translateY(100%); opacity: 0; transition: all 0.8s;}
+
+section.life.on > div.box > p.title, 
+section.life.on div.box > p.text, 
+section.life.on div.box > p.noti {transform: translateY(0); opacity: 1;}
+
+section.line {padding: 160px 0;}
+section.line ul.list {width: 1440px; margin: 0 auto; overflow: hidden;}
+section.line ul.list > li {float: left; width: 33.3%; text-align: center;}
+section.line ul.list > li > .img {overflow: hidden;}
+section.line ul.list > li img {margin: 0 auto; transform: translateY(100%); opacity: 0; transition: all 0.8s;}
+section.line ul.list > li > .text-area {margin-top: 40px;}
+section.line ul.list > li > .text-area > p.title {font-size: 20px; font-weight: 600; margin-bottom: 20px; transform: translateY(100%); opacity: 0; transition: all 0.8s;}
+section.line ul.list > li > .text-area > p.text {line-height: 1.5em; font-size: 18px; color: #666; transform: translateY(100%); opacity: 0; transition: all 0.8s;}
+
+section.line ul.list > li img.on, 
+section.line ul.list > li > .text-area.on > p.title, 
+section.line ul.list > li > .text-area.on > p.text {transform: translateY(0); opacity: 1;}
+
+section.patent {position: relative; overflow: hidden;}
+section.patent > div.bg {height: 840px; background: url(../img/sub-sci-spring-bg-5.jpg) bottom center no-repeat; overflow: hidden; transform: scale(1.1); transition: all 0.8s;}
+section.patent div.box {position: absolute; top: 0; right: 230px; width: 460px; padding: 160px 0;}
+section.patent div.box > p.title {line-height: 1.5em; font-size: 40px; font-weight: 400; color: #333; margin-bottom: 80px; transform: translateY(100%); opacity: 0; transition: all 0.8s;}
+section.patent div.box > ul.list {font-size: 20px; font-weight: 400; margin-top: 90px; color: #666;}
+section.patent div.box > ul.list > li {line-height: 2em;}
+
+section.patent.on > div.bg {transform: scale(1);}
+section.patent.on div.box > p.title, 
+section.patent.on div.box > ul.list {transform: translateY(0); opacity: 1;}
+
+section.spring {padding: 160px 0;}
+section.spring > p.title {margin-bottom: 40px;}
+section.spring > p.text {line-height: 2em; font-size: 18px; font-weight: 400; color: #666; text-align: center; margin-bottom: 80px; transform: translateY(100%); opacity: 0; transition: all 0.8s;}
+section.spring .tabview {}
+/* section.spring .tabview ul.tab {width: 76%;} */
+section.spring .tabview .dummy {width: 60%;}
+section.spring .tabview ul.slide > li {padding: 100px 0; overflow: hidden;}
+section.spring .tabview ul.slide > li > div {width: 44%;}
+section.spring .tabview ul.slide > li > div + div {margin-left: 8%;}
+section.spring .tabview ul.slide > li > div.left {float: left;}
+section.spring .tabview ul.slide > li > div.left > em {display: block; line-height: 1.5em; font-size: 20px; font-weight: 800; color: var(--color-blue); margin-bottom: 60px; transform: translateY(100%); opacity: 0; transition: all 0.8s;}
+section.spring .tabview ul.slide > li > div.left > p.title {font-size: 40px; font-weight: 800; margin-bottom: 35px; transform: translateY(100%); opacity: 0; transition: all 0.8s;}
+section.spring .tabview ul.slide > li > div.left > p.text {line-height: 1.5em; font-size: 20px; font-weight: 400; color: #666; margin-bottom: 60px; transform: translateY(100%); opacity: 0; transition: all 0.8s;}
+section.spring .tabview ul.slide > li > div.left > ul.list {}
+section.spring .tabview ul.slide > li > div.left > ul.list > li {overflow: hidden; transform: translateY(100%); opacity: 0; transition: all 0.8s;}
+section.spring .tabview ul.slide > li > div.left > ul.list > li + li {margin-top: 40px;}
+section.spring .tabview ul.slide > li > div.left > ul.list > li > div {float: left;}
+section.spring .tabview ul.slide > li > div.left > ul.list > li > .icon {width: 90px; margin-right: 20px;}
+section.spring .tabview ul.slide > li > div.left > ul.list > li > .icon img {display: block; margin: 0 auto;}
+section.spring .tabview ul.slide > li > div.left > ul.list > li > .text-area {width: calc(100% - 110px);}
+section.spring .tabview ul.slide > li > div.left > ul.list > li > .text-area > p.title {font-size: 20px; font-weight: 800; margin-bottom: 10px;}
+section.spring .tabview ul.slide > li > div.left > ul.list > li > .text-area > p.text {line-height: 1.5em; font-size: 16px; font-weight: 400; color: #666;}
+section.spring .tabview ul.slide > li > div.right {float: right; overflow: hidden;}
+section.spring .tabview ul.slide > li > div.right img {transform: translateY(100%); opacity: 0; transition: all 0.8s;}
+
+section.spring.on > p.text, 
+section.spring .tabview ul.slide > li > div.left > em.on,
+section.spring .tabview ul.slide > li > div.left > p.title.on, 
+section.spring .tabview ul.slide > li > div.left > p.text.on, 
+section.spring .tabview ul.slide > li > div.left > ul.list > li.on, 
+section.spring .tabview ul.slide > li > div.right img.on {transform: translateY(0); opacity: 1;}
 
 /* sub(common) */
-body.sub #main {position: relative; padding-top: 0;}
-body.sub #header:not(.open)::before {background-color: transparent;}
-body.sub #header:not(.open) div.top ul > li {color: #fff;}
-body.sub #header:not(.open) #gnb > ul > li {color: #fff;}
-body.sub #header:not(.open) div.top ul > li:nth-child(3) > a {padding: 8px 15px 8px 33px; background: url(../img/wedding-icon.png) left 14px center no-repeat transparent; border: 1px solid #fff; border-radius: 50px; box-sizing: border-box; margin-right: 5px;}
-body.sub #header:not(.open) div.top ul > li:nth-child(4) > a {padding: 8px 15px; background-color: transparent; border: 1px solid #fff; border-radius: 50px; border-radius: 50px; box-sizing: border-box;} 
+body.bed #main,
+body.science #main {position: relative; padding-top: 0;}
+body.bed #header:not(.open)::before, 
+body.science #header:not(.open)::before {background-color: transparent;}
+body.bed #header:not(.open) div.top ul > li {color: #fff;}
+body.bed #header:not(.open) #gnb > ul > li {color: #fff;}
+body.bed #header:not(.open) div.top ul > li:nth-child(3) > a {padding: 8px 15px 8px 33px; background: url(../img/wedding-icon.png) left 14px center no-repeat transparent; border: 1px solid #fff; border-radius: 50px; box-sizing: border-box; margin-right: 5px;}
+body.bed #header:not(.open) div.top ul > li:nth-child(4) > a {padding: 8px 15px; background-color: transparent; border: 1px solid #fff; border-radius: 50px; border-radius: 50px; box-sizing: border-box;} 
 
-body.sub #main div.sub-header {position: relative; width: 100%; overflow: hidden;}
-body.sub #main div.sub-header h2 {position: absolute; top: 55%; left: 50%; transform: translate(-50%, 0); font-size: 60px; font-weight: 800; color: #fff; text-align: center;}
+body.bed #main div.sub-header, 
+body.science #main div.sub-header {position: relative; width: 100%; overflow: hidden;}
+body.sub #main div.sub-header h2 {position: absolute; left: 50%; transform: translate(-50%, 0); font-size: 60px; font-weight: 800; color: #fff; text-align: center;}
+body.bed #main div.sub-header h2 {top: 47%;} 
+body.science #main div.sub-header h2 {top: 52%; transform: translate(-50%, 100%); opacity: 0; transition: all 0.8s;}
+body.science #main div.sub-header h2 > p {line-height: 1.5em; font-size: 22px; font-weight: 300; color: #fff; text-align: center; margin-top: 20px; transform: translateY(100%); opacity: 0; transition: all 1.2s;}
+body.science #main div.sub-header h2.on {transform: translate(-50%, 0); opacity: 1;}
+body.science #main div.sub-header h2.on > p {transform: translateY(0); opacity: 1;}
 
 body.sub #footer {border-top: 1px solid #ebebeb;}
 
@@ -662,7 +859,7 @@ body.sub #footer {border-top: 1px solid #ebebeb;}
 #sub-product-list div.pages {margin-top: 60px; text-align: center;}
 #sub-product-list div.pages p.number {display: inline-block; font-size: 16px; font-weight: 800; color: #666; overflow: hidden;}
 #sub-product-list div.pages p.number a {display: block; float: left; width: 34px; height: 34px; line-height: 34px; text-align: center;}
-#sub-product-list div.pages p.number a.page.on {color: #0890c0; border: 1px solid #0890c0; box-sizing: border-box;}
+#sub-product-list div.pages p.number a.page.on {color: var(--color-blue); border: 1px solid var(--color-blue); box-sizing: border-box;}
 #sub-product-list div.pages p.number a.prev {background: url(../img/paging-prev.png) center center no-repeat;}
 #sub-product-list div.pages p.number a.next {background: url(../img/paging-next.png) center center no-repeat;}
 #sub-product-list div.pages p.number a.first {background: url(../img/paging-first-prev.png) center center no-repeat;}
@@ -695,7 +892,6 @@ body.bed-new .page > .text-area > .left > p.kr {font-size: 16px; color: #333; le
 body.bed-new .page > .text-area > .right > p.title {font-size: 30px; font-weight: 600; margin-bottom: 30px; transform: translateY(200%); opacity: 0; transition: transform 0.8s;}
 body.bed-new .page > .text-area > .right > p.text {line-height: 1.5em; font-size: 20px; font-weight: 300; color: #333; margin-bottom: 40px; transform: translateY(100%); opacity: 0; transition: transform 0.8s}
 body.bed-new .page > .text-area > .right > a.btn {transform: translateY(200%); opacity: 0; transition: transform 0.8s}
-
 
 body.bed-new .page.left.on > .img-area {left: 0; opacity: 1;}
 body.bed-new .page.right.on > .img-area {right: 0; opacity: 1;}
@@ -730,7 +926,7 @@ p.control > a:first-child > span {transform: rotate(180deg);}
 
 .btn {position: relative; display: inline-block; min-width: 100px; height: 40px; line-height: 40px; box-sizing: border-box; border: 1px solid #d1d1d1; text-align: center; cursor: pointer;}
 .btn.regular {height: 50px; line-height: 50px; font-size: 16px; padding: 0 40px;}
-.btn:not(.normal):before {content: ''; position: absolute; left: 0; bottom: 0; display: block; width: 100%; height: 0; background-color: #0890c0; box-sizing: border-box;}
+.btn:not(.normal):before {content: ''; position: absolute; left: 0; bottom: 0; display: block; width: 100%; height: 0; background-color: var(--color-blue); box-sizing: border-box;}
 .btn:hover::before {height: 100%; color: #fff; transition: height 0.5s ease-out;}
 .btn > span {position: relative; font-weight: 700; z-index: 1;}
 .btn:hover span {color: #fff;}
@@ -738,7 +934,7 @@ p.control > a:first-child > span {transform: rotate(180deg);}
 .btn.half:first-child {margin-right: 10px;}
 .btn.half {width: calc(50% - 9px);}
 .btn.normal.white {background-color: #fff;}
-.btn.normal.blue {color: #fff; background-color: #0890c0;}
+.btn.normal.blue {color: #fff; background-color: var(--color-blue);}
 .btn.outline-black {border-color: #000;}
 .btn.h-outline-black:hover {border-color: #000;}
 
@@ -749,13 +945,13 @@ a.link:hover span::before {width: 100%; transition: width 0.8s ease-out;}
 
 div.bar {position: relative; height: 60px;}
 div.bar::before {content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; box-sizing: border-box; border-radius: 50px; background-color: #C9C9C9;}
-div.bar span {position: absolute; top: 0; height: 4px; box-sizing: border-box; border-radius: 50px; transition: left 1s; background-color: #0890c0;}
+div.bar span {position: absolute; top: 0; height: 4px; box-sizing: border-box; border-radius: 50px; transition: left 1s; background-color: var(--color-blue);}
 
-p.close.btn {position: absolute;}
-p.close.btn a {position: relative; display: block;}
-p.close.btn a::before {content: ''; position: absolute; top: 50%; left: 50%; width: 120%; height: 2px; transform: translate(-50%, -50%) rotate(45deg);}
-p.close.btn a span {position: absolute; top: 0; left: 0; transform: translate(-50%, -50%); width: 100%; height: 2px; transition: all 0.3s; opacity: 0;}
-p.close.btn a::after {content: ''; position: absolute; left: 50%; bottom: 50%; width: 120%; height: 2px; transform: translate(-50%, 50%) rotate(-45deg);}
+p.close.button {position: absolute;}
+p.close.button a {position: relative; display: block;}
+p.close.button a::before {content: ''; position: absolute; top: 50%; left: 50%; width: 120%; height: 2px; transform: translate(-50%, -50%) rotate(45deg);}
+p.close.button a span {position: absolute; top: 0; left: 0; transform: translate(-50%, -50%); width: 100%; height: 2px; transition: all 0.3s; opacity: 0;}
+p.close.button a::after {content: ''; position: absolute; left: 50%; bottom: 50%; width: 120%; height: 2px; transform: translate(-50%, 50%) rotate(-45deg);}
 
 
 

@@ -338,9 +338,9 @@
   setLogo();
   setRowView();
   loadList('../json/bed-product.json', type);
+  var visualBgTimer = setTimeout(function() {$('body.sub #main div.background-matt').addClass('on');}, 500); 
   
   $(window).on('resize', function() {
-    setLogo();
     setRowView();
   });
   
